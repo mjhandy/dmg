@@ -1,0 +1,119 @@
+/// SCSS Prefix. Adjust this to change the prefix for all classes.
+/// @group sv
+$prefix: "mjh" !default;
+
+/// Sans Serif Font Family
+/// @group tv
+$font-family-sans-serif: "Roboto", "Helvetica Neue", Arial, sans-serif !default;
+
+/// Serif Font Family
+/// @group tv
+$font-family-serif: "Georgia", "Times New Roman", Times, serif !default;
+
+/// Base font size
+/// @group tv
+$font-size-base: 1rem !default; // this can only have a REM unit, PX will cause an error
+/// Base line height
+/// @group tv
+$line-height-base: 1.5 !default; // this can only have a REM unit, PX will cause an error
+
+/// Base font colour
+/// @group tv
+$base-colour: map-get($monochrome, 105) !default; // default base color
+
+/// Heading sizes
+/// @group sm
+/// @example Usage
+///   .h1{
+///     font-size: map-get($heading, h1);
+///    }
+$heading: (
+  h1: $font-size-base * 3,
+  h2: $font-size-base * 2.5,
+  h3: $font-size-base * 2,
+  h4: $font-size-base * 1.5,
+  h5: $font-size-base * 1.25,
+  h6: $font-size-base * 1.125,
+) !default;
+
+/// Basic space variable
+/// @group sv
+$space: 10px !default;
+
+/// Sapcing map
+/// @group sm
+$spaces: (
+  1: $space * 0.25,
+  2: $space * 0.75,
+  3: $space * 0.5,
+  4: $space * 1,
+  5: $space * 1.25,
+  6: $space * 1.5,
+  7: $space * 1.75,
+  8: $space * 2,
+) !default;
+
+/// Breakpoints Map
+/// @group sm
+$bps: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+) !default;
+
+/// Width Map
+/// @group sm
+$w: (
+  125: 12.5%,
+  25: 25%,
+  33: 33.3333%,
+  50: 50%,
+  625: 62.5%,
+  66: 66.6667%,
+  75: 75%,
+  875: 87.5%,
+  100: 100%,
+) !default;
+
+/// Position Map
+/// @group sm
+$positions: (
+  static: static,
+  relative: relative,
+  absolute: absolute,
+  fixed: fixed,
+  sticky: sticky,
+) !default;
+
+/// Button Padding
+/// @group sv
+$btnPadding: 0.5rem 1rem !default; // default button padding
+
+/// Button Primary Colour
+/// @group sv
+$btnPrimaryColour: map-get(
+  $blues,
+  105
+) !default; // default primary button color
+$btnSecondaryColour: map-get(
+  $reds,
+  105
+) !default; // default secondary button color
+$btnBorderWidth: 2px !default; // default button border width
+
+///
+
+// Form Variables
+/// @group v
+$inputBorderColour: map-get($monochrome,155) !default; // default input border color
+$inputBorderWidth: 1px !default; // default input border widths
+$error: darken(map-get($reds, 105), 20%) !default; // default error color
+$success: darken(map-get($greens, 100), 20%)   !default; // default success color
+
+/// Fancy Form Variables
+/// @group v
+$fi-bg:  map-get($monochrome,185) !default;
+$fi-1: map-get($blues, 110 ) !default;

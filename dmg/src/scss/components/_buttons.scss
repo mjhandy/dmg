@@ -1,0 +1,64 @@
+/// Button & Button Group Component
+/// @group cmp
+///
+/// @author Mark Handy
+/// 
+
+
+.btn{
+  @include border-radius(10px, 10px, 10px, 10px);
+  background-color: transparent;
+  font-size: var(--#{$prefix}-font-size-base);
+  cursor: pointer;
+  &-primary{
+    background-color: $btnPrimaryColour;
+    border: $btnBorderWidth solid $btnPrimaryColour;
+    color: var(--#{$prefix}-white);
+    padding: $btnPadding;
+    @if ( $btnBoxShadow ) {
+      @include boxShadow (3, 4, 300);
+    }    
+  }
+  &-primaryGhost{
+    background-color: transparent;
+    border: $btnBorderWidth solid $btnPrimaryColour;
+    color: var(--#{$prefix}-black-100);
+    padding: $btnPadding;
+    @if ( $btnBoxShadow ) {
+      @include boxShadow (3, 4, 300);
+    }
+  }
+  &-secondary{
+    background-color: $btnSecondaryColour;
+    border: $btnBorderWidth solid $btnSecondaryColour;  
+    color: var(--#{$prefix}-white);
+    padding: $btnPadding;
+    @if ( $btnBoxShadow ) {
+      @include boxShadow (3, 4, 300);
+    }
+  }
+  &-secondaryGhost{
+    background-color: transparent;
+    border: $btnBorderWidth solid $btnSecondaryColour;  
+    color: var(--#{$prefix}-black-100);
+    padding: $btnPadding;
+    @if ( $btnBoxShadow ) {
+      @include boxShadow (3, 4, 300);
+    }
+  }
+  &-link{
+    @if ( $btnBoxShadow ) {
+      @include boxShadow (3, 4, 300);
+    }
+  }
+  // button group
+  &-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: $space;
+  }
+}
+

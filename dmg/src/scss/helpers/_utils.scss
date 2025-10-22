@@ -1,0 +1,67 @@
+
+
+/// Margin classes
+/// @group Utilities
+.m {
+	@each $space, $value in $spaces {
+		&t-#{$space} {
+			margin-top: $value !important;
+		}
+
+		&r-#{$space} {
+			margin-right: $value !important;
+		}
+
+		&b-#{$space} {
+			margin-bottom: $value !important;
+		}
+
+		&l-#{$space} {
+			margin-left: $value !important;
+		}
+	}
+}
+/// Padding classes
+/// @group Utilities
+.p {
+	@each $space, $value in $spaces {
+		&t-#{$space} {
+			padding-top: $value !important;
+		}
+
+		&r-#{$space} {
+			padding-right: $value !important;
+		}
+
+		&b-#{$space} {
+			padding-bottom: $value !important;
+		}
+
+		&l-#{$space} {
+			padding-left: $value !important;
+		}
+	}
+}
+
+
+/// Width classes
+/// @group Utilities
+.w {
+	@each $width, $value in $w {
+		&-#{$width} {
+			width: $value;
+		}
+	}
+}
+
+/// position classes
+/// @group Utilities
+/// @name Position classes
+/// 
+.pos {
+  @each $pos, $value in $positions {
+    &-#{$pos} {
+      position: $value;
+    }
+  }
+}

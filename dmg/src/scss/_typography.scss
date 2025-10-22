@@ -1,0 +1,56 @@
+h1,
+h2,
+h3,
+.h1,
+.h2,
+.h3 {
+	font-weight: 400;
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+}
+
+h1,
+.h1 {
+	font-size: var(--#{$prefix}-h1-font-size);
+}
+
+h2,
+.h2 {
+	font-size: var(--#{$prefix}-h2-font-size);
+}
+
+h3,
+.h3 {
+	font-size: var(--#{$prefix}-h3-font-size);
+}
+
+h4,
+.h4 {
+	font-size: var(--#{$prefix}-h4-font-size);
+}
+
+h5,
+.h5 {
+	font-size: var(--#{$prefix}-h5-font-size);
+}
+
+h6,
+.h6 {
+	font-size: var(--#{$prefix}-h6-font-size);
+}
+
+p {
+	font-size: var(--#{$prefix}-font-size-base);
+	line-height: var(--#{$prefix}-line-height-base);
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
+a{
+  color: var(--#{$prefix}-link-colour);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+  &:visited {
+    color: var(--#{$prefix}-link-colour);
+  }
+}

@@ -1,0 +1,14 @@
+@mixin bp($name, $breakpoints: $bps) {
+	$breakpoint: map-get($breakpoints, $name);
+
+	@if $breakpoint ==null {
+		@warn "Breakpoint `#{$name}` not found in `$breakpoints`.";
+	}
+
+	@else {
+		@media (min-width: $breakpoint) {
+			@content;
+		}
+	}
+
+}

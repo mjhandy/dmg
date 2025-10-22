@@ -1,0 +1,11 @@
+/// Font size and line height mixin
+/// @name Font Size & Line Height
+/// @group mx
+/// @param {string} $size [null] - Font size (px, rem)
+/// @param {string} $height [null] - Line height
+/// @example .text { @include font-size(16px, 1.5); }
+/// @example .text { @include font-size(1.5rem); }
+@mixin font-size($size, $height: null) {
+  font-size: if(unit($size) == "px" or unit($size) == "rem", $size, $size + rem);
+  line-height: if($height, $height, var( --#{$prefix}-line-height-base  ));
+}

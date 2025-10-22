@@ -1,0 +1,16 @@
+/// HEX to RGBA
+/// @group fn
+/// @example $color: hex-to-rgba(#3498db, 0.7);
+/// @param {string} $color [null] -  Hex colour to be converted
+/// @param {number} $alpha [1] -  Alpha value to be applied to the colours
+
+@function hex-to-rgba($color, $alpha: 1) {
+  @if type-of($color) == "color" {
+    $red: red($color);
+    $green: green($color);
+    $blue: blue($color);
+    @return rgba($red, $green, $blue, $alpha);
+  } @else {
+    @error "hex-to-rgba(): #{$color} is not a valid hex color.";
+  }
+}

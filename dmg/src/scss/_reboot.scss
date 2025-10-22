@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0; // 1
+  font-family: var(--#{$prefix}-font-family-base);
+  font-weight: var(--#{$prefix}-body-font-weight);
+  line-height: var(--#{$prefix}-body-line-height);
+  color: var(--#{$prefix}-base-colour);
+
+
+}
