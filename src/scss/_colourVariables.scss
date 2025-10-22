@@ -10,6 +10,17 @@ $whiteRGBA: hex-to-rgba($white, 1);
 $black: #000000 !default;
 $blackRGBA: hex-to-rgba($black, 1);
 
+/// Site Colours
+/// @group cv
+/// @type colour
+$dmgColours:(
+  black: $black,
+  white: $white,
+  blue: #004360,
+  orange: #E86000
+
+);
+
 /// Monochromatic Colours
 /// @group cv
 /// @type colour
