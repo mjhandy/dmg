@@ -30,3 +30,4 @@ yarn-error.log*
 # Project Files
 /dmg/.angular
 /dmg/node_modules
+/dmg/dist
