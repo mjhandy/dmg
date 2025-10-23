@@ -1,0 +1,17 @@
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  .navItem {
+    .navItem-link {
+      font-weight: 400;
+      color: var(--dmg-baseColour-blue);
+      padding: 10px 5px;
+      &:hover{
+        border-bottom: 2px solid var(--dmg-baseColour-orange);
+
+      }
+    }
+  }
+}

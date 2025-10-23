@@ -11,6 +11,11 @@
     --#{$prefix}-monochrome-#{$color}: #{$value};
   }
 
+// DMG Colours
+@each $color, $value in $dmgColours{
+  --#{$prefix}-baseColour-#{$color}: #{$value};
+}
+
   // reds
   // @each $color, $value in $reds {
   //   --#{$prefix}-red-#{$color}: #{$value};
