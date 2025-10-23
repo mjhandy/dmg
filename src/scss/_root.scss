@@ -12,19 +12,19 @@
   }
 
   // reds
-  @each $color, $value in $reds {
-    --#{$prefix}-red-#{$color}: #{$value};
-  }
+  // @each $color, $value in $reds {
+  //   --#{$prefix}-red-#{$color}: #{$value};
+  // }
 
   // greens
-  @each $color, $value in $greens {
-    --#{$prefix}-green-#{$color}: #{$value};
-  }
+  // @each $color, $value in $greens {
+  //   --#{$prefix}-green-#{$color}: #{$value};
+  // }
 
   // blues
-  @each $color, $value in $blues {
-    --#{$prefix}-blue-#{$color}: #{$value};
-  }
+  // @each $color, $value in $blues {
+  //   --#{$prefix}-blue-#{$color}: #{$value};
+  // }
 
   ///named colours
   /* test */

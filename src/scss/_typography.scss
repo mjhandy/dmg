@@ -4,9 +4,13 @@ h3,
 .h1,
 .h2,
 .h3 {
-	font-weight: 400;
+	font-family: "Raleway", sans-serif;
+  	font-optical-sizing: auto;
+  	font-style: normal;
+	font-weight: 200;
 	margin-top: 0;
 	margin-bottom: 0.5rem;
+	color: map-get($dmgColours, blue)
 }
 
 h1,
