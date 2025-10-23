@@ -14,6 +14,7 @@ export const routes: Routes = [
       desciption: 'This is the Web Prototype home page',
       label: 'nav.home',
       showInFooter: true,
+      showInSiteMap: true,
     }
   },
 ];
