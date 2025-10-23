@@ -6,10 +6,11 @@ ul {
   .navItem {
     .navItem-link {
       font-weight: 400;
+      font-size: 1.75rem;
       color: var(--dmg-baseColour-blue);
-      padding: 10px 5px;
+      padding: 10px 5px 0 5px;
       &:hover{
-        border-bottom: 2px solid var(--dmg-baseColour-orange);
+        border-bottom: 5px solid var(--dmg-baseColour-orange);
 
       }
     }
