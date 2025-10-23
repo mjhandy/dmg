@@ -118,8 +118,8 @@ $btnBorderWidth: 2px !default; // default button border width
 /// @group v
 $inputBorderColour: map-get($monochrome,155) !default; // default input border color
 $inputBorderWidth: 1px !default; // default input border widths
-// $error: darken(map-get($dmgColours, 'red'), 20%) !default; // default error color
-// $success: darken(green, 20%)   !default; // default success color
+$error: darken(map-get($dmgColours, red), 20%) !default; // default error color
+$success: darken(map-get($dmgColours, green), 20%)   !default; // default success color
 
 /// Fancy Form Variables
 /// @group v
