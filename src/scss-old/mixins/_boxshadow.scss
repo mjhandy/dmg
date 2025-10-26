@@ -3,9 +3,7 @@
 ///
 /// @author Mark Handy
 /// 
-/// @group helpers
-/// 
-/// @name Box Shadow
+/// @group mx
 /// 
 /// @param {Int} $level - Sets the  Box Shadow
 /// @param {Int} $hoverLevel - Sets the  Box Shadow hover
@@ -13,7 +11,7 @@
 /// 
 /// @example scss 
 /// .card {
-///    @include boxshadow (1, 2, 300);
+///    @include boxShadow (1, 2, 300);
 /// }
 /// 
 

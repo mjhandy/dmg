@@ -1,0 +1,48 @@
+/// Font Size mixin.
+/// Simplify font customization
+///
+/// @author Mark Handy
+///
+/// @group helpers
+///
+/// @name Font Size
+///
+/// @param {Int} $size - Font Size
+/// @param {Int} $height - Line Height
+/// @param {Int} $weight [400] - Font Weight
+/// @param {Int} $letterSpacing [normal] - Letter Spacing
+///
+/// @example scss 
+/// p {
+///    @include font-size(12px, 1.2, 700, 1px);
+/// }
+
+
+@mixin font-size($size: $fontSize, $height: $lineHeight, $weight: 400, $letterSpacing: normal) {
+  // font size
+  @if str-index(to-string($size), '%') !=null or str-index(to-string($size), 'px') !=null or str-index(to-string($size), 'rem') !=null {
+    font-size: $size;
+  }
+  // font weight
+  font-weight: $weight;
+  // line height
+  @if str-index(to-string($height), '%') !=null or str-index(to-string($height), 'px') !=null {
+    line-height: $height;
+  }
+  @else {
+    line-height: $height;
+  }
+  // letter spacing
+  @if str-index(to-string($letterSpacing), '%') !=null or str-index(to-string($letterSpacing), 'px') !=null or str-index(to-string($letterSpacing), 'rem') !=null {
+    letter-spacing: $letterSpacing;
+  }
+  @else{
+    letter-spacing: $letterSpacing;
+  }  
+}
+
+
+// convert to string function
+@function to-string($value) {
+  @return inspect($value);
+}

@@ -1,0 +1,157 @@
+/// 
+/// Boostrap Overrides
+/// 
+/// 
+
+/// SCSS Prefix. Adjust this to change the prefix for all classes.
+/// @group sv
+$prefix: "dmg" !default;
+
+/// Base White
+/// @group cv
+/// @type colour
+$white: #ffffff !default;
+$whiteRGBA: hex-to-rgba($white, 1);
+
+/// Base Black
+/// @group cv
+/// @type colour
+$black: #000000 !default;
+$blackRGBA: hex-to-rgba($black, 1);
+
+/// Site Colours
+/// @group cv
+/// @type colour
+$dmgColours: (
+  black: $black,
+  white: $white,
+  blue: #004360,
+  royalBlue: #005EB8,
+  orange: #E86000,
+  red: #B4001E,
+  yellow: #FFD228,
+  green: green
+);
+
+/// Monochromatic Colours
+/// @group cv
+/// @type colour
+$monochrome: (
+  100:#000000,
+  105:#0d0d0d,
+  110:#1b1b1b,
+  115:#282828,
+  120:#363636,
+  125:#434343,
+  130:#515151,
+  135:#5e5e5e,
+  140:#6b6b6b,
+  145:#797979,
+  150:#868686,
+  155:#949494,
+  160:#a1a1a1,
+  165:#aeaeae,
+  170:#bcbcbc,
+  175:#c9c9c9,
+  180:#d7d7d7,
+  185:#e4e4e4,
+  190:#f2f2f2,
+  195:#ffffff,
+  ) !default;
+
+/// Sans Serif Font Family
+/// @group tv
+$font-family-sans-serif: "Roboto", "Helvetica Neue", Arial, sans-serif !default;
+
+/// Serif Font Family
+/// @group tv
+$font-family-serif: "Georgia", "Times New Roman", Times, serif !default;
+
+/// Base font size
+/// @group tv
+$font-size-base: 1rem !default; // this can only have a REM unit, PX will cause an error
+
+/// base font wieght
+/// @group tv
+$font-base-weight: 200;
+
+
+/// Base line height
+/// @group tv
+$line-height-base: 1.5 !default; // this can only have a REM unit, PX will cause an error
+
+
+
+/// Base font colour
+/// @group tv
+$base-colour: map-get($monochrome, 105) !default; // default base color
+
+/// Heading sizes
+/// @group sm
+/// @example Usage
+///   .h1{
+///     font-size: map-get($heading, h1);
+///    }
+$heading: (
+  h1: $font-size-base * 3,
+  h2: $font-size-base * 2.5,
+  h3: $font-size-base * 2,
+  h4: $font-size-base * 1.5,
+  h5: $font-size-base * 1.25,
+  h6: $font-size-base * 1.125,
+) !default;
+
+// package cards
+
+/// Grid breakpoints Updates
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px,
+  xxxl: 1600px
+);
+
+/// Container max widths
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1400px,
+  xxl: 1440px
+);
+
+/// Control the default styling of most Bootstrap elements by modifying these
+/// variables. Mostly focused on spacing.
+$spacer: 10px;
+$spacers: (
+);
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge((0: 0,
+      1: ($spacer * 0.5), // 5px
+      2: ($spacer * 1), // 10px
+      3: ($spacer * 1.5), // 15px
+      4: ($spacer * 2), // 20px
+      5: ($spacer * 2.5), // 25px
+      6: ($spacer * 3), // 30px
+      7: ($spacer * 3.5) // 35px
+    ), $spacers);
+// This variable affects the `.h-*` and `.w-*` classes.
+
+$sizes: (
+);
+// stylelint-disable-next-line scss/dollar-variable-default
+$sizes: map-merge((25: 25%,
+      33: 33%,
+      50: 50%,
+      75: 75%,
+      100: 100%,
+      auto: auto), $sizes);
+
+$h1-font-size: 3rem;
+
+/* custom variable values:END */
+
+/* Utilities */

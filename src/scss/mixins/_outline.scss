@@ -1,0 +1,5 @@
+@mixin outline($os: -5px){
+  outline: 2px dotted var(--mjh-blue);
+  outline-offset: $os;
+  box-shadow: none;
+}

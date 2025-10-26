@@ -1,0 +1,59 @@
+h1,
+h2,
+h3,
+.h1,
+.h2,
+.h3 {
+	font-family: "Raleway", sans-serif;
+  	font-optical-sizing: auto;
+  	font-style: normal;
+	font-weight: 200;
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+	color: map-get($dmgColours, blue)
+}
+
+h1,
+.h1 {
+	font-size: var(--#{$prefix}-h1-font-size);
+}
+
+h2,
+.h2 {
+	font-size: var(--#{$prefix}-h2-font-size);
+}
+
+h3,
+.h3 {
+	font-size: var(--#{$prefix}-h3-font-size);
+}
+
+h4,
+.h4 {
+	font-size: var(--#{$prefix}-h4-font-size);
+}
+
+h5,Q
+.h5 {
+	font-size: var(--#{$prefix}-h5-font-size);
+}
+
+h6,
+.h6 {
+	font-size: var(--#{$prefix}-h6-font-size);
+}
+
+p {
+	
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
+a{
+  color: var(--#{$prefix}-link-colour);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+  &:visited {
+    color: var(--#{$prefix}-link-colour);
+  }
+}

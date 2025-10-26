@@ -1,0 +1,32 @@
+@import "bsOverrides";
+@import "componentInclude";
+
+// @import "colourModes";
+
+// skip to main items
+.skipToMain {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateY(-100%);
+  padding: 25px 50px;
+  background-color: $white;
+  z-index: 99999;
+
+  &:focus {
+    transform: translateY(10%);
+    @include outline();
+  }
+}
+
+// focus state
+a {
+  &:focus {
+    @include outline(0);
+  }
+}
+
+footer {
+  background: var(--web-gray-900);
+  min-height: 100px;
+}

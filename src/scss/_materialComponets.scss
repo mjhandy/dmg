@@ -1,0 +1,30 @@
+@use '@angular/material' as mat;
+
+// Customize the entire app. Change :root to your selector if you want to scope the styles.
+:root {
+  --mdc-snackbar-container-color:  var(--web-gray-600);
+  --mdc-snackbar-supporting-text-color: #f2f0f4;
+  --mdc-snackbar-supporting-text-font: "Montserrat", sans-serif;
+  --mdc-snackbar-supporting-text-line-height: 1;
+  --mdc-snackbar-supporting-text-size: 18px;
+  --mdc-snackbar-supporting-text-weight: 700;
+  --mdc-snackbar-container-shape: 10px;
+}
+
+//snackbars
+.alert{
+  &-default{
+    .mdc-snackbar__surface.mat-mdc-snackbar-surface{
+      background: rgba(var(--web-black-rgb),0.6);
+      border: 2px solid #495057;
+      border-radius: 10px;
+      padding: 25px 50px;
+    }
+  }
+}
+
+.mat-mdc-progress-spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}

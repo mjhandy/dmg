@@ -11,9 +11,32 @@
     --#{$prefix}-monochrome-#{$color}: #{$value};
   }
 
-  // DMG Colours
-  @each $color, $value in $dmgColours {
-    --#{$prefix}-baseColour-#{$color}: #{$value};
+// DMG Colours
+@each $color, $value in $dmgColours{
+  --#{$prefix}-baseColour-#{$color}: #{$value};
+}
+
+  // reds
+  // @each $color, $value in $reds {
+  //   --#{$prefix}-red-#{$color}: #{$value};
+  // }
+
+  // greens
+  // @each $color, $value in $greens {
+  //   --#{$prefix}-green-#{$color}: #{$value};
+  // }
+
+  // blues
+  // @each $color, $value in $blues {
+  //   --#{$prefix}-blue-#{$color}: #{$value};
+  // }
+
+  ///named colours
+  /* test */
+  @if ($namedColours) {
+    @each $color, $value in $named-colours {
+      --#{$prefix}-#{$color}: #{$value};
+    }
   }
 
   // base font colour
@@ -23,7 +46,7 @@
   --#{$prefix}-font-family-base: #{$font-family-sans-serif};
   --#{$prefix}-font-size-base: #{$font-size-base};
   --#{$prefix}-line-height-base: #{$line-height-base};
-  // --#{$prefix}-body-font-weight: #{$font-base-weight};
+  --#{$prefix}-body-font-weight: #{$font-base-weight};
   --#{$prefix}-link-colour: var(--#{$prefix}-blue-100);
 
   // heading sizes

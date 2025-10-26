@@ -28,18 +28,24 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               {
+                "glob": "_redirects",
+                "input": "src",
+                "output": "/"
+              },              
+              {
                 "glob": "**/*",
                 "input": "public"
               }
             ],
             "styles": [
-              "src/scss/main.scss"
+              "src/styles.scss"
             ],
             "stylePreprocessorOptions": {
               "sass": {
                 "silenceDeprecations": [
-                  "mixed-decls",
-                  "global-builtin",
+                  "mixed-decls", 
+                  "color-functions", 
+                  "global-builtin", 
                   "import"
                 ]
               },

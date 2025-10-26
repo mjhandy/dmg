@@ -1,1 +1,12 @@
+// @use '@angular/material' as mat;
+// @use 'scssm3-theme';
+
+
 /* You can add global styles to this file, and also import other style files */
+@import 'bsOverrides';
+@import 'bootstrapIncludes';
+
+@import 'mixins/mixins';
+
+// global items
+@import 'main';

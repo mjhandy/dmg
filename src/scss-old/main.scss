@@ -5,6 +5,8 @@
 // custom components at https://material.angular.dev/guide/theming
 @use '@angular/material' as mat;
 
+@import "bsOverrides";
+
 html {
   @include mat.theme((color: (
         primary: mat.$azure-palette,
@@ -15,29 +17,11 @@ html {
     ));
 }
 
-
-
-// Config items
-@import 'config';
-@import 'functions';
-@import 'colourVariables';
-@import 'variables';
-
-
-
-// UI layout Items
-@import 'root';
-@import 'reboot';
-@import 'mixins';
-@import 'typography';
-@import 'helpers';
-
-// Components
-@import 'components';
-
-// Load Bootstrap Grid?
-@if ($bsGrdid) {
-  @import 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap-grid.min.css';
+// focus state
+a {
+  &:focus {
+    @include outline(0);
+  }
 }
 
 html,
