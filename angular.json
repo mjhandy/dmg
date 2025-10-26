@@ -17,6 +17,9 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputPath": "dist/dmg",
+            "index": "src/index.html",
+            "baseHref": "/",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
@@ -31,7 +34,20 @@
             ],
             "styles": [
               "src/scss/main.scss"
-            ]
+            ],
+            "stylePreprocessorOptions": {
+              "sass": {
+                "silenceDeprecations": [
+                  "mixed-decls",
+                  "global-builtin",
+                  "import"
+                ]
+              },
+              "includePaths": [
+                "./node_modules/bootstrap/scss",
+                "./src/scss"
+              ]
+            }
           },
           "configurations": {
             "production": {
