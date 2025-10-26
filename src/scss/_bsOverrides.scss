@@ -5,7 +5,7 @@
 
 /// SCSS Prefix. Adjust this to change the prefix for all classes.
 /// @group sv
-$prefix: "dmg" !default;
+$prefix: "dmg-" !default;
 
 /// Base White
 /// @group cv
@@ -61,11 +61,17 @@ $monochrome: (
 
 /// Sans Serif Font Family
 /// @group tv
-$font-family-sans-serif: "Roboto", "Helvetica Neue", Arial, sans-serif !default;
+$font-family-sans-serif: "Roboto",
+  "Helvetica Neue",
+  Arial,
+  sans-serif !default;
 
 /// Serif Font Family
 /// @group tv
-$font-family-serif: "Georgia", "Times New Roman", Times, serif !default;
+$font-family-serif: "Georgia",
+  "Times New Roman",
+  Times,
+  serif !default;
 
 /// Base font size
 /// @group tv
@@ -73,18 +79,21 @@ $font-size-base: 1rem !default; // this can only have a REM unit, PX will cause 
 
 /// base font wieght
 /// @group tv
-$font-base-weight: 200;
-
+$font-base-weight: 400;
 
 /// Base line height
 /// @group tv
 $line-height-base: 1.5 !default; // this can only have a REM unit, PX will cause an error
 
-
-
 /// Base font colour
 /// @group tv
 $base-colour: map-get($monochrome, 105) !default; // default base color
+
+/// Link Colour
+/// @group tv
+$link-colour: map-get($dmgColours, blue );
+$link-colour-hover: map-get($dmgColours, orange );
+$link-colour-underline: map-get($dmgColours, royalBlue );
 
 /// Heading sizes
 /// @group sm
@@ -99,7 +108,7 @@ $heading: (
   h4: $font-size-base * 1.5,
   h5: $font-size-base * 1.25,
   h6: $font-size-base * 1.125,
-) !default;
+  ) !default;
 
 // package cards
 
@@ -149,8 +158,6 @@ $sizes: map-merge((25: 25%,
       75: 75%,
       100: 100%,
       auto: auto), $sizes);
-
-$h1-font-size: 3rem;
 
 /* custom variable values:END */
 

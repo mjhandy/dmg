@@ -47,7 +47,7 @@
   --#{$prefix}-font-size-base: #{$font-size-base};
   --#{$prefix}-line-height-base: #{$line-height-base};
   --#{$prefix}-body-font-weight: #{$font-base-weight};
-  --#{$prefix}-link-colour: var(--#{$prefix}-blue-100);
+  --#{$prefix}-link-colour: var(--#{$prefix}blue-100);
 
   // heading sizes
   @each $heading, $size in $heading {

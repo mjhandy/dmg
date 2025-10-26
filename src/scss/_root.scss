@@ -1,33 +1,31 @@
 :root {
   // base colours
-  --#{$prefix}-white: #{$white};
-  --#{$prefix}-whiteRGBA: #{$whiteRGBA};
+  --#{$prefix}white: #{$white};
   // blacks
-  --#{$prefix}-black: #{$black};
-  --#{$prefix}-blackRGBA: #{$blackRGBA};
-
+  --#{$prefix}black: #{$black};
   // monochrome
   @each $color, $value in $monochrome {
-    --#{$prefix}-monochrome-#{$color}: #{$value};
+    --#{$prefix}monochrome-#{$color}: #{$value};
   }
-
   // DMG Colours
   @each $color, $value in $dmgColours {
-    --#{$prefix}-baseColour-#{$color}: #{$value};
+    --#{$prefix}baseColour-#{$color}: #{$value};
   }
 
   // base font colour
-  --#{$prefix}-base-colour: #{$base-colour};
+  --#{$prefix}base-colour: #{$base-colour};
 
   // typography
-  --#{$prefix}-font-family-base: #{$font-family-sans-serif};
-  --#{$prefix}-font-size-base: #{$font-size-base};
-  --#{$prefix}-line-height-base: #{$line-height-base};
-  // --#{$prefix}-body-font-weight: #{$font-base-weight};
-  --#{$prefix}-link-colour: var(--#{$prefix}-blue-100);
+  --#{$prefix}font-family-base: #{$font-family-sans-serif};
+  --#{$prefix}font-size-base: #{$font-size-base};
+  --#{$prefix}line-height-base: #{$line-height-base};
+  --#{$prefix}body-font-weight: #{$font-base-weight};
+  --#{$prefix}link-colour: #{$link-colour};
+  --#{$prefix}link-colour-hover: #{$link-colour-hover};
+  --#{$prefix}link-colour-underline: #{$link-colour-underline};
 
   // heading sizes
   @each $heading, $size in $heading {
-    --#{$prefix}-#{$heading}-font-size: #{$size};
+    --#{$prefix}#{$heading}-font-size: #{$size};
   }
 }
