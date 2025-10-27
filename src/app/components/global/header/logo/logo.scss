@@ -1,13 +1,15 @@
 @import 'componentInclude';
 
 
-.header-logo{
+.header-logo {
     display: flex;
-    width: 150px;
-    @include media-breakpoint-up(lg){
-width: 300px;
+    width: 200px;
+
+    @include media-breakpoint-up(lg) {
+        width: 300px;
     }
-    mat-icon{
+
+    mat-icon {
         width: 100%;
         height: auto;
     }
