@@ -1,3 +1,20 @@
+@import 'componentInclude';
+
+@import 'navbar';
+
+.nav{
+  &-item{
+
+  }
+  &-link{
+    font-size: 1.5rem;
+    &:hover{
+      border-bottom: 5px solid var(--dmg-link-colour-hover)
+    }
+  }
+}
+
+
 ul {
   margin: 0;
   padding: 0;
