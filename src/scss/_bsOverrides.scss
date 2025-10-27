@@ -5,18 +5,18 @@
 
 /// SCSS Prefix. Adjust this to change the prefix for all classes.
 /// @group sv
-$prefix: "dmg-" !default;
+$prefix: "dmg-";
 
 /// Base White
 /// @group cv
 /// @type colour
-$white: #ffffff !default;
+$white: #ffffff;
 $whiteRGBA: hex-to-rgba($white, 1);
 
 /// Base Black
 /// @group cv
 /// @type colour
-$black: #000000 !default;
+$black: #000000;
 $blackRGBA: hex-to-rgba($black, 1);
 
 /// Site Colours
@@ -161,8 +161,9 @@ $sizes: map-merge((25: 25%,
       100: 100%,
       auto: auto), $sizes);
 
-
-
+/// navbar
+$navbar-toggler-padding-y: 0;
+$navbar-toggler-padding-x: 0;
 
 /* custom variable values:END */
 
