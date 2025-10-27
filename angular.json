@@ -40,6 +40,9 @@
             "styles": [
               "src/styles.scss"
             ],
+            "scripts": [
+              
+            ],
             "stylePreprocessorOptions": {
               "sass": {
                 "silenceDeprecations": [
