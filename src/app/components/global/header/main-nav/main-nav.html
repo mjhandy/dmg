@@ -13,15 +13,12 @@
     </div>
     <div class="offcanvas-body">
       <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        @for ( route of routes; track route.title ){
         <li class="nav-item">
-          <a href="/services" class="nav-link">Services</a>
+          <a [routerLink]="[route.path]" class="nav-link" routerLinkActive="active">{{ route.label }}</a>
         </li>
-        <li class="nav-item">
-          <a href="/case-studies" class="nav-link">Case Studies</a>
-        </li>
-        <li class="nav-item">
-          <a href="/about-us" class="nav-link">About Us</a>
-        </li>
+        }
+
       </ul>
     </div>
   </div>
