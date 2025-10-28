@@ -38,6 +38,10 @@ a {
 	color: var(--#{$prefix}link-colour);
 	text-decoration: none;
 	transition: color 0.2s ease-in-out;
+	&:hover{
+		color: var(--#{$prefix}link-colour-hover);
+		text-decoration: underline;
+	}
 
 	&:visited {
 		color: var(--#{$prefix}link-colour);
