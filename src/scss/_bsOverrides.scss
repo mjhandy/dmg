@@ -93,7 +93,9 @@ $base-colour: map-get($monochrome, 105) !default; // default base color
 /// @group tv
 $link-colour: map-get($dmgColours, blue );
 $link-colour-hover: map-get($dmgColours, orange );
-$link-colour-underline: map-get($dmgColours, royalBlue );
+$link-colour-visted: map-get($dmgColours, orange );
+$link-colour-underline: map-get($dmgColours, orange );
+$link-colour-focus: map-get($dmgColours, orange );
 
 /// Heading sizes
 /// @group sm

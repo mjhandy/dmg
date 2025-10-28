@@ -23,6 +23,8 @@
   --#{$prefix}link-colour: #{$link-colour};
   --#{$prefix}link-colour-hover: #{$link-colour-hover};
   --#{$prefix}link-colour-underline: #{$link-colour-underline};
+  --#{$prefix}link-colour-visited: #($link-colour-visted);
+  --#{$prefix}link-colour-focus: #{$link-colour-focus};
 
   // heading sizes
   @each $heading, $size in $heading {
