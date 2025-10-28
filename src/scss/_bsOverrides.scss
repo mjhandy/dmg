@@ -81,8 +81,6 @@ $font-size-base: 1rem !default; // this can only have a REM unit, PX will cause 
 /// @group tv
 $font-base-weight: 400;
 
-
-
 /// Base line height
 /// @group tv
 $line-height-base: 1.5 !default; // this can only have a REM unit, PX will cause an error
@@ -161,9 +159,16 @@ $sizes: map-merge((25: 25%,
       100: 100%,
       auto: auto), $sizes);
 
+/// basic BS items
+
+
 /// navbar
 $navbar-toggler-padding-y: 0;
 $navbar-toggler-padding-x: 0;
+$navbar-toggler-font-size: 1.75rem;
+
+/// offcanvas
+$offcanvas-bg: map-get($dmgColours, white );
 
 /* custom variable values:END */
 

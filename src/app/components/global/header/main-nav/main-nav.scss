@@ -1,13 +1,35 @@
 @import 'componentInclude';
 
 @import 'navbar';
+@import 'offcanvas';
+
+.offcanvas{
+  background-color: map-get($dmgColours, white );
+  &-header{
+    padding: 15px 15px 0 15px;
+    h3{
+      margin: 0;
+    }
+  }
+}
+
+.navbar{
+  &-nav{
+    padding: 0;
+    margin: 0;
+  }
+  &-toggler{
+    position: absolute;
+    right: 0;
+  }
+}
 
 .nav{
   &-item{
 
   }
   &-link{
-    font-size: 1.5rem;
+    font-size: 2rem;
     &:hover{
       border-bottom: 5px solid var(--dmg-link-colour-hover)
     }
@@ -15,22 +37,3 @@
 }
 
 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-
-  .navItem {
-    margin: 0 10px;
-    .navItem-link {
-      font-weight: 400;
-      font-size: 1.75rem;
-      color: var(--dmg-baseColour-blue);
-      padding: 10px 5px 0 5px;
-      &:hover{
-        border-bottom: 5px solid var(--dmg-baseColour-orange);
-
-      }
-    }
-  }
-}

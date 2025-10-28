@@ -4,6 +4,8 @@
 .header-logo {
     display: flex;
     width: 200px;
+    height: 64px;
+
 
     @include media-breakpoint-up(lg) {
         width: 300px;
