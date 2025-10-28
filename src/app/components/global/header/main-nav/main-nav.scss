@@ -2,13 +2,18 @@
 
 @import 'navbar';
 @import 'offcanvas';
+@import 'custom/buttons';
 
 .offcanvas{
-  background-color: map-get($dmgColours, white );
+  // background-color: map-get($dmgColours, white );
   &-header{
     padding: 15px 15px 0 15px;
+    justify-content: space-between;
     h3{
       margin: 0;
+    }
+    .btn{
+      color: var(--dmg-baseColour-orange)
     }
   }
 }
@@ -21,13 +26,11 @@
   &-toggler{
     position: absolute;
     right: 0;
+    color: var(--dmg-baseColour-orange);
   }
 }
 
 .nav{
-  &-item{
-
-  }
   &-link{
     font-size: 2rem;
     &:hover{

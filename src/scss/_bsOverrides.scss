@@ -168,8 +168,9 @@ $navbar-toggler-padding-x: 0;
 $navbar-toggler-font-size: 1.75rem;
 
 /// offcanvas
-$offcanvas-bg: map-get($dmgColours, white );
-
+$offcanvas-bg-color: map-get($dmgColours, white );
+$offcanvas-horizontal-width: 100vw;
+$offcanvas-color: map-get($dmgColours, black );
 /* custom variable values:END */
 
 /* Utilities */
