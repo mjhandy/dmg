@@ -4,6 +4,10 @@
 @import 'offcanvas';
 @import 'custom/buttons';
 
+
+
+
+
 .offcanvas{
   // background-color: map-get($dmgColours, white );
   &-header{
@@ -34,7 +38,7 @@
   &-link{
     font-size: 2rem;
     &.active{
-      color: var(--dmg-link-colour-hover);
+      color: var(--dmg-link-colour-hover) !important;
     }
     &:hover{
       color: var(--dmg-link-colour-hover);

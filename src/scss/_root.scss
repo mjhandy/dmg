@@ -25,6 +25,9 @@
   --#{$prefix}link-colour-underline: #{$link-colour-underline};
   --#{$prefix}link-colour-visited: #($link-colour-visted);
   --#{$prefix}link-colour-focus: #{$link-colour-focus};
+  --#{$prefix}navbar-active-color: #{$link-colour-focus};
+
+  
 
   // heading sizes
   @each $heading, $size in $heading {

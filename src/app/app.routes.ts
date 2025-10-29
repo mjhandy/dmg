@@ -20,10 +20,10 @@ export const routes: Routes = [
   },
   {
     path: 'services',
-    loadComponent: () => import('./components/pages/home/home').then(m => m.Home),
+    loadComponent: () => import('./components/pages/services/services').then(m => m.Services),
     title: 'Services | Dundee Media Group',
     data: {
-      desciption: 'This is the Web Prototype home page',
+      desciption: "Dundee Media Group's offered services, from SEO to WCAG",
       label: 'Services',
       showInMain: true,
       showInFooter: true,
@@ -32,7 +32,7 @@ export const routes: Routes = [
   },
   {
     path: 'about-us',
-    loadComponent: () => import('./components/pages/home/home').then(m => m.Home),
+    loadComponent: () => import('./components/pages/about-us/about-us').then(m => m.AboutUs),
     title: 'About Us | Dundee Media Group',
     data: {
       desciption: 'This is the Web Prototype home page',
@@ -44,7 +44,7 @@ export const routes: Routes = [
   },
   {
     path: 'case-studies',
-    loadComponent: () => import('./components/pages/home/home').then(m => m.Home),
+    loadComponent: () => import('./components/pages/case-studies/case-studies').then(m => m.CaseStudies),
     title: 'Case Studies | Dundee Media Group',
     data: {
       desciption: 'This is the Web Prototype home page',
@@ -56,7 +56,7 @@ export const routes: Routes = [
   },
   {
     path: 'contact-us',
-    loadComponent: () => import('./components/pages/home/home').then(m => m.Home),
+    loadComponent: () => import('./components/pages/contact-us/contact-us').then(m => m.ContactUs),
     title: 'Contact Us | Dundee Media Group',
     data: {
       desciption: 'This is the Web Prototype home page',
@@ -68,7 +68,7 @@ export const routes: Routes = [
   },
   {
     path: 'site-map',
-    loadComponent: () => import('./components/pages/home/home').then(m => m.Home),
+    loadComponent: () => import('./components/pages/site-map/site-map').then(m => m.SiteMap),
     title: 'Site Map | Dundee Media Group',
     data: {
       desciption: 'This is the Web Prototype home page',
