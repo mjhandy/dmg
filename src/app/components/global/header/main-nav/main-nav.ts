@@ -24,7 +24,7 @@ export class MainNav {
         route => route.path &&
           typeof route.title === 'string' &&
           route.data && route.data['label'] &&
-          route.data['showInFooter'] === true
+          route.data['showInMain'] === true
       )
       .map(route => ({
         path: route.path!,

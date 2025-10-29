@@ -1,0 +1,19 @@
+@import 'componentInclude';
+
+
+.footer-logo {
+    display: flex;
+    width: 200px;
+    height: 64px;
+
+
+    @include media-breakpoint-up(lg) {
+        width: 300px;
+        height: 90px;
+    }
+
+    mat-icon {
+        width: 100%;
+        height: auto;
+    }
+}
