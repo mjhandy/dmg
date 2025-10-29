@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+
 
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
@@ -7,6 +7,10 @@ import { MatIconRegistry, MatIconModule } from '@angular/material/icon';
 
 import { Header } from './components/global/header/header';
 import { Footer } from './components/global/footer/footer';
+
+import { Meta, Title } from '@angular/platform-browser';
+import { RouterOutlet, ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { filter, map } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -18,10 +22,15 @@ export class App {
   protected readonly title = signal('dmg');
   private iconPath = '/assets/';
 
+
+
   constructor(
     private matIconRegistry: MatIconRegistry,
-
     private domSanitizer: DomSanitizer,
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
+    private metaService: Meta,
+    private titleService: Title,
   ) {
 
     this.matIconRegistry
@@ -31,6 +40,28 @@ export class App {
       );
 
 
+  }
+
+
+  ngOnInit() {
+    this.router.events
+      .pipe(
+        filter(event => event instanceof NavigationEnd),
+        map(() => this.getChild(this.activatedRoute)),
+        map(route => route.snapshot.data)
+      )
+      .subscribe(data => {
+        // Update meta description
+        if (data['description']) {
+          this.metaService.updateTag({ name: 'description', content: data['description'] });
+        } else {
+          this.metaService.removeTag("name='description'");
+        }
+      });
+  }
+
+  private getChild(route: ActivatedRoute): ActivatedRoute {
+    return route.firstChild ? this.getChild(route.firstChild) : route;
   }
 
 
