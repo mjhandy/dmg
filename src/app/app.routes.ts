@@ -66,4 +66,16 @@ export const routes: Routes = [
       showInSiteMap: true,
     }
   },
+  {
+    path: 'site-map',
+    loadComponent: () => import('./components/pages/home/home').then(m => m.Home),
+    title: 'Site Map | Dundee Media Group',
+    data: {
+      desciption: 'This is the Web Prototype home page',
+      label: 'Site Map',
+      showInMain: false,
+      showInFooter: true,
+      showInSiteMap: false,
+    }
+  },
 ];

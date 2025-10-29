@@ -1,13 +1,14 @@
 ul{
   display: flex;
   flex-flow: row;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
-  width: 50%;
+  width: 75%;
   li{
     margin: 0;
     padding: 0;
-    width: 50%;
+    flex: 0 0 50%;
   }
 }
