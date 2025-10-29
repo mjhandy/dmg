@@ -87,7 +87,11 @@ $line-height-base: 1.5 !default; // this can only have a REM unit, PX will cause
 
 /// Base font colour
 /// @group tv
-$base-colour: map-get($monochrome, 105) !default; // default base color
+$base-colour: map-get($monochrome, 105); // default base color
+
+/// Strong font colour
+/// @group tv
+$strong-colour: map-get($monochrome, 100);
 
 /// Link Colour
 /// @group tv
@@ -105,9 +109,9 @@ $link-colour-active: map-get($dmgColours, orange );
 ///     font-size: map-get($heading, h1);
 ///    }
 $heading: (
-  h1: $font-size-base * 3,
-  h2: $font-size-base * 2.5,
-  h3: $font-size-base * 2,
+  h1: $font-size-base * 2.5,
+  h2: $font-size-base * 1.5,
+  h3: $font-size-base * 1,
   h4: $font-size-base * 1.5,
   h5: $font-size-base * 1.25,
   h6: $font-size-base * 1.125,

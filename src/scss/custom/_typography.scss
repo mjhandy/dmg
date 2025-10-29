@@ -21,17 +21,23 @@ h1,
 h2,
 .h2 {
 	font-size: var(--#{$prefix}h2-font-size);
+	font-weight: 400;
 }
 
 h3,
 .h3 {
 	font-size: var(--#{$prefix}h3-font-size);
+	font-weight: 400;
 }
 
 
 p {
 	margin-top: 0;
 	margin-bottom: 1rem;
+}
+
+strong{
+	color: var(--#{$prefix}strong-font-color);
 }
 
 a {
@@ -42,9 +48,12 @@ a {
 		color: var(--#{$prefix}link-colour-hover);
 		text-decoration: underline;
 	}
-
-	&:visited {
-		color: var(--#{$prefix}link-colour);
+	&.active{
+		color: var(--#{$prefix}link-colour-hover) !important;
 	}
+
+	// &:visited {
+	// 	color: var(--#{$prefix}link-colour-hover);
+	// }
 
 }

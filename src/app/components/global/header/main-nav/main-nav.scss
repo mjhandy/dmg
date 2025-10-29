@@ -37,9 +37,6 @@
 .nav{
   &-link{
     font-size: 2rem;
-    &.active{
-      color: var(--dmg-link-colour-hover) !important;
-    }
     &:hover{
       color: var(--dmg-link-colour-hover);
       border-bottom: 5px solid var(--dmg-link-colour-hover);

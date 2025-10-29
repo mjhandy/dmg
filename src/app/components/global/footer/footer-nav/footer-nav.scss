@@ -1,3 +1,5 @@
+@import 'componentInclude';
+
 ul{
   display: flex;
   flex-flow: row;
@@ -5,10 +7,16 @@ ul{
   margin: 0;
   padding: 0;
   list-style: none;
-  width: 75%;
+  width: 100%;
+  @include media-breakpoint-up(lg){
+    width: 75%;
+  }
   li{
     margin: 0;
     padding: 0;
     flex: 0 0 50%;
+    a{
+      font-weight: 700;
+    }
   }
 }
