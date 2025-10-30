@@ -4,8 +4,8 @@
 .progress{
   width: 100%;
   &-bar{
-    width: 5%;
-    height: 1px;
+    width: 0;
+    height: 3px;
     background-color: map-get($dmgColours, orange );
   }
 }
