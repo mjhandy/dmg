@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 
-
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 import { MatIconRegistry, MatIconModule } from '@angular/material/icon';
 
+import { ReadOnRouteChange } from './components/wcag/read-on-route-change/read-on-route-change';
+import { SkipToMain } from './components/wcag/skip-to-main/skip-to-main';
 import { Header } from './components/global/header/header';
 import { Footer } from './components/global/footer/footer';
 
@@ -14,7 +15,13 @@ import { filter, map } from 'rxjs';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MatIconModule, Header, Footer],
+  imports: [
+    RouterOutlet, 
+    MatIconModule, 
+    ReadOnRouteChange,
+    SkipToMain,
+    Header, 
+    Footer],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
