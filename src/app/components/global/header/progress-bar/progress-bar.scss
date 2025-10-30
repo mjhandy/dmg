@@ -1,0 +1,11 @@
+@import 'componentInclude';
+
+
+.progress{
+  width: 100%;
+  &-bar{
+    width: 5%;
+    height: 1px;
+    background-color: map-get($dmgColours, orange );
+  }
+}

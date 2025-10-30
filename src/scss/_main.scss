@@ -30,3 +30,11 @@ footer {
   background: var(--web-gray-900);
   min-height: 100px;
 }
+
+
+header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: $white;
+}
