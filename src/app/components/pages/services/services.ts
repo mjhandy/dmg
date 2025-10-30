@@ -9,5 +9,5 @@ import { HeroBanner } from '../../global/hero-banner/hero-banner';
   styleUrl: './services.scss'
 })
 export class Services {
-parentComp = "page-services";
+  parentComp = "page-services";
 }
