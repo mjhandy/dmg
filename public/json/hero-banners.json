@@ -1,0 +1,12 @@
+{
+  "home": {
+    "h1": "this is heading one",
+    "h2": "this is heading three",
+    "position": "p1"
+  },
+  "success": {
+    "h1": "this is heading one",
+    "h2": "this is heading three",
+    "position": "p1"
+  }
+}
