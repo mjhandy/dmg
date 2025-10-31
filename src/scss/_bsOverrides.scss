@@ -83,7 +83,11 @@ $font-base-weight: 400;
 
 /// Base line height
 /// @group tv
-$line-height-base: 1.5 !default; // this can only have a REM unit, PX will cause an error
+$line-height-base: 1.5; // this can only have a REM unit, PX will cause an error
+
+/// Base Heading Line Height
+/// @group tv
+$line-height-heading: 1.2;
 
 /// Base font colour
 /// @group tv

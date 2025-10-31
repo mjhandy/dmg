@@ -8,9 +8,11 @@ h3,
 	font-optical-sizing: auto;
 	font-style: normal;
 	font-weight: 200;
+	line-height: var(--#{$prefix}line-height-heading);
 	margin-top: 0;
 	margin-bottom: 0.5rem;
 	color: map-get($dmgColours, blue)
+
 }
 
 h1,

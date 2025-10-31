@@ -1,9 +1,19 @@
 <div class="heroBanner p-0 {{ parent }}" *ngIf="banners[parent]">
   <div class="heroBanner-image">
-    <img src="hero-banners/{{ banners[parent].bgImage }}" width="100%">
+    <picture>
+      <!-- image should be 480 x 320 -->
+      <source media="(max-width:767px)" srcset="hero-banners/mobile/{{ banners[parent].bgImageMobile }}">
+      <!-- image should be 1920 x 600 -->
+      <source media="(min-width:768px)" srcset="hero-banners/desktop/{{ banners[parent].bgImageDesktop }}">      
+      <img src="hero-banners/desktop/{{ banners[parent].bgImageDesktop }}" width="100%" alt="">
+    </picture>
+
   </div>
   <div class="heroBanner-copy side-{{ banners[parent].position }}">
-    <h1>{{ banners[parent].h1 }}</h1>
-    <h2>{{ banners[parent].h2 }}</h2>
+    <h1 [innerHTML]=" banners[parent].h1 "></h1>
+    @if ( banners[parent].h2 ){
+    <h2 [innerHTML]="banners[parent].h2"></h2>
+    }
+
   </div>
 </div>

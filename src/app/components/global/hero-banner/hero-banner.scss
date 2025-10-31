@@ -5,10 +5,11 @@
 
   &-copy {
     position: absolute;
-    z-index: 5;
-    width: 40%;
-    top: 25px;
-    padding: 25px;
+    z-index: 5;    
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    padding: 10px;
     background: rgba(255, 255, 255, 0.025);
     /* Semi-transparent background */
     backdrop-filter: blur(3px) saturate(180%);
@@ -20,21 +21,41 @@
     box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2),
       inset 0 4px 20px rgba(255, 255, 255, 0.3);
 
+    @include media-breakpoint-up(lg) {
+      width: 40%;
+      top: 25px;
+      left: unset;
+      right: unset;
+      padding: 15px;
+    }
+
     /* Depth and glow */
 
     /// font colours
-    h1, h2, p{
+    h1,
+    h2 {
       color: var(--dmg-baseColour-white);
-      // margin: 0;
       font-weight: 500;
       line-height: 1.2;
+      text-shadow: 4px 2px 5px var(--dmg-baseColour-blue);
     }
+
+    h2 {
+      margin: 0;
+    }
+
     &.side {
       &-left {
-        left: 25px;
+        @include media-breakpoint-up(lg) {
+          left: 25px;
+        }
+
       }
-      &-right{
-        right: 25px;
+
+      &-right {
+        @include media-breakpoint-up(lg) {
+          right: 25px;
+        }
       }
     }
   }
