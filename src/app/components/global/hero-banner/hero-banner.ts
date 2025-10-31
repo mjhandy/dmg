@@ -1,10 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
-
-
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-hero-banner',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './hero-banner.html',
   styleUrl: './hero-banner.scss'
 })

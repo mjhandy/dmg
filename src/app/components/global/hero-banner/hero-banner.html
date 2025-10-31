@@ -1,5 +1,9 @@
-<div class="hero-banner p-0 {{ parent }}" >
-  <div class="bgImage">
-    <img src="hero-banners/castle-loch-bridge.webp" width="100%">
+<div class="heroBanner p-0 {{ parent }}" *ngIf="banners[parent]">
+  <div class="heroBanner-image">
+    <img src="hero-banners/{{ banners[parent].bgImage }}" width="100%">
+  </div>
+  <div class="heroBanner-copy side-{{ banners[parent].position }}">
+    <h1>{{ banners[parent].h1 }}</h1>
+    <h2>{{ banners[parent].h2 }}</h2>
   </div>
 </div>

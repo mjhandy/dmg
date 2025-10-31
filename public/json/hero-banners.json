@@ -1,12 +1,19 @@
 {
   "home": {
-    "h1": "this is heading one",
-    "h2": "this is heading three",
-    "position": "p1"
+    "bgImage": "castle-loch-bridge.webp",
+    "h1": "Digital Visibility Meets Inclusive Design",
+    "h2": "SEO performance and WCAG compliance, nified for impact.",
+    "position": "left"
   },
-  "success": {
-    "h1": "this is heading one",
-    "h2": "this is heading three",
-    "position": "p1"
+  "services": {
+    "bgImage": "train-over-bridge.webp",
+    "h1": "What We Do",
+    "h2": "We don’t just build websites.",
+    "position": "left"
+  },
+  "about":{
+    "bgImage" : "sun-rays-over-loch.webp",
+    "h1": "Who We Are",
+    "position": "left"
   }
 }
