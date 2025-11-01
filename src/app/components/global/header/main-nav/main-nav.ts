@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Logo } from '../logo/logo';
 import { RouterModule, Router } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
+
+
 
 
 @Component({
@@ -11,6 +13,9 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './main-nav.scss'
 })
 export class MainNav {
+
+  @ViewChild('closeButton') closeButton: ElementRef<HTMLElement> | undefined
+
   routes: {
     path: string;
     title: string;
@@ -32,4 +37,12 @@ export class MainNav {
         label: route.data!['label']
       }));
   }
+
+  closeMenu(){
+    console.debug('close menu');
+    if (!this.closeButton) return;
+      let el: HTMLElement = this.closeButton.nativeElement;
+    el.click();
+  }
+
 }

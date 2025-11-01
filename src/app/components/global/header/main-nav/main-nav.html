@@ -7,7 +7,7 @@
   <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
     <div class="offcanvas-header">
       <h3 id="offcanvasNavbarLabel">Dundee Media Group</h3>
-      <button type="button" class="btn btn-icon" data-bs-dismiss="offcanvas" aria-label="Close">
+      <button type="button" class="btn btn-icon" data-bs-dismiss="offcanvas" aria-label="Close" #closeButton>
         <mat-icon>close</mat-icon>
       </button>
     </div>
@@ -15,7 +15,7 @@
       <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
         @for ( route of routes; track route.title ){
         <li class="nav-item">
-          <a [routerLink]="[route.path]" class="nav-link" routerLinkActive="active">{{ route.label }}</a>
+          <a [routerLink]="[route.path]" class="nav-link" routerLinkActive="active" (click)="closeMenu()">{{ route.label }}</a>
         </li>
         }
 
