@@ -12,7 +12,7 @@
   // background-color: map-get($dmgColours, white );
   &-header{
     padding: 15px 15px 0 15px;
-    justify-content: space-between;
+    justify-content: flex-end;
     h3{
       margin: 0;
     }
