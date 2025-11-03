@@ -1,10 +1,10 @@
 import { Component, Input } from '@angular/core';
-
+import { MatIconModule } from '@angular/material/icon';
 
 
 @Component({
   selector: 'app-testimonials',
-  imports: [],
+  imports: [MatIconModule],
   templateUrl: './testimonials.html',
   styleUrl: './testimonials.scss'
 })
