@@ -1,14 +1,14 @@
 <app-hero-banner parent="home"></app-hero-banner>
 <div class="container">
+
     <div class="row">
-        <div class="col-12">
-            <h1>Home Page Title</h1>
-            <h2>Home Page Subtitle</h2>
-        </div>
+      <div class="col-12">
+        <h2 class="first">Home page intro copy.</h2>
+      </div>
     </div>
     <div class="row">
       <div class="col-12">
-        <p>Home page intro copy.</p>
+        <app-testimonials [data]="review"></app-testimonials>
       </div>
     </div>
 </div>

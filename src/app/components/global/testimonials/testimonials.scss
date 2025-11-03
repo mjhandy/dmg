@@ -11,13 +11,33 @@ mat-icon{
   align-items: flex-start;
 }
 
+.quote{
+  color: var(--dmg-baseColour-orange);
+  font-size: 72px;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1;
+  &-left{
+    transform: scaleX(-1);
+    padding-top: 20px;
+  }
+  &-right{
+    align-items: flex-end;
+    padding-bottom: 20px;
+  }
+}
+
 .carousel{
+
   &-inner{
     min-height: 180px;
+    padding: 0 15px;
+
   }
   &-buttons{
     display: flex;
     justify-content: space-between;
+
   }
   &-control-prev,
   &-control-next{

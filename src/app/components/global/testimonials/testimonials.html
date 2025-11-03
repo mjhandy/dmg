@@ -1,13 +1,21 @@
 <div id="{{ silderID }}" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    @for ( review of data; track review; let i = $index){
-    <div class="carousel-item" [class.active]="i === 0">
-      <p class="copy">{{review.copy}}</p>
-      <p class="name">{{ review.name }},<br>{{ review.title }}</p>
+  <div class="d-flex d-100">
+    <div class="quote quote-left">
+      <mat-icon>format_quote</mat-icon>
     </div>
-    }
+    <div class="carousel-inner">
+      @for ( review of data; track review; let i = $index){
+      <div class="carousel-item" [class.active]="i === 0">
+        <p class="copy">{{review.copy}}</p>
+        <p class="name">{{ review.name }},<br>{{ review.title }}</p>
+      </div>
+      }
+    </div>
+    <div class="quote quote-right">
+      <mat-icon>format_quote</mat-icon>
+    </div>
   </div>
-  <div class="carousel-buttons">
+  <div class="carousel-buttons w-100">
     <button class="carousel-control-prev" type="button" attr.data-bs-target="#{{ silderID }}" data-bs-slide="prev">
       <mat-icon>chevron_left</mat-icon>
       <span class="visually-hidden">Previous</span>
