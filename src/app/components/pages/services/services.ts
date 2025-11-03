@@ -4,11 +4,13 @@ import { HeroBanner } from '../../global/hero-banner/hero-banner';
 import { TestimonialsService } from '../../../services/testimonials';
 import { Testimonials } from '../../global/testimonials/testimonials';
 
+import { OnPageImage } from '../../../services/on-page-images.service';
+import { BodyImage } from "../../global/body-image/body-image";
 
 
 @Component({
   selector: 'app-services',
-  imports: [HeroBanner, Testimonials],
+  imports: [HeroBanner, Testimonials, BodyImage],
   templateUrl: './services.html',
   styleUrl: './services.scss'
 })

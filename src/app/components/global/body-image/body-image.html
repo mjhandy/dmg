@@ -1,0 +1,24 @@
+<div class="body-image" [class.loading]="loading | async">
+  <!-- Show loading spinner when loading -->
+  <div *ngIf="loading | async" class="body-image__loader">
+    Loading...
+  </div>
+
+  <!-- Show image when available -->
+
+<div *ngIf="currentImage$ | async as image">
+  <picture>
+    <source [srcset]="image.desktopImg" media="(min-width: 768px)">
+    <img [src]="image.mobileImg" [alt]="image.altTag" class="body-image__img" [class.published]="image.published">
+  </picture>
+</div>
+
+
+
+  <!-- Show error if no image found -->
+  @if (!(currentImage$ | async) && !(loading | async)){
+  <div class="body-image__error">
+    No image found
+  </div>
+  }
+</div>
