@@ -23,6 +23,8 @@
     height: auto;
     display: block;
     border-radius: 10px;
+    outline: 5px solid var(--dmg-baseColour-orange);
+    outline-offset: -15px; /* Set the offset */
 
   }
 
