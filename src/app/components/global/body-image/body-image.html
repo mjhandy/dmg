@@ -12,7 +12,7 @@
   <picture>
     <source [srcset]="image.mobileImg" media="(max-width:767px)">
     <source [srcset]="image.desktopImg" media="(min-width: 768px)">
-    <img [src]="image.mobileImg" [alt]="image.altTag" class="body-image__img" [class.published]="image.published">
+    <img [src]="image.mobileImg" [alt]="image.altTag" class="body-image__img" [class.published]="image.published" loading="lazy">
   </picture>
 </div>
 
