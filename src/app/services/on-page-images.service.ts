@@ -45,7 +45,7 @@ export class OnPageImagesService {
    */
   getImageById(id: string): Observable<OnPageImage | undefined> {
     return this.imagesCache$.pipe(
-      map(images => images.find(img => img._id === id))
+      map(images => images.find(img => img._id === id && img.published))
     );
   }
 

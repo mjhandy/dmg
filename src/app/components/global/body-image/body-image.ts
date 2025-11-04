@@ -13,6 +13,8 @@ import { Observable, BehaviorSubject, switchMap } from 'rxjs';
 export class BodyImage implements OnInit {
   // Optional: pass a specific image ID to load
   @Input() imageId?: string;
+  // custom css
+  @Input() css: string = '';
   
   // Observable for the currently displayed image
   currentImage$?: Observable<OnPageImage | undefined>;

@@ -1,13 +1,16 @@
 <div class="body-image" [class.loading]="loading | async">
   <!-- Show loading spinner when loading -->
-  <div *ngIf="loading | async" class="body-image__loader">
+  @if (loading | async){
+  <div class="body-image__loader">
     Loading...
   </div>
+  } 
+
 
   <!-- Show image when available -->
-
-<div *ngIf="currentImage$ | async as image">
+<div *ngIf="currentImage$ | async as image" class="{{css}}" attr.attr-id="{{ image._id }}">
   <picture>
+    <source [srcset]="image.mobileImg" media="(max-width:767px)">
     <source [srcset]="image.desktopImg" media="(min-width: 768px)">
     <img [src]="image.mobileImg" [alt]="image.altTag" class="body-image__img" [class.published]="image.published">
   </picture>

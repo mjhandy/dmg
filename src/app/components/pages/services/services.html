@@ -1,7 +1,7 @@
 <app-hero-banner parent="services"></app-hero-banner>
 <div class="container">
   <div class="row">
-    <div class="col-12 col-lg-7">
+    <div class="col-12 col-lg-8">
 
       <h2 class="first">We don’t just build websites. We craft digital experiences that breathe, speak, and
         connect.</h2>
@@ -17,16 +17,19 @@
       </ul>
       <p>The result: Higher rankings, more qualified traffic, and measurable growth.</p>
       <h2>Accessibility as a Creative Superpower</h2>
+      
       <p>Accessibility isn’t a box to tick—it’s a design philosophy. When your site works for everyone, it works better
         for <i>everyone</i>.</p>
-        <app-body-image imageId="3"></app-body-image>
+        
       <ul>
         <li><strong>Audits with empathy</strong> – We test like real humans, not just machines.</li>
         <li><strong>Design without barriers</strong> – Color, contrast, and flow that invite every visitor in.</li>
         <li><strong>Code that cares</strong> – Clean, compliant, and future-ready.</li>
         <li><strong>Culture shift</strong> – Training your team to see accessibility as creativity, not constraint.</li>
       </ul>
+            <app-body-image imageId="1" [css]="''"></app-body-image>
       <p>The result: A digital space that feels open, human, and beautifully inclusive.</p>
+
       <h2>Experience That Moves People</h2>
       <p>Design is more than pixels—it’s how your brand makes people feel. We shape experiences that are intuitive,
         emotional, and unforgettable.</p>
@@ -39,8 +42,8 @@
       <p>The result: A website that doesn’t just work, <i>it works wonders.</i></p>
       
     </div> 
-    <div class="col-12 col-lg-5 d-flex align-items-center">
-      <app-testimonials [data]="review"></app-testimonials>
+    <div class="col-12 col-lg-4 d-flex align-items-center">
+      <app-testimonials [data]="review" ></app-testimonials>
     </div>
   </div>
 </div>
