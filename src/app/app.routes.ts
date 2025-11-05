@@ -11,7 +11,7 @@ export const routes: Routes = [
     loadComponent: () => import('./components/pages/home/home').then(m => m.Home),
     title: 'Home Page | Dundee Media Group',
     data: {
-      description: 'This is the Web Prototype home page',
+      description: 'Dundee Media Group. Where Digital Visability Meets Inclusive Design.',
       label: 'Home',
       showInMain: false,
       showInFooter: true,
