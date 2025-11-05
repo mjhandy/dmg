@@ -23,6 +23,7 @@
 }
 
 .navbar{
+  background-color: var(--dmg-baseColour-white);
   &-nav{
     padding: 0;
     margin: 0;
@@ -37,6 +38,7 @@
 .nav{
   &-link{
     font-size: 2rem;
+    text-decoration: none;
     &:hover{
       color: var(--dmg-link-colour-hover);
       border-bottom: 5px solid var(--dmg-link-colour-hover);

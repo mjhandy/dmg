@@ -48,7 +48,9 @@ strong{
 
 a {
 	color: var(--#{$prefix}link-colour);
-	text-decoration: none;
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	text-decoration-color: var(--#{$prefix}link-colour-hover);
 	transition: color 0.2s ease-in-out;
 	&:hover{
 		color: var(--#{$prefix}link-colour-hover);

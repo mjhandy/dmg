@@ -1,0 +1,18 @@
+@import 'componentInclude';
+
+.skipToMain{
+  width: 25%;
+  margin: 25px auto;
+  border: 5px solid var(--dmg-baseColour-orange);
+
+  background-color: var(--dmg-baseColour-white);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  transform: translateY(-150%);
+  &:focus{
+    transform: translateY(10%);
+  }
+}
