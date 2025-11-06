@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Logo } from '../logo/logo';
 import { RouterModule, Router } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
@@ -8,7 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-main-nav',
-  imports: [Logo, MatIconModule, RouterModule],
+  imports: [Logo, MatIconModule, RouterModule, CommonModule],
   templateUrl: './main-nav.html',
   styleUrl: './main-nav.scss'
 })

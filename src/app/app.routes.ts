@@ -53,7 +53,33 @@ export const routes: Routes = [
       showInMain: true,
       showInFooter: true,
       showInSiteMap: true,
-    }
+    },
+    children: [
+      {
+        path: 'project-a',
+        loadComponent: () => import('./components/pages/case-studies/case-studies').then(m => m.CaseStudies),
+        title: 'Project A | Dundee Media Group',
+        data: {
+          description: 'Details about Project A.',
+          label: 'Project A',
+          showInMain: false,
+          showInFooter: false,
+          showInSiteMap: true,
+        }
+      },
+      {
+        path: 'project-b',
+        loadComponent: () => import('./components/pages/case-studies/case-studies').then(m => m.CaseStudies),
+        title: 'Project B | Dundee Media Group',
+        data: {
+          description: 'Details about Project B.',
+          label: 'Project B',
+          showInMain: false,
+          showInFooter: false,
+          showInSiteMap: true,
+        }
+      }
+    ]
   },
   {
     path: 'contact-us',

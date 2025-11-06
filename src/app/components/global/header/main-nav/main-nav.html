@@ -12,10 +12,30 @@
     </div>
     <div class="offcanvas-body">
       <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-        @for ( route of routes; track route.title ){
-        <li class="nav-item">
-          <a [routerLink]="[route.path]" class="nav-link" routerLinkActive="active" (click)="closeMenu()">{{ route.label }}</a>
-        </li>
+        @for ( route of routes; track route.title ) {
+          @if (route.label !== 'Case Studies') {
+            <li class="nav-item">
+              <a [routerLink]="[route.path]" class="nav-link" routerLinkActive="active" (click)="closeMenu()">{{ route.label }}</a>
+            </li>
+          }
+          @if (route.label === 'Case Studies') {
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="caseStudiesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {{ route.label }}
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="caseStudiesDropdown">
+                <li>
+                  <a [routerLink]="['/case-studies']" class="dropdown-item" (click)="closeMenu()">Overview</a>
+                </li>
+                <li>
+                  <a [routerLink]="['/case-studies/project-a']" class="dropdown-item" (click)="closeMenu()">Project A</a>
+                </li>
+                <li>
+                  <a [routerLink]="['/case-studies/project-b']" class="dropdown-item" (click)="closeMenu()">Project B</a>
+                </li>
+              </ul>
+            </li>
+          }
         }
 
       </ul>
