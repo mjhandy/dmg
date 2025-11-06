@@ -1,3 +1,4 @@
+import { L } from '@angular/cdk/keycodes';
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
@@ -64,6 +65,31 @@ export const routes: Routes = [
       showInMain: true,
       showInFooter: true,
       showInSiteMap: true,
+    }
+  },
+  {
+    path: 'terms-and-conditions',
+    loadComponent: () => import('./components/pages/terms/terms').then(m => m.Terms),
+    title: 'Terms and Conditions | Dundee Media Group',
+    data: {
+      description: "Dundee Media Group's Terms and Conditions",
+      label: 'Terms',
+      showInMain: false,
+      showInFooter: false,
+      showInSiteMap: true
+
+    }
+  },
+  {
+    path: 'privacy-policy',
+    loadComponent: () => import('./components/pages/privacy/privacy').then(m => m.Privacy),
+    title: 'Our Privacy Policy | Dundee Media Group',
+    data:{
+      description: "Dundee Media Group's Privacy Policy",
+      label: 'Privacy',
+      showInMain: false,
+      showInFooter: false,
+      showInSiteMap: true
     }
   },
   {
