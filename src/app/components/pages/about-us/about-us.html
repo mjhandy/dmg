@@ -1,2 +1,27 @@
 <app-hero-banner parent="about"></app-hero-banner>
-<p>about-us works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-8">
+      <h2 class="first">Building Better Digital Experiences That Last</h2>
+      <p>For over 25 years, we've partnered with clients to craft smarter, more accessible digital solutions—right from
+        our home base in Nova Scotia, Canada. From SEO audits and WCAG 2.2-compliant design to ongoing maintenance,
+        analytics, and performance reporting, we help organizations stay sharp, visible, and future-ready in a
+        fast-moving digital world.</p>
+      <p>We specialize in:</p>
+      <ul>
+        <li><strong>SEO strategies and audits</strong> that boost visibility, uncover opportunities, and drive results
+        </li>
+        <li><strong>WCAG 2.2-compliant design</strong> for inclusive, accessible experiences that meet the latest
+          standards</li>
+        <li><strong>Ongoing maintenance and updates</strong> to keep your site secure, fast, and future-ready</li>
+        <li><strong>Analytics implementation and reporting</strong> that turns data into decisions. Track user behavior,
+          measure performance, and uncover insights that fuel growth</li>
+      </ul>
+      <p>From small businesses to enterprise teams, we tailor solutions that meet your goals and grow with you. Let’s
+        build something that works beautifully for everyone.</p>
+    </div>
+    <div class="col-12 col-lg-4 d-flex align-items-center">
+      <app-testimonials [data]="review"></app-testimonials>
+    </div>
+  </div>
+</div>

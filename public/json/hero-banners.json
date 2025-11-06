@@ -16,7 +16,8 @@
   "about":{
     "bgImageDesktop" : "sun-rays-over-loch.webp",
     "bgImageMobile" : "sun-rays-over-loch.webp",
-    "h1": "Who We Are",
+    "h1": "Smarter Websites Start Here",
+    "h2":"From visibility to accessibility, we deliver results through audits, analytics, and expert care.",
     "position": "left"
   }
 }
