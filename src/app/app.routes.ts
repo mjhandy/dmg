@@ -17,6 +17,11 @@ export const routes: Routes = [
       showInMain: false,
       showInFooter: true,
       showInSiteMap: true,
+      h1: 'Digital Visibility Meets <br>Inclusive Design',
+      h2: 'SEO performance and WCAG compliance, minified for impact.',
+      desktopImage: 'castle-loch-bridge.webp',
+      mobileImage: 'castle-loch-bridge.webp',
+      headerPostion: 'left'
     }
   },
   {
@@ -29,6 +34,10 @@ export const routes: Routes = [
       showInMain: true,
       showInFooter: true,
       showInSiteMap: true,
+      h1: 'What We Do',
+      desktopImage: 'train-over-bridge.webp',
+      mobileImage: 'train-over-bridge.webp',
+      headerPostion: 'left'
     }
   },
   {
@@ -41,6 +50,11 @@ export const routes: Routes = [
       showInMain: true,
       showInFooter: true,
       showInSiteMap: true,
+      h1: 'Smarter Websites Start Here',
+      h2: 'From visibility to accessibility, we deliver results through audits, analytics, and expert care.',
+      desktopImage: 'sun-rays-over-loch.webp',
+      mobileImage: 'sun-rays-over-loch.webp',
+      headerPostion: 'left'
     }
   },
   {
@@ -53,6 +67,11 @@ export const routes: Routes = [
       showInMain: true,
       showInFooter: true,
       showInSiteMap: true,
+      h1: 'Digital Success for Every User, Every Search, Every Click',
+      h2: 'Inclusive, visible, and measurable results.',
+      desktopImage: 'train-over-bridge.webp',
+      mobileImage: 'train-over-bridge.webp',
+      headerPostion: 'left'
     },
     children: [
 
@@ -66,6 +85,11 @@ export const routes: Routes = [
           showInMain: false,
           showInFooter: false,
           showInSiteMap: true,
+          h1: 'Case study: Solving usability and accessibility challenges',
+          h2: 'How Dundee Media Group improved UX and met WCAG standards—validated with Google Analytics.',
+          desktopImage: 'train-over-bridge.webp',
+          mobileImage: 'train-over-bridge.webp',
+          headerPostion: 'left'
         }
       }
     ]
@@ -80,6 +104,11 @@ export const routes: Routes = [
       showInMain: true,
       showInFooter: true,
       showInSiteMap: true,
+      h1: 'What We Do',
+      h2: 'We don’t just build websites.',
+      desktopImage: 'train-over-bridge.webp',
+      mobileImage: 'train-over-bridge.webp',
+      headerPostion: 'left'
     }
   },
   {
@@ -91,7 +120,11 @@ export const routes: Routes = [
       label: 'Terms',
       showInMain: false,
       showInFooter: false,
-      showInSiteMap: true
+      showInSiteMap: true,
+      h1: 'Terms & Conditions',
+      desktopImage: 'train-over-bridge.webp',
+      mobileImage: 'train-over-bridge.webp',
+      headerPostion: 'left'
 
     }
   },
@@ -99,12 +132,16 @@ export const routes: Routes = [
     path: 'privacy-policy',
     loadComponent: () => import('./components/pages/privacy/privacy').then(m => m.Privacy),
     title: 'Our Privacy Policy | Dundee Media Group',
-    data:{
+    data: {
       description: "Dundee Media Group's Privacy Policy",
       label: 'Privacy',
       showInMain: false,
       showInFooter: false,
-      showInSiteMap: true
+      showInSiteMap: true,
+      h1: 'Privacy Policy',
+      desktopImage: 'train-over-bridge.webp',
+      mobileImage: 'train-over-bridge.webp',
+      headerPostion: 'left'
     }
   },
   {
@@ -117,6 +154,11 @@ export const routes: Routes = [
       showInMain: false,
       showInFooter: true,
       showInSiteMap: false,
+      h1: 'Site Map',
+      h2: 'We don’t just build websites.',
+      desktopImage: 'train-over-bridge.webp',
+      mobileImage: 'train-over-bridge.webp',
+      headerPostion: 'left'
     }
   },
 ];
