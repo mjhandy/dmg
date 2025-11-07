@@ -25,6 +25,9 @@
                 {{ route.label }}
               </a>
               <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" (click)="closeMenu()" [routerLink]="[route.path]">Overview</a>
+                </li>
                 @for (child of route.children; track child.label) {
                   <li>
                     <a class="dropdown-item" (click)="closeMenu()" [routerLink]="[route.path, child.path]">{{ child.label }}</a>

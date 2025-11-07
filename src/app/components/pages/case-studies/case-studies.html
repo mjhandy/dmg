@@ -1,10 +1,12 @@
 <app-hero-banner parent="caseStudies"></app-hero-banner>
-<div class="container">
-  <div class="row">
-    <div class="col-12 col-lg-8">
-      <h2 class="first">
-        Driving Digital Success Through SEO, Accessibility, and Usability
-      </h2>
+
+@if (showOverview) {
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-8">
+        <h2 class="first">
+          Driving Digital Success Through SEO, Accessibility, and Usability
+        </h2>
       <p>At <strong>Dundee Media Group</strong>, we believe that every digital experience should be discoverable, inclusive, and
         effortless to use. Our case studies highlight how we’ve partnered with clients to overcome challenges in search
         engine optimisation (SEO), accessibility compliance (WCAG), and usability—while also implementing robust Google
@@ -67,3 +69,13 @@
     </div>
   </div>
 </div>
+
+} @else {
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-8">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+}
