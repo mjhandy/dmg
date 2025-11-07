@@ -12,30 +12,28 @@
     </div>
     <div class="offcanvas-body">
       <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-        @for ( route of routes; track route.title ) {
-          @if (route.label !== 'Case Studies') {
+        @for (route of routes; track route.title) {
+          @if (!route.children) {
             <li class="nav-item">
               <a [routerLink]="[route.path]" class="nav-link" routerLinkActive="active" (click)="closeMenu()">{{ route.label }}</a>
             </li>
           }
-          @if (route.label === 'Case Studies') {
+
+          @if (route.children) {
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="caseStudiesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="{{ route.path }}Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 {{ route.label }}
               </a>
-              <ul class="dropdown-menu" aria-labelledby="caseStudiesDropdown">
-                <li>
-                  <a [routerLink]="['/case-studies']" class="dropdown-item" (click)="closeMenu()">Overview</a>
-                </li>
-                <li>
-                  <a [routerLink]="['/case-studies/solving-usability-and-accessibility-challenges']" class="dropdown-item" (click)="closeMenu()">Solving usability and accessibility challenges</a>
-                </li>
-
+              <ul class="dropdown-menu">
+                @for (child of route.children; track child.label) {
+                  <li>
+                    <a class="dropdown-item" (click)="closeMenu()" [routerLink]="[route.path, child.path]">{{ child.label }}</a>
+                  </li>
+                }
               </ul>
             </li>
           }
         }
-
       </ul>
     </div>
   </div>

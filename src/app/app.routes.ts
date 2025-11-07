@@ -55,13 +55,14 @@ export const routes: Routes = [
       showInSiteMap: true,
     },
     children: [
+
       {
-        path: 'project-a',
-        loadComponent: () => import('./components/pages/case-studies/case-studies').then(m => m.CaseStudies),
+        path: 'solving-usability',
+        loadComponent: () => import('./components/pages/case-studies/solving-usability/solving-usability').then(m => m.SolvingUsability),
         title: 'Project A | Dundee Media Group',
         data: {
           description: 'Details about Project A.',
-          label: 'Project A',
+          label: 'Solving Usability',
           showInMain: false,
           showInFooter: false,
           showInSiteMap: true,
