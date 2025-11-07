@@ -74,19 +74,35 @@ export const routes: Routes = [
       headerPostion: 'left'
     },
     children: [
-
       {
         path: 'solving-usability',
         loadComponent: () => import('./components/pages/case-studies/solving-usability/solving-usability').then(m => m.SolvingUsability),
-        title: 'Project A | Dundee Media Group',
+        title: 'Case study: Solving usability and accessibility challenges | Dundee Media Group',
         data: {
-          description: 'Details about Project A.',
-          label: 'Solving Usability',
+          description: 'How Dundee Media Group improved UX and met WCAG standards—validated with Google Analytics.',
+          label: 'Solving Usability and Accessibility Challenges',
           showInMain: false,
           showInFooter: false,
           showInSiteMap: true,
-          h1: 'Case study: Solving usability and accessibility challenges',
+          h1: 'Case Study: Solving Usability and Accessibility Challenges',
           h2: 'How Dundee Media Group improved UX and met WCAG standards—validated with Google Analytics.',
+          desktopImage: 'train-over-bridge.webp',
+          mobileImage: 'train-over-bridge.webp',
+          headerPostion: 'left'
+        }
+      },
+            {
+        path: 'rejunvenating-our-digital-experience',
+        loadComponent: () => import('./components/pages/case-studies/rejuvenating-digital-experience/rejuvenating-digital-experience').then(m => m.RejuvenatingDigitalExperience),
+        title: 'Case Study: Rejuvenating Our Digital Experience | Dundee Media Group',
+        data: {
+          description: 'How Dundee Media Group Helped Our Family-Owned Spa Thrive Online',
+          label: 'Rejuvenating Our Digital Experience',
+          showInMain: false,
+          showInFooter: false,
+          showInSiteMap: true,
+          h1: 'Case Study: Rejuvenating Our Digital Experience',
+          h2: 'How Dundee Media Group Helped Our Family-Owned Spa Thrive Online',
           desktopImage: 'train-over-bridge.webp',
           mobileImage: 'train-over-bridge.webp',
           headerPostion: 'left'

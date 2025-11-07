@@ -90,4 +90,7 @@
     --#{$prefix}dropdown-header-padding-x: #{$dropdown-header-padding-x};
     --#{$prefix}dropdown-header-padding-y: #{$dropdown-header-padding-y};
   }
+  &-item{
+    font-size: 1.5rem;
+  }
 }
