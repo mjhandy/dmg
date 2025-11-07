@@ -182,6 +182,13 @@ $navbar-toggler-font-size: 1.75rem;
 $offcanvas-bg-color: map-get($dmgColours, white );
 $offcanvas-horizontal-width: 100vw;
 $offcanvas-color: map-get($dmgColours, black );
+
+// dropdown
+$dropdown-bg-color: map-get($dmgColours, white );
+$drowdown-border-color: transparent;
+$dropdown-border-radius: 0;
+$dropdown-border-width: 0;
+
 /* custom variable values:END */
 
 /* Utilities */

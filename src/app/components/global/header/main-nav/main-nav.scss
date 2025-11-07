@@ -6,41 +6,49 @@
 @import 'custom/buttons';
 
 
+:root {
+  --dmg-dropdown-bg: var(--var-dmg-baseColor-white);
+}
 
 
+.offcanvas {
 
-.offcanvas{
   // background-color: map-get($dmgColours, white );
-  &-header{
+  &-header {
     padding: 15px 15px 0 15px;
     justify-content: flex-end;
-    h3{
+
+    h3 {
       margin: 0;
     }
-    .btn{
+
+    .btn {
       color: var(--dmg-baseColour-orange)
     }
   }
 }
 
-.navbar{
+.navbar {
   background-color: var(--dmg-baseColour-white);
-  &-nav{
+
+  &-nav {
     padding: 0;
     margin: 0;
   }
-  &-toggler{
+
+  &-toggler {
     position: absolute;
     right: 0;
     color: var(--dmg-baseColour-orange);
   }
 }
 
-.nav{
-  &-link{
+.nav {
+  &-link {
     font-size: 2rem;
     text-decoration: none;
-    &:hover{
+
+    &:hover {
       color: var(--dmg-link-colour-hover);
       border-bottom: 5px solid var(--dmg-link-colour-hover);
       text-decoration: none;
@@ -49,3 +57,37 @@
 }
 
 
+.dropdown {
+  &-menu {
+    @include media-breakpoint-up(lg){
+      margin-top: 5px;
+    }
+    // dropdown
+    --#{$prefix}dropdown-zindex: #{$zindex-dropdown};
+    --#{$prefix}dropdown-min-width: #{$dropdown-min-width};
+    --#{$prefix}dropdown-padding-x: #{$dropdown-padding-x};
+    --#{$prefix}dropdown-padding-y: #{$dropdown-padding-y};
+    --#{$prefix}dropdown-spacer: #{$dropdown-spacer};
+    @include rfs($dropdown-font-size, --#{$prefix}dropdown-font-size);
+    --#{$prefix}dropdown-color: #{$link-colour};
+    --#{$prefix}dropdown-bg: #{$dropdown-bg-color};
+    --#{$prefix}dropdown-border-color: #{$dropdown-border-color};
+    --#{$prefix}dropdown-border-radius: #{$dropdown-border-radius};
+    --#{$prefix}dropdown-border-width: #{$dropdown-border-width};
+    --#{$prefix}dropdown-inner-border-radius: #{$dropdown-inner-border-radius};
+    --#{$prefix}dropdown-divider-bg: #{$dropdown-divider-bg};
+    --#{$prefix}dropdown-divider-margin-y: #{$dropdown-divider-margin-y};
+    --#{$prefix}dropdown-box-shadow: #{$dropdown-box-shadow};
+    --#{$prefix}dropdown-link-color: #{$link-colour};
+    --#{$prefix}dropdown-link-hover-color: #{$link-colour-hover};
+    --#{$prefix}dropdown-link-hover-bg: #{$dropdown-link-hover-bg};
+    --#{$prefix}dropdown-link-active-color: #{$dropdown-link-active-color};
+    --#{$prefix}dropdown-link-active-bg: #{$dropdown-link-active-bg};
+    --#{$prefix}dropdown-link-disabled-color: #{$dropdown-link-disabled-color};
+    --#{$prefix}dropdown-item-padding-x: #{$dropdown-item-padding-x};
+    --#{$prefix}dropdown-item-padding-y: #{$dropdown-item-padding-y};
+    --#{$prefix}dropdown-header-color: #{$dropdown-header-color};
+    --#{$prefix}dropdown-header-padding-x: #{$dropdown-header-padding-x};
+    --#{$prefix}dropdown-header-padding-y: #{$dropdown-header-padding-y};
+  }
+}

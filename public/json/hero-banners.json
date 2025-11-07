@@ -13,11 +13,25 @@
     "h2": "We don’t just build websites.",
     "position": "left"
   },
-  "about":{
-    "bgImageDesktop" : "sun-rays-over-loch.webp",
-    "bgImageMobile" : "sun-rays-over-loch.webp",
+  "about": {
+    "bgImageDesktop": "sun-rays-over-loch.webp",
+    "bgImageMobile": "sun-rays-over-loch.webp",
     "h1": "Smarter Websites Start Here",
-    "h2":"From visibility to accessibility, we deliver results through audits, analytics, and expert care.",
+    "h2": "From visibility to accessibility, we deliver results through audits, analytics, and expert care.",
+    "position": "left"
+  },
+  "caseStudies": {
+    "bgImageDesktop": "sun-rays-over-loch.webp",
+    "bgImageMobile": "sun-rays-over-loch.webp",
+    "h1": "Digital Success for Every User, Every Search, Every Click",
+    "h2": "Inclusive, visible, and measurable results.",
+    "position": "left"
+  },
+    "caseStudies--solvingUsability": {
+    "bgImageDesktop": "sun-rays-over-loch.webp",
+    "bgImageMobile": "sun-rays-over-loch.webp",
+    "h1": "Case study: Solving usability and accessibility challenges",
+    "h2": "How Dundee Media Group improved UX and met WCAG standards—validated with Google Analytics.",
     "position": "left"
   }
 }

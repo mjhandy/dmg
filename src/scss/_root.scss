@@ -29,7 +29,8 @@
   --#{$prefix}navbar-active-color: #{$link-colour-focus};
   --#{$prefix}strong-font-color: #{$strong-colour};
 
-  
+
+
 
   // heading sizes
   @each $heading, $size in $heading {
