@@ -3,10 +3,12 @@
   --#{$prefix}white: #{$white};
   // blacks
   --#{$prefix}black: #{$black};
+
   // monochrome
   @each $color, $value in $monochrome {
     --#{$prefix}monochrome-#{$color}: #{$value};
   }
+
   // DMG Colours
   @each $color, $value in $dmgColours {
     --#{$prefix}baseColour-#{$color}: #{$value};

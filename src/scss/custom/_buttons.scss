@@ -52,8 +52,8 @@
   }
 
   &-textLink {
-    color: $blue;
-    text-decoration: $blue;
+    color: var(--dmg-baseColour-blue);
+    text-decoration-color: none;
   }
 
   &-icon {
