@@ -120,8 +120,8 @@ export const routes: Routes = [
           showInSiteMap: true,
           h1: 'Case Study: Turning Data into Direction',
           h2: 'How Dundee Media Group Helped a Small Manufacturing Firm Harness Google Analytics for Smarter Engagement',
-          desktopImage: 'web-design.webp',
-          mobileImage: 'web-design.webp',
+          desktopImage: 'laptop-data-graphs.webp',
+          mobileImage: 'laptop-data-graphs.webp',
           headerPostion: 'left'
         }
       }
