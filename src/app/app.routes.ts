@@ -86,8 +86,8 @@ export const routes: Routes = [
           showInSiteMap: true,
           h1: 'Case Study: Solving Usability and Accessibility Challenges',
           h2: 'How Dundee Media Group improved UX and met WCAG standards—validated with Google Analytics.',
-          desktopImage: 'train-over-bridge.webp',
-          mobileImage: 'train-over-bridge.webp',
+          desktopImage: 'accessability-computer-addon.webp',
+          mobileImage: 'accessability-computer-addon.webp',
           headerPostion: 'left'
         }
       },

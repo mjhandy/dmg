@@ -3,10 +3,10 @@
     <div class="heroBanner-image">
       <picture>
         <!-- image should be 480 x 320 -->
-        <source media="(max-width:767px)" srcset="hero-banners/mobile/{{ imgMobile ? imgMobile : (banners[parent] && banners[parent].bgImageMobile) }}">
+        <source media="(max-width:767px)" srcset="images/hero-banners/mobile/{{ imgMobile ? imgMobile : (banners[parent] && banners[parent].bgImageMobile) }}">
         <!-- image should be 1920 x 600 -->
-        <source media="(min-width:768px)" srcset="hero-banners/desktop/{{ imgDesktop ? imgDesktop : (banners[parent] && banners[parent].bgImageDesktop) }}">      
-        <img src="hero-banners/desktop/{{ imgDesktop ? imgDesktop : (banners[parent] && banners[parent].bgImageDesktop) }}" width="100%" alt="">
+        <source media="(min-width:768px)" srcset="images/hero-banners/desktop/{{ imgDesktop ? imgDesktop : (banners[parent] && banners[parent].bgImageDesktop) }}">      
+        <img src="images/hero-banners/desktop/{{ imgDesktop ? imgDesktop : (banners[parent] && banners[parent].bgImageDesktop) }}" width="100%" alt="">
       </picture>
 
     </div>
