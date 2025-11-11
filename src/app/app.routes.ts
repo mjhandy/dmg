@@ -103,8 +103,8 @@ export const routes: Routes = [
           showInSiteMap: true,
           h1: 'Case Study: Rejuvenating Our Digital Experience',
           h2: 'How Dundee Media Group Helped Our Family-Owned Spa Thrive Online',
-          desktopImage: 'train-over-bridge.webp',
-          mobileImage: 'train-over-bridge.webp',
+          desktopImage: 'web-design.webp',
+          mobileImage: 'web-design.webp',
           headerPostion: 'left'
         }
       }

@@ -27,18 +27,18 @@ export class HeroBanner implements OnInit, OnDestroy {
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
   async ngOnInit(): Promise<void> {
-    try {
-      const res = await fetch('/json/hero-banners.json');
-      if (!res.ok) throw new Error(`Failed to load hero banners: ${res.status}`);
-      const data = await res.json();
-      if (Array.isArray(data)) {
-        this.banners = Object.assign({}, ...data);
-      } else {
-        this.banners = data;
-      }
-    } catch (err) {
-      this.banners = {};
-    }
+    // try {
+    //   const res = await fetch('/json/hero-banners.json');
+    //   if (!res.ok) throw new Error(`Failed to load hero banners: ${res.status}`);
+    //   const data = await res.json();
+    //   if (Array.isArray(data)) {
+    //     this.banners = Object.assign({}, ...data);
+    //   } else {
+    //     this.banners = data;
+    //   }
+    // } catch (err) {
+    //   this.banners = {};
+    // }
 
     // initialize from current route and listen for navigation changes
     this.updateFromRoute(this.activatedRoute);

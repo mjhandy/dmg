@@ -61,6 +61,7 @@
   &-menu {
     @include media-breakpoint-up(lg){
       margin-top: 5px;
+      min-width: 420px;
     }
     // dropdown
     --#{$prefix}dropdown-zindex: #{$zindex-dropdown};
@@ -92,5 +93,7 @@
   }
   &-item{
     font-size: 1.5rem;
+    white-space: unset;
+
   }
 }

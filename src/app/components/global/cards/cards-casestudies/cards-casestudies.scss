@@ -5,3 +5,15 @@
 
 
 @import 'card';
+
+.card{
+  &-text{
+    a{
+      text-decoration: none;
+      mat-icon{
+        font-weight: 700;
+        height: 18px;
+      }
+    }
+  }
+}
