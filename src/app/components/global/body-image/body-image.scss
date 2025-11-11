@@ -1,14 +1,11 @@
 @import 'componentInclude';
+@import 'custom/images';
 
 .body-image {
   position: relative;
   width: 100%;
   max-width: 1368px;
 
-  &.loading {
-    opacity: 0.7;
-    pointer-events: none;
-  }
 
   &__loader {
     position: absolute;
@@ -19,12 +16,7 @@
   }
 
   &__img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 10px;
-    outline: 5px solid var(--dmg-baseColour-orange);
-    outline-offset: -15px; /* Set the offset */
+
 
   }
 

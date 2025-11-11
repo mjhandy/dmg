@@ -1,0 +1,21 @@
+.imgHolder{
+  &-loading{
+    opacity: 0.7;
+    pointer-events: none;
+  }
+  &-error{
+        padding: 1rem;
+    text-align: center;
+    background: #ffebee;
+    color: #c62828;
+    border-radius: 4px;
+  }
+  &-img{
+        width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    outline: 5px solid var(--dmg-baseColour-orange);
+    outline-offset: -15px; /* Set the offset */
+  }
+}

@@ -1,7 +1,7 @@
-<div class="body-image" [class.loading]="loading | async">
+<div class="body-image imgHolder" [class.loading]="loading | async">
   <!-- Show loading spinner when loading -->
   @if (loading | async){
-  <div class="body-image__loader">
+  <div class="imgHolder-loader">
     Loading...
   </div>
   } 
@@ -13,7 +13,7 @@
     <picture>
       <source [srcset]="image.mobileImg" media="(max-width:767px)">
       <source [srcset]="image.desktopImg" media="(min-width: 768px)">
-      <img [src]="image.mobileImg" [alt]="image.altTag" class="body-image__img" [class.published]="image.published" loading="lazy">
+      <img [src]="image.mobileImg" [alt]="image.altTag" class="imgHolder-img" [class.published]="image.published" loading="lazy">
     </picture>
   </div>
 }
@@ -22,7 +22,7 @@
 
   <!-- Show error if no image found -->
   @if (!(currentImage$ | async) && !(loading | async)){
-  <div class="body-image__error">
+  <div class="imgHolder-error">
     No image found
   </div>
   }
