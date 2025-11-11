@@ -91,7 +91,7 @@ export const routes: Routes = [
           headerPostion: 'left'
         }
       },
-            {
+      {
         path: 'rejunvenating-our-digital-experience',
         loadComponent: () => import('./components/pages/case-studies/rejuvenating-digital-experience/rejuvenating-digital-experience').then(m => m.RejuvenatingDigitalExperience),
         title: 'Case Study: Rejuvenating Our Digital Experience | Dundee Media Group',
@@ -103,6 +103,23 @@ export const routes: Routes = [
           showInSiteMap: true,
           h1: 'Case Study: Rejuvenating Our Digital Experience',
           h2: 'How Dundee Media Group Helped Our Family-Owned Spa Thrive Online',
+          desktopImage: 'web-design.webp',
+          mobileImage: 'web-design.webp',
+          headerPostion: 'left'
+        }
+      },
+      {
+        path: 'turning-data-into-direction',
+        loadComponent: () => import('./components/pages/case-studies/turning-data-into-direction/turning-data-into-direction').then(m => m.TurningDataIntoDirection),
+        title: 'Case Study: Turning Data Into Direction | Dundee Media Group',
+        data:{
+          description: 'How Dundee Media Group Helped a Small Manufacturing Firm Harness Google Analytics for Smarter Engagement',
+          label: 'Turning Data into Direction',
+          showInMain: false,
+          showInFooter: false,
+          showInSiteMap: true,
+          h1: 'Case Study: Turning Data into Direction',
+          h2: 'How Dundee Media Group Helped a Small Manufacturing Firm Harness Google Analytics for Smarter Engagement',
           desktopImage: 'web-design.webp',
           mobileImage: 'web-design.webp',
           headerPostion: 'left'
