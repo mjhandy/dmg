@@ -1,18 +1,16 @@
 @import 'componentInclude';
 
 @import 'navbar';
-@import "dropdown";
+@import 'dropdown';
 @import 'offcanvas';
 @import 'custom/buttons';
 
-
 :root {
   --dmg-dropdown-bg: var(--var-dmg-baseColor-white);
+  --dmg-navbar-active-color: blue;
 }
 
-
 .offcanvas {
-
   // background-color: map-get($dmgColours, white );
   &-header {
     padding: 15px 15px 0 15px;
@@ -23,7 +21,7 @@
     }
 
     .btn {
-      color: var(--dmg-baseColour-orange)
+      color: var(--dmg-baseColour-orange);
     }
   }
 }
@@ -48,7 +46,9 @@
     font-size: 2rem;
     text-decoration: none;
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &:active {
       color: var(--dmg-link-colour-hover);
       border-bottom: 5px solid var(--dmg-link-colour-hover);
       text-decoration: none;
@@ -56,12 +56,12 @@
   }
 }
 
-
 .dropdown {
   &-menu {
-    @include media-breakpoint-up(lg){
-      margin-top: 5px;
+    @include media-breakpoint-up(lg) {
+      // margin-top: 5px;
       min-width: 420px;
+      border: 1px solid var(--dmg-baseColour-orange);
     }
     // dropdown
     --#{$prefix}dropdown-zindex: #{$zindex-dropdown};
@@ -91,9 +91,8 @@
     --#{$prefix}dropdown-header-padding-x: #{$dropdown-header-padding-x};
     --#{$prefix}dropdown-header-padding-y: #{$dropdown-header-padding-y};
   }
-  &-item{
+  &-item {
     font-size: 1.5rem;
     white-space: unset;
-
   }
 }
