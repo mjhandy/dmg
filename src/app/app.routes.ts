@@ -88,7 +88,8 @@ export const routes: Routes = [
           h2: 'How Dundee Media Group improved UX and met WCAG standards—validated with Google Analytics.',
           desktopImage: 'accessability-computer-addon.webp',
           mobileImage: 'accessability-computer-addon.webp',
-          headerPostion: 'left'
+          headerPostion: 'left',
+          imageMask: true
         }
       },
       {
@@ -122,7 +123,9 @@ export const routes: Routes = [
           h2: 'How Dundee Media Group Helped a Small Manufacturing Firm Harness Google Analytics for Smarter Engagement',
           desktopImage: 'laptop-data-graphs.webp',
           mobileImage: 'laptop-data-graphs.webp',
-          headerPostion: 'left'
+          headerPostion: 'left',
+
+          imageMask: true
         }
       }
     ]
