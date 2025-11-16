@@ -21,7 +21,9 @@ export const routes: Routes = [
       h2: 'We craft inclusive digital experiences that don’t just perform, they resonate.',
       desktopImage: 'castle-loch-bridge.webp',
       mobileImage: 'castle-loch-bridge.webp',
-      headerPostion: 'left'
+      headerPostion: 'left',
+      ctaCopy: 'Book An Audit',
+      ctaTarget: 'contact-us'
     }
   },
   {

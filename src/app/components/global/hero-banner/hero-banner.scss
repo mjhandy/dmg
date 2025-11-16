@@ -65,9 +65,18 @@ $gradient: linear-gradient(to right, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%
     }
 
     h2 {
-      margin: 0;
+      margin-bottom: 20px;
     }
 
+    a{
+      text-decoration: none;
+      padding: 10px 20px;
+      color: var(--dmg-baseColour-white);
+      background-color: var(--dmg-baseColour-orange);
+      border-radius: 10px;
+      margin-top: 20px;
+      font-size: 1.5rem;
+    }
 
 
     &.side {

@@ -20,6 +20,8 @@ export class HeroBanner implements OnInit, OnDestroy {
   imgMobile: string = '';
   h1Html: string = '';
   h2Html: string = '';
+  ctaCopy: string = '';
+  ctaTarget: string = '';
   positionClass: string = '';
   imageMask: boolean = false;
 
@@ -50,13 +52,15 @@ export class HeroBanner implements OnInit, OnDestroy {
     const data = r?.snapshot?.data || {};
     const d: any = data;
 
-    if (d && (d.h1 || d.desktopImage || d.mobileImage || d.headerPostion)) {
+    if (d && (d.h1 || d.desktopImage || d.mobileImage || d.headerPostion || d.ctaCopy )) {
       this.h1Html = d.h1 || '';
       this.h2Html = d.h2 || '';
       this.imgDesktop = d.desktopImage || '';
       this.imgMobile = d.mobileImage || '';
       this.positionClass = d.headerPostion || '';
       this.imageMask = d.imageMask || '';
+      this.ctaCopy = d.ctaCopy || '';
+      this.ctaTarget = d.ctaTarget || '';
       return;
     }
 
@@ -69,6 +73,7 @@ export class HeroBanner implements OnInit, OnDestroy {
       this.imgDesktop = b.bgImageDesktop || b.desktopImage || '';
       this.imgMobile = b.bgImageMobile || b.mobileImage || '';
       this.positionClass = b.position || b.headerPostion || '';
+      this.ctaCopy = b.ctaCopy || b.ctaCopy || '';
       return;
     }
 
@@ -79,5 +84,6 @@ export class HeroBanner implements OnInit, OnDestroy {
     this.imgMobile = '';
     this.positionClass = '';
     this.imageMask = false;
+    this.ctaCopy = '';
   }
 }
