@@ -19,11 +19,9 @@ mat-icon{
   line-height: 1;
   &-left{
     transform: scaleX(-1);
-    padding-top: 20px;
   }
   &-right{
-    align-items: flex-end;
-    padding-bottom: 20px;
+    align-items: flex-start;
   }
 }
 
@@ -31,12 +29,15 @@ mat-icon{
 
   &-inner{
     min-height: 180px;
-    padding: 0 15px;
+    padding: 10px 5px;
+    // background-color: aqua;
 
   }
   &-buttons{
     display: flex;
     justify-content: space-between;
+    position: absolute;
+    top: 65px;
 
   }
   &-control-prev,
@@ -44,5 +45,16 @@ mat-icon{
     position: relative;
     width: unset;
     filter: unset;
+  }
+  &-item{
+    h3{
+      font-weight: 500;      
+    }
+    p{
+      font-weight: 500;
+      &.name{
+        font-style: italic;
+      }
+    }
   }
 }

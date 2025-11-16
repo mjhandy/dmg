@@ -1,72 +1,37 @@
 [
   {
-    "copy": "Dundee Media Group didn’t just build us a website—they created a digital experience that feels alive and inclusive. Their blend of storytelling, SEO, and accessible design helped us connect more deeply with our audience and grow with purpose.",
+    "title": "Family-Owned Spa, Halifax",
+    "copy": "We thought accessibility compliance would be a burden. Dundee Media Group turned it into our biggest strength. Now our site feels welcoming to everyone — and our bookings have doubled.",
     "rating": "5",
     "name": "Francis Anderson",
-    "title": "Director of Brand Experience",
     "live": true
   },
   {
-    "copy": "Dundee Media Group brought our brand to life online with clarity, creativity, and care. Their team made every detail—from SEO to design—feel purposeful and human.",
+    "title": "Manufacturing Firm, Ontario",
+    "copy": "They didn’t just give us a website. They gave us clarity. Every decision was backed by data, but delivered with creativity. We finally understand how digital can drive growth.",
     "rating": "5",
-    "name": "Aisha Patel",
-    "title": "VP of Digital Strategy",
+    "name": "Aisha Patel",    
     "live": true
   },
   {
-    "copy": "Dundee helped us turn clicks into real connections. Their design and messaging made our brand feel human, bold, and unforgettable.",
+    "title": "Nonprofit Organization, Toronto",
+    "copy": "Our mission is about people, and Dundee Media Group captured that perfectly. The site feels alive, inclusive, and true to our values. Donors tell us they feel more connected than ever.",
     "rating": "5",
-    "name": "Marcus Chen",
-    "title": "Director of Brand Experience",
+    "name": "Marcus Chen",    
     "live": true
   },
   {
-    "copy": "From SEO to accessibility, Dundee nailed every detail. Our site now ranks higher, feels better, and speaks directly to our audience.",
+    "title": "Tech Startup, Vancouver",
+    "copy": "We needed speed and scalability. They delivered both — without sacrificing design. The site is sleek, accessible, and already helping us attract investors.",
     "rating": "5",
-    "name": "Jamal Robinson",
-    "title": "Owner",
+    "name": "Jamal Robinson",    
     "live": true
   },
   {
-    "copy": "We came for a website—what we got was a brand experience. Dundee’s team brought clarity, creativity, and measurable impact.",
+    "title": "Artisan Collective, Montreal",
+    "copy": "For years, our craft felt invisible online. Dundee Media Group gave us a digital identity that feels authentic. Sales are up, but more importantly, our story is finally being told.",
     "rating": "5",
-    "name": "Head of Content & Community",
-    "title": "Artist",
-    "live": true
-  },
-  {
-    "copy": "Dundee helped us turn clicks into real connections. Their design and messaging made our brand feel human, bold, and unforgettable.",
-    "rating": "5",
-    "name": "Elijah O’Connor",
-    "title": "Social Marketing Lead",
-    "live": true
-  },
-  {
-    "copy": "Dundee’s SEO strategy helped us climb the rankings and stay there. Their content feels natural, their structure is airtight, and the results speak for themselves.",
-    "rating": "5",
-    "name": "Mei-Ling Tran",
-    "title": "Creative Director",
-    "live": true
-  },
-  {
-    "copy": "Our traffic doubled within months thanks to Dundee’s SEO magic. They don’t just optimize—they humanize every keyword and headline.",
-    "rating": "5",
-    "name": "Priya Deshmukh",
-    "title": "CMO",
-    "live": true
-  },
-  {
-    "copy": "Dundee made SEO feel like art. Their approach was strategic, empathetic, and wildly effective.",
-    "rating": "5",
-    "name": "Diego Morales",
-    "title": "Chief Communications Officer (CCO)",
-    "live": true
-  },
-  {
-    "copy": "Search engines love our site now—and so do our customers. Dundee’s SEO work gave us visibility, clarity, and momentum.",
-    "rating": "5",
-    "name": "Grace Okafor",
-    "title": "Head of Content & Community",
+    "name": "Head of Content & Community",    
     "live": true
   }
 ]

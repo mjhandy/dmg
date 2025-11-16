@@ -6,8 +6,9 @@
     <div class="carousel-inner">
       @for ( review of data; track review; let i = $index){
       <div class="carousel-item" [class.active]="i === 0">
+        <h3>{{ review.title }}</h3>
         <p class="copy">{{review.copy}}</p>
-        <p class="name">{{ review.name }},<br>{{ review.title }}</p>
+        <p class="name">{{ review.name }}</p>
       </div>
       }
     </div>

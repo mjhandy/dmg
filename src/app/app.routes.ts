@@ -17,8 +17,8 @@ export const routes: Routes = [
       showInMain: false,
       showInFooter: true,
       showInSiteMap: true,
-      h1: 'Digital Visibility Meets <br>Inclusive Design',
-      h2: 'SEO performance and WCAG compliance, minified for impact.',
+      h1: 'Digital Visibility. <br>Human Connetion.',
+      h2: 'We craft inclusive digital experiences that don’t just perform, they resonate.',
       desktopImage: 'castle-loch-bridge.webp',
       mobileImage: 'castle-loch-bridge.webp',
       headerPostion: 'left'
