@@ -121,6 +121,15 @@ $heading: (
   h6: $font-size-base * 1.125,
   ) !default;
 
+/// font size increase
+/// 
+$fontSize: (
+  f125: $font-size-base * 1.25,
+  f150: $font-size-base * 1.5,
+  f175: $font-size-base * 1.75,
+  f200: $font-size-base * 2,
+);
+
 // package cards
 
 /// Grid breakpoints Updates

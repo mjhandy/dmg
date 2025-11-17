@@ -47,6 +47,22 @@ p {
 	margin-bottom: 1rem;
 }
 
+.f125{
+	font-size: var(--#{$prefix}f125-font-size);
+}
+
+.f150{
+	font-size: var(--#{$prefix}f150-font-size);
+}
+
+.f175{
+	font-size: var(--#{$prefix}f175-font-size);
+}
+
+.f200{
+	font-size: var(--#{$prefix}f200-font-size);
+}
+
 strong{
 	color: var(--#{$prefix}strong-font-color);
 }

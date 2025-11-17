@@ -1,17 +1,46 @@
 <app-hero-banner parent="home"></app-hero-banner>
 <div class="container">
 
-    <div class="row justify-content-center">
-      <div class="col-12 col-lg-10">
-        <h2 class="first">Crafting Digital Experiences That Resonate</h2>
-        <p>Performance matters. But connection matters more. At Dundee Media Group, we design with inclusivity at the core, blending strategy and storytelling so your brand isn’t just seen — it’s remembered.</p>
-        <app-cards-casestudies></app-cards-casestudies>
-      </div>
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <h2 class="first">Inclusive Web Design That Welcomes Everyone</h2>
     </div>
-    
-    <div class="row justify-content-center pt-5">
-      <div class="col-12 col-lg-8 ">
-        <app-testimonials [data]="review"></app-testimonials>
-      </div>
+    <div class="col-12 col-lg-8 d-flex align-items-center">
+
+      <p class="f175">Your website should feel like an open invitation. We design accessible, user-centered experiences
+        that remove barriers, boost engagement, and expand your reach. From WCAG-compliant layouts to SEO-optimized
+        content, we make sure every visitor feels welcome — and every interaction builds loyalty.</p>
+      <p><a href="#" class="f175">Discover how inclusivity grows your brand.</a></p>
     </div>
+    <div class="col-12 col-lg-4">
+      <img src="images/onPageImages/600x465/webdesign-wireframes.webp" alt="" class="imgHolder-img">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <h2 class="first">Turning Barriers Into Breakthroughs</h2>
+    </div>
+    <div class="col-12 col-lg-5 ">
+      <img src="images/onPageImages/600x465/inclusive.webp" alt="Turning Barriers Into Breakthroughs"
+        class="imgHolder-img">
+    </div>
+    <div class="col-12 col-lg-7 d-flex align-items-center">
+      <p class="f175">Accessibility isn’t just compliance — it’s a growth strategy. Our approach aligns design, content,
+        and development to unlock new audiences while ensuring measurable impact. With inclusive branding and
+        data-driven insights, we transform usability challenges into opportunities for stronger performance, smarter
+        engagement, and sustainable growth.</p>
+        <p><a href="#" class="f175">See how accessibility drives ROI.</a></p>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-10">
+      <app-cards-casestudies></app-cards-casestudies>
+    </div>
+  </div>
+
+  <div class="row justify-content-center pt-5">
+    <div class="col-12 col-lg-8 ">
+      <app-testimonials [data]="review"></app-testimonials>
+    </div>
+  </div>
 </div>

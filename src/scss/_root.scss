@@ -38,4 +38,9 @@
   @each $heading, $size in $heading {
     --#{$prefix}#{$heading}-font-size: #{$size};
   }
+
+  // fone sizes
+  @each $fontSize, $size in $fontSize{
+    --#{$prefix}#{$fontSize}-font-size: #{$size};
+  }
 }
