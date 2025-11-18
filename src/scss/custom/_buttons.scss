@@ -25,9 +25,10 @@
   }
 
   &-primary {
-    background-color: $blue;
-    border: 1px solid $blue;
-    color: white;
+    background-color: var(--dmg-baseColour-orange);
+    // border: 1px solid var(--dmg-baseColour-orange);
+    border: none;
+    color: var(--dmg-baseColour-white);
     border-radius: 5px;
     padding: 5px 10px;
     width: fit-content;
