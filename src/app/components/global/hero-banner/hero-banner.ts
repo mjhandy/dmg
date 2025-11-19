@@ -4,10 +4,12 @@ import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
+import { MatButton } from '@angular/material/button';
+
 @Component({
   selector: 'app-hero-banner',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,MatButton],
   templateUrl: './hero-banner.html',
   styleUrl: './hero-banner.scss'
 })

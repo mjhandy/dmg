@@ -40,7 +40,14 @@
   }
 
   // fone sizes
-  @each $fontSize, $size in $fontSize{
+  @each $fontSize, $size in $fontSize {
     --#{$prefix}#{$fontSize}-font-size: #{$size};
   }
+
+  // material root variables
+  // --mat-sys-primary: #{$btn-primary-bg};
+  --mat-button-protected-label-text-color: #{$btn-primary-text};
+  --mat-button-protected-container-color: #{$btn-primary-bg};
+  // --mat-button
+
 }

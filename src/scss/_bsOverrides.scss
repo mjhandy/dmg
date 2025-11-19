@@ -221,4 +221,8 @@ $card-group-margin:                 2px * .5;
 
 /* custom variable values:END */
 
+// button colours
+$btn-primary-bg: map-get($dmgColours, orange );
+$btn-primary-text: $white;
+
 /* Utilities */
