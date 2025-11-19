@@ -6,6 +6,11 @@
 .mdc{
   &-button{
     padding: 10px 20px;
+    &>.mat-icon{
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-left: 0;
+    }
   }
 }
 
