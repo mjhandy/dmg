@@ -46,8 +46,12 @@
 
   // material root variables
   // --mat-sys-primary: #{$btn-primary-bg};
+  --mat-sys-label-large-size: 125%;
   --mat-button-protected-label-text-color: #{$btn-primary-text};
   --mat-button-protected-container-color: #{$btn-primary-bg};
+  // --mat-button-filled-horizontal-padding: 1rem;
+  --mat-button-filled-label-text-color: #{$btn-primary-text};
+  --mat-button-filled-container-color: #{$btn-primary-bg};
   // --mat-button
 
 }

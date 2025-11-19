@@ -5,11 +5,12 @@ import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
 import { MatButton } from '@angular/material/button';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-hero-banner',
   standalone: true,
-  imports: [CommonModule,MatButton],
+  imports: [CommonModule,MatButton,MatIcon],
   templateUrl: './hero-banner.html',
   styleUrl: './hero-banner.scss'
 })
