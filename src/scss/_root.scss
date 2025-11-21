@@ -31,8 +31,17 @@
   --#{$prefix}navbar-active-color: #{$link-colour-focus};
   --#{$prefix}strong-font-color: #{$strong-colour};
 
+  //buttons
+  --#{$prefix}-button-HeroBanner-primary-bg: #{$btn-heroBanner-primary-bg};
+  --#{$prefix}-button-HeroBanner-primary-text: #{$btn-heroBanner-primary-text};
+  --#{$prefix}-button-HeroBanner-secondary-bg: #{$btn-heroBanner-secondary-bg};
+  --#{$prefix}-button-HeroBanner-secondary-text: #{$btn-heroBanner-secondary-text};
 
-
+  --#{$prefix}-button-bg-primary: #{$btn-primary-bg};
+  --#{$prefix}-button-text-primary: #{$btn-primary-text};
+  --#{$prefix}-button-bg-secondary: #{$btn-secondary-bg};
+  --#{$prefix}-button-text-secondary: #{$btn-secondary-text};
+  --#{$prefix}-button-icon-colour: #{$btn-icon-colour};
 
   // heading sizes
   @each $heading, $size in $heading {
@@ -47,8 +56,8 @@
   // material root variables
   // --mat-sys-primary: #{$btn-primary-bg};
   --mat-sys-label-large-size: 125%;
-  --mat-button-protected-label-text-color: #{$btn-primary-text};
-  --mat-button-protected-container-color: #{$btn-primary-bg};
+  // --mat-button-protected-label-text-color: #{$btn-primary-text};
+  // --mat-button-protected-container-color: #{$btn-primary-bg};
   // --mat-button-filled-horizontal-padding: 1rem;
   --mat-button-filled-label-text-color: #{$btn-primary-text};
   --mat-button-filled-container-color: #{$btn-primary-bg};

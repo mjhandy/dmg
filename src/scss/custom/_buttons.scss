@@ -1,12 +1,11 @@
-
-
 @import "bsOverrides";
 
 
-.mdc{
-  &-button{
+.mdc {
+  &-button {
     padding: 10px 20px;
-    &>.mat-icon{
+
+    &>.mat-icon {
       font-size: 1.5rem;
       font-weight: 700;
       margin-left: 0;
@@ -18,79 +17,54 @@
 .btn {
 
   margin: 0;
-  // padding: 0;
   border: 0;
-  // display: flex;
-  // background-color: transparent;
   text-decoration: none;
+  width: fit-content;
+
+  &-group {
+    display: flex;
+    gap: 15px;
+
+    @include media-breakpoint-up(lg) {
+
+      flex-direction: row;
+
+    }
+  }
+
+  &-HeroBanner {
+    &-primary {
+      background-color: var(--#{$prefix}-button-HeroBanner-primary-bg) !important;
+      color: var(--#{$prefix}-button-HeroBanner-primary-text) !important;
+    }
+
+    &-secondary {
+      background-color: var(--#{$prefix}-button-HeroBanner-bg-secondary) !important;
+      color: var(--#{$prefix}-button-HeroBanner-text-secondary) !important;
+    }
+  }
+
+  &-primary {
+    background-color: var(--#{$prefix}-button-bg-primary) !important;
+    color: var(--#{$prefix}-button-text-primary) !important;
+  }
+
+  &-secondary {
+    background-color: var(--#{$prefix}-button-bg-secondary) !important;
+    color: var(--#{$prefix}-button-text-secondary) !important;
+  }
+
+  &-primary {
+    background-color: var(--#{$prefix}-button-bg-primary) !important;
+    color: var(--#{$prefix}-button-text-primary) !important;
+  }
+
+  &-secondary {
+    background-color: var(--#{$prefix}-button-bg-secondary) !important;
+    color: var(--#{$prefix}-button-text-secondary) !important;
+  }
+
+  mat-icon {
+    color: var(--#{$prefix}-button-icon-colour);
+  }
 }
-
-// .btn {
-//   margin: 0;
-//   padding: 0;
-//   border: 0;
-//   display: flex;
-//   background-color: transparent;
-
-//   &-group {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//     gap: 15px;
-
-//     @include media-breakpoint-up(lg) {
-//       flex-direction: row;
-//       row-gap: 15px;
-//     }
-
-//     &--accordion {
-//       flex-direction: row;
-//     }
-//   }
-
-//   &-primary {
-//     background-color: var(--dmg-baseColour-orange);
-//     // border: 1px solid var(--dmg-baseColour-orange);
-//     border: none;
-//     color: var(--dmg-baseColour-white);
-//     border-radius: 5px;
-//     padding: 5px 10px;
-//     width: fit-content;
-
-//     &:hover {
-//       background-color: lighten($color: $blue, $amount: 5);
-//     }
-//   }
-
-//   &-secondary {
-//     background-color: transparent;
-//     border: 1px solid $blue;
-//     color: $blue;
-//     border-radius: 5px;
-//     padding: 5px 10px;
-//     width: fit-content;
-
-//     &:hover {
-//       border: 1px solid lighten($color: $blue, $amount: 5);
-//       color: lighten($color: $blue, $amount: 5);
-//     }
-//   }
-
-//   &-textLink {
-//     color: var(--dmg-baseColour-blue);
-//     text-decoration-color: none;
-//   }
-
-//   &-icon {
-//     width: 50px;
-//     height: 50px;
-
-//     .mat-icon {
-//       font-size: 60px;
-//       width: auto;
-//       height: auto;
-//     }
-//   }
-
-// }

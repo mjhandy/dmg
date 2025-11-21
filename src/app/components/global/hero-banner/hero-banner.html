@@ -20,13 +20,21 @@
     <h2 [innerHTML]=" h2Html ? h2Html : banners[parent].h2"></h2>
     }
     @if (ctaCopy && ctaTarget ){
-    <a href="{{ ctaTarget ? ctaTarget :  banners[parent].ctaTarget}}" 
-      matFab 
-      extended 
-      matButton="filled" class="btn">
-      {{ ctaCopy ? ctaCopy : (banners[parent] && banners[parent].ctaCopy)  }}
-      <mat-icon iconPositionEnd>chevron_right</mat-icon></a>
+    <div class="btn-group">
+      <a href="{{ ctaTarget ? ctaTarget :  banners[parent].ctaTarget}}" matFab extended matButton="elevated"
+        class="btn btn-HeroBanner-primary">
+        {{ ctaCopy ? ctaCopy : (banners[parent] && banners[parent].ctaCopy) }}
+        <mat-icon iconPositionEnd>chevron_right</mat-icon></a>
+      @if( ctaTargetSecondary){
+      <a href="{{ ctaTargetSecondary ? ctaTargetSecondary :  banners[parent].ctaTargetSecondary}}" matFab extended
+        matButton="elevated" class="btn btn-HeroBanner-secondary">
+        {{ ctaCopySecondary ? ctaCopySecondary : banners[parent].ctaCopySecondary}}
+        <mat-icon iconPositionEnd>chevron_right</mat-icon>
+      </a>
+      }
+    </div>
     }
+
 
   </div>
 </div>

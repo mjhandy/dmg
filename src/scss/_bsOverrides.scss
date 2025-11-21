@@ -91,7 +91,8 @@ $line-height-heading: 1.2;
 
 /// Base font colour
 /// @group tv
-$base-colour: map-get($monochrome, 105); // default base color
+$base-colour: map-get($monochrome, 105
+); // default base color
 
 /// Strong font colour
 /// @group tv
@@ -99,12 +100,12 @@ $strong-colour: map-get($monochrome, 100);
 
 /// Link Colour
 /// @group tv
-$link-colour: map-get($dmgColours, blue );
-$link-colour-hover: map-get($dmgColours, orange );
-$link-colour-visted: map-get($dmgColours, orange );
-$link-colour-underline: map-get($dmgColours, orange );
-$link-colour-focus: map-get($dmgColours, orange );
-$link-colour-active: map-get($dmgColours, orange );
+$link-colour: map-get($dmgColours, blue);
+$link-colour-hover: map-get($dmgColours, orange);
+$link-colour-visted: map-get($dmgColours, orange);
+$link-colour-underline: map-get($dmgColours, orange);
+$link-colour-focus: map-get($dmgColours, orange);
+$link-colour-active: map-get($dmgColours, orange);
 
 /// Heading sizes
 /// @group sm
@@ -188,41 +189,49 @@ $navbar-toggler-padding-x: 0;
 $navbar-toggler-font-size: 1.75rem;
 
 /// offcanvas
-$offcanvas-bg-color: map-get($dmgColours, white );
+$offcanvas-bg-color: map-get($dmgColours, white);
 $offcanvas-horizontal-width: 100vw;
-$offcanvas-color: map-get($dmgColours, black );
+$offcanvas-color: map-get($dmgColours, black);
 
 // dropdown
-$dropdown-bg-color: map-get($dmgColours, white );
+$dropdown-bg-color: map-get($dmgColours, white);
 $drowdown-border-color: transparent;
 $dropdown-border-radius: 0;
 $dropdown-border-width: 0;
 $dropdown-spacer: 10px;
 
 // cards
-$card-spacer-y:                     $spacer;
-$card-spacer-x:                     $spacer;
-$card-title-spacer-y:               $spacer * .5;
-$card-title-color:                  map-get($dmgColours, blue );
-$card-subtitle-color:               null;
-$card-border-width:                 0;
-$card-border-color:                 null;
-$card-border-radius:                null;
-$card-inner-border-radius:          null;
-$card-cap-padding-y:                $card-spacer-y * .5;
-$card-cap-padding-x:                $card-spacer-x;
-$card-cap-bg:                       null;
-$card-cap-color:                    null;
-$card-height:                       null;
-$card-color:                        null;
-$card-bg:                           null;
-$card-img-overlay-padding:          $spacer;
-$card-group-margin:                 2px * .5;
+$card-spacer-y: $spacer;
+$card-spacer-x: $spacer;
+$card-title-spacer-y: $spacer * .5;
+$card-title-color: map-get($dmgColours, blue);
+$card-subtitle-color: null;
+$card-border-width: 0;
+$card-border-color: null;
+$card-border-radius: null;
+$card-inner-border-radius: null;
+$card-cap-padding-y: $card-spacer-y * .5;
+$card-cap-padding-x: $card-spacer-x;
+$card-cap-bg: null;
+$card-cap-color: null;
+$card-height: null;
+$card-color: null;
+$card-bg: null;
+$card-img-overlay-padding: $spacer;
+$card-group-margin: 2px * .5;
 
 /* custom variable values:END */
 
 // button colours
-$btn-primary-bg: map-get($dmgColours, orange );
+$btn-heroBanner-primary-bg: $white;
+$btn-heroBanner-primary-text: map-get($dmgColours, blue);
+$btn-heroBanner-secondary-bg: map-get($dmgColours, blue);
+$btn-heroBanner-secondary-text: $white;
+
+$btn-primary-bg: map-get($dmgColours, blue);
 $btn-primary-text: $white;
+$btn-secondary-bg: map-get($dmgColours, blue);
+$btn-secondary-text: $white;
+$btn-icon-colour: map-get($dmgColours, orange);
 
 /* Utilities */
