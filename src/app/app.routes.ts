@@ -40,7 +40,26 @@ export const routes: Routes = [
       desktopImage: 'train-over-bridge.webp',
       mobileImage: 'train-over-bridge.webp',
       headerPostion: 'left'
-    }
+    },
+    children: [
+      {
+        path: 'seo-and-you',
+        loadComponent: () => import('./components/pages/services/seo/seo').then(m => m.Seo),
+        title: 'Services | Seo and you | Dundee Media Group',
+        data: {
+          description: 'How Dundee Media Group improved UX and met WCAG standards—validated with Google Analytics.',
+          label: 'Solving Usability and Accessibility Challenges',
+          showInMain: false,
+          showInFooter: false,
+          showInSiteMap: true,
+          h1: 'SEO and You',
+          h2: 'TBD',
+          desktopImage: 'train-over-bridge.webp',
+          mobileImage: 'train-over-bridge.webp',
+          headerPostion: 'left',
+        }
+      },
+    ]
   },
   {
     path: 'about-us',
@@ -115,7 +134,7 @@ export const routes: Routes = [
         path: 'turning-data-into-direction',
         loadComponent: () => import('./components/pages/case-studies/turning-data-into-direction/turning-data-into-direction').then(m => m.TurningDataIntoDirection),
         title: 'Case Study: Turning Data Into Direction | Dundee Media Group',
-        data:{
+        data: {
           description: 'How Dundee Media Group Helped a Small Manufacturing Firm Harness Google Analytics for Smarter Engagement',
           label: 'Turning Data into Direction',
           showInMain: false,
