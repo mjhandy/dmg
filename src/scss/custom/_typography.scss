@@ -28,9 +28,9 @@ h1,
 h2,
 .h2 {
 	font-size: var(--#{$prefix}h2-font-size);
-	font-weight: 400;
+	font-weight: 700;
 	&.first{
-		font-size: 2rem;
+		font-size: 2.5rem;
 		margin-top: 1rem;
 	}
 }
