@@ -12,6 +12,5 @@ import { RouterModule } from '@angular/router';
 export class SolvingUsability {
   ngOnInit() {
     console.log('SolvingUsability component initialized');
-    console.log('SolvingUsability template:', document.querySelector('app-solving-usability')?.innerHTML || 'Component not found in DOM');
   }
 }

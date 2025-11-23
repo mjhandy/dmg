@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { HeroBanner } from '../../global/hero-banner/hero-banner';
 import { RouterModule, Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
+
+import { HeroBanner } from '../../global/hero-banner/hero-banner';
+
 
 
 @Component({
@@ -15,7 +17,9 @@ export class CaseStudies {
   parentComp = "page-caseStudies";
   showOverview = true;
 
-  constructor(private router: Router) {
+  constructor(
+    private router: Router
+  ) {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: any) => {

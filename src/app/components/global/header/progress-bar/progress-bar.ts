@@ -20,7 +20,7 @@ divWidth: number = 0; // Initial width
     const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const scrolled = (winScroll / height) * 100;
-    console.debug(scrolled);
+    // console.debug(scrolled);
     // this.divWidth = 1 + scrollPosition  /  2; // Adjust multiplier as needed
     this.divWidth = scrolled;
   }

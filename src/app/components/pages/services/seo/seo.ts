@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './seo.scss'
 })
 export class Seo {
-
+  ngOnInit() {
+    console.log('Seo component initialized');
+  }
 }

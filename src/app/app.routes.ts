@@ -45,10 +45,10 @@ export const routes: Routes = [
       {
         path: 'seo-and-you',
         loadComponent: () => import('./components/pages/services/seo/seo').then(m => m.Seo),
-        title: 'Services | Seo and you | Dundee Media Group',
+        title: 'Services | Seo and You | Dundee Media Group',
         data: {
-          description: 'How Dundee Media Group improved UX and met WCAG standards—validated with Google Analytics.',
-          label: 'Solving Usability and Accessibility Challenges',
+          description: 'SEo detail page descriptoin.',
+          label: 'SEO nav label',
           showInMain: false,
           showInFooter: false,
           showInSiteMap: true,
@@ -59,6 +59,40 @@ export const routes: Routes = [
           headerPostion: 'left',
         }
       },
+            {
+        path: 'accessability-for-all',
+        loadComponent: () => import('./components/pages/services/wcag/wcag').then(m => m.Wcag),
+        title: 'Services | Accessability for All | Dundee Media Group',
+        data: {
+          description: 'WCAG detail page descriptoin.',
+          label: 'WCAG nav label',
+          showInMain: false,
+          showInFooter: false,
+          showInSiteMap: true,
+          h1: 'Accessability for all',
+          h2: 'TBD',
+          desktopImage: 'train-over-bridge.webp',
+          mobileImage: 'train-over-bridge.webp',
+          headerPostion: 'left',
+        }
+      },
+            {
+        path: 'designed-to-be-noticed',
+        loadComponent: () => import('./components/pages/services/design/design').then(m => m.Design),
+        title: 'Services | Designed to be noticed | Dundee Media Group',
+        data: {
+          description: 'Design detail page descriptoin.',
+          label: 'Design nav label',
+          showInMain: false,
+          showInFooter: false,
+          showInSiteMap: true,
+          h1: 'Designed to be Noticed',
+          h2: 'TBD',
+          desktopImage: 'train-over-bridge.webp',
+          mobileImage: 'train-over-bridge.webp',
+          headerPostion: 'left',
+        }
+      }
     ]
   },
   {

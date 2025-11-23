@@ -1,4 +1,6 @@
 <app-hero-banner parent="servicesxx"></app-hero-banner>
+
+@if (showServices){
 <div class="container">
   <div class="row">
     <div class="col-12 col-lg-8">
@@ -47,3 +49,14 @@
     </div>
   </div>
 </div>
+}
+@else {
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-8">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+}
+
