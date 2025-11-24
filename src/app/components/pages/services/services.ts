@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { RouterModule, Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { MatButton } from '@angular/material/button';
+
+import { MatIcon } from '@angular/material/icon';
 
 import { HeroBanner } from '../../global/hero-banner/hero-banner';
 import { TestimonialsService } from '../../../services/testimonials';
@@ -10,7 +13,7 @@ import { BodyImage } from "../../global/body-image/body-image";
 
 @Component({
   selector: 'app-services',
-  imports: [HeroBanner, Testimonials, BodyImage, RouterModule],
+  imports: [HeroBanner, Testimonials, BodyImage, RouterModule,MatButton, MatIcon ],
   templateUrl: './services.html',
   styleUrl: './services.scss'
 })

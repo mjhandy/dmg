@@ -3,23 +3,42 @@
 @if (showServices){
 <div class="container">
   <div class="row">
-    <div class="col-12 col-lg-8">
+    <div class="col-12 col-lg-12">
 
       <h2 class="first">We don’t just build websites. We craft digital experiences that breathe, speak, and
         connect.</h2>
       <p>At Dundee Media Group, we believe visibility and inclusivity aren’t extras—they’re the foundation. That’s why
         our work lives at the intersection of search, accessibility, and design magic.</p>
+    </div>
+    <div class="col-12">
       <h2>SEO That Tells Your Story</h2>
-      <p>Search engines love structure. People love stories. We make sure your brand delivers both.</p>
-      <ul>
-        <li><strong>Technical brilliance</strong> – Fast, crawlable, and built for performance.</li>
-        <li><strong>Narrative-driven content</strong> – Keywords woven into copy that feels alive, not robotic.</li>
-        <li><strong>Local love</strong> – Helping your brand show up where your community is searching.</li>
-        <li><strong>Clarity through data</strong> – Reports that don’t just measure clicks, but momentum.</li>
-      </ul>
-      <p>The result: Higher rankings, more qualified traffic, and measurable growth.</p>
-      <h2>Accessibility as a Creative Superpower</h2>
+    </div>
+    <div class="col-12 col-lg-8 d-flex align-items-center">
+      <div class="d-flex flex-column">
 
+        <p>Search engines love structure, but people love stories—and we make sure your brand delivers both. Imagine a
+          site that’s fast, crawlable, and built for performance, while every word feels alive and authentic. Picture
+          keywords woven seamlessly into narrative-driven content that resonates instead of reading robotic. Think of
+          your brand showing up exactly where your community is searching, backed by clarity through data that measures
+          not just clicks, but momentum.</p>
+
+        <p>The result? Higher rankings, more qualified traffic, and growth you can see and feel. Ready to discover how
+          we turn technical brilliance into storytelling magic?</p>
+        <div class="btn-group">
+          <a href="#" matFab extended matButton="elevated" matButton="filled" class="btn btn-primary ">
+            Read More
+            <mat-icon iconPositionEnd>chevron_right</mat-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-4">
+      <img src="images/onPageImages/600x465/seo.webp" alt="SEO That Tells Your Story" class="imgHolder-img">
+    </div>
+    <div class="col-12">
+      <h2>Accessibility as a Creative Superpower</h2>
+    </div>
+    <div class="col-12 col-lg-8">
       <p>Accessibility isn’t a box to tick—it’s a design philosophy. When your site works for everyone, it works better
         for <i>everyone</i>.</p>
 
@@ -29,10 +48,17 @@
         <li><strong>Code that cares</strong> – Clean, compliant, and future-ready.</li>
         <li><strong>Culture shift</strong> – Training your team to see accessibility as creativity, not constraint.</li>
       </ul>
-      <app-body-image imageId="1" [css]="'imgType-content'"></app-body-image>
       <p>The result: A digital space that feels open, human, and beautifully inclusive.</p>
+      <p><a href="#">Read More</a></p>
+    </div>
+    <div class="col-12 col-lg-4">IMG PLO</div>
 
-      <h2>Experience That Moves People</h2>
+    <div class="col-12">
+<h2>Experience That Moves People</h2>
+    </div>
+    <div class="col-12 col-lg-8">
+
+      
       <p>Design is more than pixels—it’s how your brand makes people feel. We shape experiences that are intuitive,
         emotional, and unforgettable.</p>
       <ul>
@@ -42,21 +68,25 @@
         <li><strong>Brand alignment</strong> – Every touchpoint, from headline to hover state, in harmony.</li>
       </ul>
       <p>The result: A website that doesn’t just work, <i>it works wonders.</i></p>
-
+      <p><a href="#">Read More</a></p>
     </div>
-    <div class="col-12 col-lg-4 d-flex align-items-center">
-      <app-testimonials [data]="review"></app-testimonials>
+    <div class="col-12 col-lg-4">IMG PLO</div>
+  </div>
+  <div class="col-12">
+    <app-body-image imageId="1" [css]="'imgType-content'"></app-body-image>
+  </div>
+  <div class="col-12">
+    <app-testimonials [data]="review"></app-testimonials>
+  </div>
+</div>
+
+}
+@else {
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-8">
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
 }
-@else {
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-lg-8">
-        <router-outlet></router-outlet>
-      </div>
-    </div>
-  </div>
-}
-
