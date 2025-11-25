@@ -6,18 +6,18 @@
 
 @import 'card';
 
-.card{
-  &-title{
-    font-weight: 900;
-    color: var(--dmg-baseColour-orange);
-  }
-  &-text{
-    a{
-      text-decoration: none;
-      mat-icon{
-        font-weight: 700;
-        height: 18px;
-      }
-    }
-  }
-}
+// .card{
+//   &-title{
+//     font-weight: 900;
+//     color: var(--dmg-baseColour-orange);
+//   }
+//   &-text{
+//     a{
+//       text-decoration: none;
+//       mat-icon{
+//         font-weight: 700;
+//         height: 18px;
+//       }
+//     }
+//   }
+// }
