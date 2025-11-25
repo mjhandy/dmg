@@ -54,8 +54,8 @@ export const routes: Routes = [
           showInSiteMap: true,
           h1: 'SEO and You',
           h2: 'TBD',
-          desktopImage: 'train-over-bridge.webp',
-          mobileImage: 'train-over-bridge.webp',
+          desktopImage: 'seo.webp',
+          mobileImage: 'seo.webp',
           headerPostion: 'left',
         }
       },
