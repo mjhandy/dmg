@@ -43,17 +43,17 @@ export const routes: Routes = [
     },
     children: [
       {
-        path: 'seo-and-you',
+        path: 'seo-visibility-growth',
         loadComponent: () => import('./components/pages/services/seo/seo').then(m => m.Seo),
-        title: 'Services | Seo and You | Dundee Media Group',
+        title: 'Services | Seo Visibility and Growth | Dundee Media Group',
         data: {
-          description: 'SEo detail page descriptoin.',
-          label: 'SEO nav label',
+          description: 'Discover how Dundee Media Group transforms SEO into measurable growth. From clean code to smart content, we help you reach your KPIs with sustainable visibility.',
+          label: 'SEO: From Visibility to Growth',
           showInMain: false,
           showInFooter: false,
           showInSiteMap: true,
-          h1: 'SEO and You',
-          h2: 'TBD',
+          h1: 'SEO: From Visibility to Growth',
+          h2: 'Beyond keywords, it’s your site’s foundation',
           desktopImage: 'seo.webp',
           mobileImage: 'seo.webp',
           headerPostion: 'left',
