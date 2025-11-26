@@ -60,20 +60,20 @@ export const routes: Routes = [
         }
       },
             {
-        path: 'accessability-for-all',
+        path: 'wcag-accessibility-web-design',
         loadComponent: () => import('./components/pages/services/wcag/wcag').then(m => m.Wcag),
-        title: 'Services | Accessability for All | Dundee Media Group',
+        title: 'Services | Accessibility That Empowers Every User | Dundee Media Group',
         data: {
-          description: 'WCAG detail page descriptoin.',
-          label: 'WCAG nav label',
+          description: 'Ensure your website is WCAG-compliant and accessible to all users. Dundee Media Group delivers inclusive design services that improve usability, strengthen SEO, and build trust across audiences.',
+          label: 'Accessibility For All Users',
           showInMain: false,
           showInFooter: false,
           showInSiteMap: true,
-          h1: 'Accessability for all',
-          h2: 'TBD',
-          desktopImage: 'train-over-bridge.webp',
-          mobileImage: 'train-over-bridge.webp',
-          headerPostion: 'left',
+          h1: 'Accessibility That Empowers Every User',
+          h2: 'WCAG‑compliant design that improves usability, inclusivity, and performance for all audiences',
+          desktopImage: 'wcag.webp',
+          mobileImage: 'wcag.webp',
+          headerPostion: 'right',
         }
       },
             {
@@ -82,7 +82,7 @@ export const routes: Routes = [
         title: 'Services | Designs That Connect and Perform | Dundee Media Group',
         data: {
           description: 'Explore Dundee Media Group’s design services. From web and social to email campaigns, we deliver SEO‑optimized and WCAG‑inclusive designs that connect, perform, and drive measurable results.',
-          label: 'Design Services',
+          label: 'Design That Connect',
           showInMain: false,
           showInFooter: false,
           showInSiteMap: true,
