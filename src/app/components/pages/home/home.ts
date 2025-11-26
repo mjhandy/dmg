@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { MatButton } from '@angular/material/button';
 
-import { MatIcon } from '@angular/material/icon';
 import { HeroBanner } from '../../global/hero-banner/hero-banner';
 
 import { CardsServices } from '../../global/cards/cards-services/cards-services';
@@ -11,7 +9,7 @@ import { TestimonialsService } from '../../../services/testimonials';
 import { Testimonials } from '../../global/testimonials/testimonials';
 @Component({
   selector: 'app-home',
-  imports: [HeroBanner, Testimonials, CardsCasestudies, CardsServices, MatButton, MatIcon],
+  imports: [HeroBanner, Testimonials, CardsCasestudies, CardsServices],
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })

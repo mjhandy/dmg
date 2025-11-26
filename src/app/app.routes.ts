@@ -77,20 +77,20 @@ export const routes: Routes = [
         }
       },
             {
-        path: 'designed-to-be-noticed',
+        path: 'design-web-social-email-seo-wcag',
         loadComponent: () => import('./components/pages/services/design/design').then(m => m.Design),
-        title: 'Services | Designed to be noticed | Dundee Media Group',
+        title: 'Services | Designs That Connect and Perform | Dundee Media Group',
         data: {
-          description: 'Design detail page descriptoin.',
-          label: 'Design nav label',
+          description: 'Explore Dundee Media Group’s design services. From web and social to email campaigns, we deliver SEO‑optimized and WCAG‑inclusive designs that connect, perform, and drive measurable results.',
+          label: 'Design Services',
           showInMain: false,
           showInFooter: false,
           showInSiteMap: true,
-          h1: 'Designed to be Noticed',
-          h2: 'TBD',
-          desktopImage: 'train-over-bridge.webp',
-          mobileImage: 'train-over-bridge.webp',
-          headerPostion: 'left',
+          h1: 'Designs That Connect and Perform',
+          h2: 'Web, social, and email designs built for impact, optimized for SEO, and inclusive by WCAG standards',
+          desktopImage: 'design.webp',
+          mobileImage: 'design.webp',
+          headerPostion: 'right',
         }
       }
     ]
