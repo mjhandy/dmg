@@ -11,12 +11,12 @@
   <div class="row">
     <div class="col-12 col-lg-8">
       <form [formGroup]="form" (ngSubmit)="submitForm()">
-      @for( field of formConfig; track field){
+      @for( field of ff; track field){
         <!-- Text, Email, Date, Number -->
-         @if (['text', 'email', 'date', 'number'].includes(field.inputType)){
+         @if (['text', 'email', 'date', 'number'].includes(field.type)){
           <label>{{ field.label }}</label>
           <input
-            [type]="field.inputType"
+            [type]="field.type"
             class="form-control" 
             [formControlName]="field.label"
           />
