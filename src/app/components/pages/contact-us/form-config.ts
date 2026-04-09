@@ -25,4 +25,19 @@ export const formConfig = [
       }
     ]
   },
+  {
+    type: 'textarea',
+    label: 'Message',
+    name: 'message',
+    value: '',
+    rows: 10,
+    cols: 10,
+    validations:[
+      {
+        name: 'required',
+        validator: 'required',
+        message: 'Please leave a message.'
+      }
+    ]
+  }
 ];

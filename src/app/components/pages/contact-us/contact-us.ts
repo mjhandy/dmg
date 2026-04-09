@@ -14,7 +14,7 @@ import { formConfig } from './form-config';
 export class ContactUs {
   parentComp = "page-contactUs";
   form!: FormGroup;
-  ff = formConfig;
+  fg = formConfig;
   field: any;
 
   constructor(
@@ -23,11 +23,11 @@ export class ContactUs {
 
   ngOnInit() {
     const group: any = {};
-    this.ff.forEach((field: { label: string | number; }) => {
+    this.fg.forEach((field: { label: string | number; }) => {
       group[field.label] = new FormControl('');
     });
     this.form = new FormGroup(group);
-    console.debug(this.ff);
+    console.debug(this.fg);
   }
 
   submitForm() {

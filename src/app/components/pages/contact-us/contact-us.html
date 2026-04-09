@@ -3,28 +3,38 @@
   <div class="row">
     <div class="col-12 col-lg-8">
       <h2 class="first">Your story matters, let’s shape it together.</h2>
-      <p>We’d love to hear from you. Whether you’re exploring a new project, have a question about our work, or simply
-        want to connect, our team is here to listen. Drop us a note and we’ll get back to you with clarity, ideas, and
-        next steps.</p>
+      <p>
+        We’d love to hear from you. Whether you’re exploring a new project, have a question about
+        our work, or simply want to connect, our team is here to listen. Drop us a note and we’ll
+        get back to you with clarity, ideas, and next steps.
+      </p>
     </div>
   </div>
   <div class="row">
     <div class="col-12 col-lg-8">
       <form [formGroup]="form" (ngSubmit)="submitForm()">
-      @for( field of ff; track field){
-        <!-- Text, Email, Date, Number -->
-         @if (['text', 'email', 'date', 'number'].includes(field.type)){
-          <label>{{ field.label }}</label>
-          <input
-            [type]="field.type"
-            class="form-control" 
-            [formControlName]="field.label"
-          />
-         }
-
-      }
-
-
+        @for (field of fg; track field) {
+          <!-- Text, Email, Date, Number -->
+          @if (['text', 'email', 'date', 'number'].includes(field.type)) {
+            <label [for]="field.name">{{ field.label }}</label>
+            <input
+              [id]="field.name"
+              [name]="field.name"
+              [type]="field.type" 
+              class="form-control" 
+              [formControlName]="field.label" />
+          }
+          @if (['textarea'].includes(field.type)){
+            <label [for]="field.name">{{ field.label }}</label>
+            <textarea
+              [id]="field.name"
+              [name]="field.name"
+              class="form-control" 
+              [formControlName]="field.label" 
+              [rows]="field.rows" [cols]="field.cols">
+            </textarea>
+          }
+        }
       </form>
     </div>
   </div>
