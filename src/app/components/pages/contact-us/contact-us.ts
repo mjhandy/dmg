@@ -13,24 +13,34 @@ import { formConfig } from './form-config';
 })
 export class ContactUs {
   parentComp = "page-contactUs";
-  contactForm: FormGroup;
+  contactForm!: FormGroup;
   isFormSubmitted: boolean = false;
-  constructor(
 
+
+  constructor(
+    private fb: FormBuilder
   ) {
     this.contactForm = new FormGroup({
       fullName: new FormControl('', [Validators.required]), // Using the 'required' validator
+      email: new FormControl('', [Validators.required])
     });
   }
 
   ngOnInit() {
-
+    this.contactForm = this.fb.group({
+      name: [null],
+      email: [null],
+      message: [null]
+    })
   }
 
-onSubmit() {
- this.contactForm.valid;
- this.isFormSubmitted = true;
-}
+  onSubmit() {
+    this.contactForm.valid;
+    this.isFormSubmitted = true;
+  }
 
+  allFieldsNull(): boolean {
+    return Object.values(this.contactForm.value).every(value => value === null || value === '');
+  }
 
 }

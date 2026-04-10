@@ -14,16 +14,30 @@
     <div class="col-12 col-lg-8">
       <form [formGroup]="contactForm" class="row">
         <div class="col-md-6">
-          <label class="form-label">Full name</label>
-          <input type="text" class="form-control" formControlName="fullName" />
-          <div class="text-danger">
+          <label class="form-label" for="fullName">Full name</label>
+          <input type="text" class="form-control" formControlName="fullName" name="fullName" />
+          <div class="error-message">
             @if (
               (contactForm.controls['fullName'].invalid &&
                 contactForm.controls['fullName'].touched) ||
               contactForm.controls['fullName'].dirty
             ) {
               @if (contactForm.controls['fullName'].errors?.['required']) {
-              <span>Please enter your first name.</span>
+                <span>Please enter your first name.</span>
+              }
+            }
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="email">Email</label>
+          <input type="email" class="form-control" formControlName="email" name="email" />
+          <div class="error-message">
+            @if (
+              (contactForm.controls['email'].invalid && contactForm.controls['email'].touched) ||
+              contactForm.controls['email'].dirty
+            ) {
+              @if (contactForm.controls['email'].errors?.['required']){
+                Please enter your email address
               }
             }
           </div>
@@ -31,7 +45,7 @@
       </form>
     </div>
     <div class="col-12 col-lg-8">
-      <button class="btn btn-primary" type="button" (click)="onSubmit()">Submit</button>
+      <button class="btn btn-primary" type="button" [disabled]="allFieldsNull()" (click)="onSubmit()">Submit</button>
     </div>
   </div>
 </div>
