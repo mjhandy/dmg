@@ -12,34 +12,26 @@
   </div>
   <div class="row">
     <div class="col-12 col-lg-8">
-      <form [formGroup]="form" (ngSubmit)="submitForm()">
-        @for (field of fg; track field) {
-          <!-- Text, Email, Date, Number -->
-          @if (['text', 'email', 'date', 'number'].includes(field.type)) {
-            <label [for]="field.name">{{ field.label }}</label>
-            <input
-              [id]="field.name"
-              [name]="field.name"
-              [type]="field.type" 
-              class="form-control" 
-              [formControlName]="field.label" />
-
-          }
-          @if (['textarea'].includes(field.type)){
-            <label [for]="field.name">{{ field.label }}</label>
-            <textarea
-              [id]="field.name"
-              [name]="field.name"
-              class="form-control" 
-              [formControlName]="field.label" 
-              [rows]="field.rows" [cols]="field.cols">
-            </textarea>
-          }
-        }
+      <form [formGroup]="contactForm" class="row">
+        <div class="col-md-6">
+          <label class="form-label">Full name</label>
+          <input type="text" class="form-control" formControlName="fullName" />
+          <div class="text-danger">
+            @if (
+              (contactForm.controls['fullName'].invalid &&
+                contactForm.controls['fullName'].touched) ||
+              contactForm.controls['fullName'].dirty
+            ) {
+              @if (contactForm.controls['fullName'].errors?.['required']) {
+              <span>Please enter your first name.</span>
+              }
+            }
+          </div>
+        </div>
       </form>
     </div>
     <div class="col-12 col-lg-8">
-      <button type="submit">Submit</button>
+      <button class="btn btn-primary" type="button" (click)="onSubmit()">Submit</button>
     </div>
   </div>
 </div>

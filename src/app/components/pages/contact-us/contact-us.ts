@@ -7,32 +7,30 @@ import { formConfig } from './form-config';
 
 @Component({
   selector: 'app-contact-us',
-  imports: [HeroBanner, ReactiveFormsModule, ],
+  imports: [HeroBanner, ReactiveFormsModule,],
   templateUrl: './contact-us.html',
   styleUrl: './contact-us.scss'
 })
 export class ContactUs {
   parentComp = "page-contactUs";
-  form!: FormGroup;
-  fg = formConfig;
-  field: any;
-
+  contactForm: FormGroup;
+  isFormSubmitted: boolean = false;
   constructor(
-    private fb: FormBuilder
-  ) { }
+
+  ) {
+    this.contactForm = new FormGroup({
+      fullName: new FormControl('', [Validators.required]), // Using the 'required' validator
+    });
+  }
 
   ngOnInit() {
-    const group: any = {};
-    this.fg.forEach((field: { label: string | number; }) => {
-      group[field.label] = new FormControl('');
-    });
-    this.form = new FormGroup(group);
-    console.debug(this.fg);
+
   }
 
-  submitForm() {
-    console.log(this.form.value);
-  }
+onSubmit() {
+ this.contactForm.valid;
+ this.isFormSubmitted = true;
+}
 
 
 }
