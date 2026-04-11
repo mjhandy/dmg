@@ -1,1 +1,27 @@
-<p>site-map works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-8">
+      <section class="site-map">
+        <h1>Site Map</h1>
+        <p class="site-map__intro">All site pages are generated from the current route configuration.</p>
+
+        <ul class="site-map__list">
+          @for (item of siteMapEntries; track item.path) {
+          <li class="site-map__item">
+            <a [routerLink]="item.path">{{ item.label }}</a>
+            @if (item.children?.length) {
+            <ul class="site-map__sub-list">
+              @for (child of item.children; track child.path) {
+              <li class="site-map__item">
+                <a [routerLink]="child.path">{{ child.label }}</a>
+              </li>
+              }
+            </ul>
+            }
+          </li>
+          }
+        </ul>
+      </section>
+    </div>
+  </div>
+</div>
