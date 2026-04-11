@@ -54,6 +54,13 @@ mat-icon{
       font-weight: 500;
       &.name{
         font-style: italic;
+        margin: 0;
+      }
+    }
+    .testimonial-stars{
+      mat-icon{
+        font-size: 36px;
+        line-height: 1;
       }
     }
   }
