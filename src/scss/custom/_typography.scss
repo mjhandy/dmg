@@ -69,7 +69,7 @@ strong{
 
 a {
 	color: var(--#{$prefix}link-colour);
-	text-decoration: underline;
+	text-decoration: none;
 	text-decoration-thickness: 2px;
 	text-decoration-color: var(--#{$prefix}link-colour-hover);
 	transition: color 0.2s ease-in-out;
