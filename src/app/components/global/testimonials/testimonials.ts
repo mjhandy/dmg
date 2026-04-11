@@ -12,6 +12,8 @@ export class Testimonials {
 
   @Input() data: any;
 
+  stars = [1, 2, 3, 4, 5];
+
   silderID = 'slideID-' + this.randomString(5);
 
   randomString(length: number) {
@@ -20,9 +22,24 @@ export class Testimonials {
     let result = '';
 
     for (var i = 0; i < length; i++) {
-      result += randomChars.charAt(Math.floor(Math.random() * randomChars.length));
+      result += randomChars.charAt(Math.floor(Math.random() * length));
     }
     return result;
+  }
+
+  getRating(review: any): number {
+    return Number(review?.rating) || 0;
+  }
+
+  getStarIcon(review: any, star: number): string {
+    const rating = this.getRating(review);
+    if (rating >= star) {
+      return 'star';
+    }
+    if (rating + 0.5 >= star) {
+      return 'star_half';
+    }
+    return 'star_border';
   }
 
 }

@@ -31,7 +31,28 @@
     "title": "Artisan Collective, Montreal",
     "copy": "For years, our craft felt invisible online. Dundee Media Group gave us a digital identity that feels authentic. Sales are up, but more importantly, our story is finally being told.",
     "rating": "5",
-    "name": "Head of Content & Community",    
+    "name": "Head of Content & Community",
+    "live": true
+  },
+  {
+    "title": "Healthcare Practice, Alberta",
+    "copy": "Our new site is clean, clear, and actually easy for our patients to use. The accessibility improvements made a real difference for people who need it most.",
+    "rating": "5",
+    "name": "Dr. Susan Grant",
+    "live": true
+  },
+  {
+    "title": "Legal Services, Manitoba",
+    "copy": "Dundee Media Group helped us make a complex offering feel simple. Our clients can now find the right information quickly, and our intake forms are converting better than ever.",
+    "rating": "5",
+    "name": "Noah Wilson",
+    "live": true
+  },
+  {
+    "title": "Hospitality Brand, Nova Scotia",
+    "copy": "They understood our need for storytelling and functionality. The new site is beautiful, faster, and more accessible — guests are already commenting on how easy it is to book.",
+    "rating": "4.5",
+    "name": "Maya Thompson",
     "live": true
   }
 ]
