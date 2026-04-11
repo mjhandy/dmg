@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, ValidationErrors, Validators } from '@angular/forms';
 
 import { HeroBanner } from '../../global/hero-banner/hero-banner';
 import { formConfig } from './form-config';
@@ -16,31 +16,79 @@ export class ContactUs {
   contactForm!: FormGroup;
   isFormSubmitted: boolean = false;
 
+  noInjectionValidator = (control: AbstractControl): ValidationErrors | null => {
+    const value = control.value;
+    if (typeof value !== 'string' || !value) {
+      return null;
+    }
+
+    const lowerValue = value.toLowerCase();
+    const injectionPattern = /<\s*script\b|<\s*\/\s*script\b|javascript:|on\w+\s*=|<[^>]+>|%3c|%3e/;
+
+    return injectionPattern.test(lowerValue) ? { injection: true } : null;
+  };
 
   constructor(
     private fb: FormBuilder
   ) {
-    this.contactForm = new FormGroup({
-      fullName: new FormControl('', [Validators.required]), // Using the 'required' validator
-      email: new FormControl('', [Validators.required])
+    this.contactForm = this.fb.group({
+      fullName: ['', [Validators.required, Validators.pattern(/^[^\d]+$/), this.noInjectionValidator]],
+      email: ['', [Validators.required, Validators.email, this.noInjectionValidator]],
+      message: ['', [Validators.required, this.noInjectionValidator]]
     });
   }
 
   ngOnInit() {
     this.contactForm = this.fb.group({
-      name: [null],
-      email: [null],
-      message: [null]
-    })
+      fullName: ['', [Validators.required, Validators.pattern(/^[^\d]+$/), this.noInjectionValidator]],
+      email: ['', [Validators.required, Validators.email, this.noInjectionValidator]],
+      subject: ['', [Validators.required, this.noInjectionValidator]],
+      message: ['', [Validators.required, this.noInjectionValidator]]
+    });
   }
 
   onSubmit() {
-    this.contactForm.valid;
     this.isFormSubmitted = true;
+    this.contactForm.markAllAsTouched();
+
+    if (this.contactForm.invalid) {
+      return;
+    }
+
+    window.location.href = this.getMailtoLink();
   }
 
-  allFieldsNull(): boolean {
-    return Object.values(this.contactForm.value).every(value => value === null || value === '');
+  getMailtoLink(): string {
+    const values = this.contactForm.value;
+    const subjectText = values.subject ? `${values.subject} - Contact request from website` : 'Contact request from website';
+    const subject = encodeURIComponent(subjectText);
+    const bodyParts = [
+      `Name: ${values.fullName ?? ''}`,
+      `Email: ${values.email ?? ''}`,
+      `Subject: ${values.subject ?? ''}`,
+    ];
+
+    bodyParts.push(`Message: ${values.message ?? ''}`);
+
+    const body = encodeURIComponent(bodyParts.join('\n'));
+    return `mailto:dmg@outlook.com?subject=${subject}&body=${body}`;
+  }
+
+  onFieldBlur(controlName: string) {
+    const control = this.contactForm.get(controlName);
+    if (control) {
+      control.markAsTouched();
+      control.updateValueAndValidity();
+    }
+  }
+
+  onClear() {
+    this.contactForm.reset({
+      fullName: '',
+      email: '',
+      message: ''
+    });
+    this.isFormSubmitted = false;
   }
 
 }
