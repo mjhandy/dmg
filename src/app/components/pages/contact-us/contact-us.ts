@@ -15,6 +15,7 @@ export class ContactUs {
   parentComp = "page-contactUs";
   contactForm!: FormGroup;
   isFormSubmitted: boolean = false;
+  submissionSuccess: boolean = false;
 
   noInjectionValidator = (control: AbstractControl): ValidationErrors | null => {
     const value = control.value;
@@ -55,6 +56,7 @@ export class ContactUs {
       return;
     }
 
+    this.submissionSuccess = true;
     window.location.href = this.getMailtoLink();
   }
 
@@ -86,9 +88,11 @@ export class ContactUs {
     this.contactForm.reset({
       fullName: '',
       email: '',
+      subject: '',
       message: ''
     });
     this.isFormSubmitted = false;
+    this.submissionSuccess = false;
   }
 
 }

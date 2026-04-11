@@ -12,6 +12,7 @@
   </div>
   <div class="row">
     <div class="col-12 col-lg-8">
+      <div [hidden]="submissionSuccess">
       <form [formGroup]="contactForm" class="row">
         <div class="col-md-6">
           <label class="form-label" for="fullName">Full name</label>
@@ -119,10 +120,16 @@
           </div>
         </div>
       </form>
-    </div>
-    <div class="col-12 col-lg-8 d-flex gap-2">
-      <button class="btn btn-primary" type="button" (click)="onSubmit()">Submit</button>
-      <button class="btn btn-secondary" type="button" (click)="onClear()">Clear</button>
+      <div class="col-12 col-lg-8 d-flex gap-2">
+        <button class="btn btn-primary" type="button" (click)="onSubmit()">Submit</button>
+        <button class="btn btn-secondary" type="button" (click)="onClear()">Clear</button>
+      </div>
+      </div>
+      <div [hidden]="!submissionSuccess" class="thank-you-message">
+        <h3>Thanks for reaching out!</h3>
+        <p>We appreciate your message and will follow up soon.</p>
+        <button class="btn btn-secondary mt-3" type="button" (click)="onClear()">Submit another response</button>
+      </div>
     </div>
   </div>
 </div>
