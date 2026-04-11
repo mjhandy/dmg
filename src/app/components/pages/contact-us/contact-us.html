@@ -1,135 +1,137 @@
 <app-hero-banner [parent]="parentComp"></app-hero-banner>
-<div class="container">
-  <div class="row">
-    <div class="col-12 col-lg-8">
-      <h2 class="first">Your story matters, let’s shape it together.</h2>
-      <p>
-        We’d love to hear from you. Whether you’re exploring a new project, have a question about
-        our work, or simply want to connect, our team is here to listen. Drop us a note and we’ll
-        get back to you with clarity, ideas, and next steps.
-      </p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-12 col-lg-8">
-      <div [hidden]="submissionSuccess">
-      <form [formGroup]="contactForm" class="row">
-        <div class="col-md-6">
-          <label class="form-label" for="fullName">Full name</label>
-          <input
-            type="text"
-            class="form-control"
-            formControlName="fullName"
-            name="fullName"
-            (blur)="onFieldBlur('fullName')"
-            [class.is-invalid]="contactForm.controls['fullName'].invalid && (contactForm.controls['fullName'].touched || contactForm.controls['fullName'].dirty || isFormSubmitted)"
-          />
-          <div class="error-message">
-            @if (
-              contactForm.controls['fullName'].invalid &&
-              (contactForm.controls['fullName'].touched || contactForm.controls['fullName'].dirty || isFormSubmitted)
-            ) {
-              @if (contactForm.controls['fullName'].errors?.['required']) {
-                <span>Please enter your first name.</span>
-              }
-              @if (contactForm.controls['fullName'].errors?.['pattern']) {
-                <span>Full name cannot contain numbers.</span>
-              }
-              @if (contactForm.controls['fullName'].errors?.['injection']) {
-                <span>Invalid characters detected.</span>
-              }
-            }
-          </div>
-        </div>
-        <div class="col-md-6">
-          <label class="form-label" for="email">Email</label>
-          <input
-            type="email"
-            class="form-control"
-            formControlName="email"
-            name="email"
-            (blur)="onFieldBlur('email')"
-            [class.is-invalid]="contactForm.controls['email'].invalid && (contactForm.controls['email'].touched || contactForm.controls['email'].dirty || isFormSubmitted)"
-          />
-          <div class="error-message">
-            @if (
-              contactForm.controls['email'].invalid &&
-              (contactForm.controls['email'].touched || contactForm.controls['email'].dirty || isFormSubmitted)
-            ) {
-              @if (contactForm.controls['email'].errors?.['required']){
-                Please enter your email address
-              }
-              @if (contactForm.controls['email'].errors?.['email']){
-                Please enter a valid email address
-              }
-              @if (contactForm.controls['email'].errors?.['injection']){
-                <span>Invalid characters detected.</span>
-              }
-            }
-          </div>
-        </div>
-        <div class="col-md-6">
-          <label class="form-label" for="subject">Subject</label>
-          <select
-            class="form-control"
-            formControlName="subject"
-            name="subject"
-            (blur)="onFieldBlur('subject')"
-            [class.is-invalid]="contactForm.controls['subject'].invalid && (contactForm.controls['subject'].touched || contactForm.controls['subject'].dirty || isFormSubmitted)"
-          >
-            <option value="">Select a subject</option>
-            <option value="WCAG Help">WCAG Help</option>
-            <option value="Analytics implementation">Analytics implementation</option>
-          </select>
-          <div class="error-message">
-            @if (
-              contactForm.controls['subject'].invalid &&
-              (contactForm.controls['subject'].touched || contactForm.controls['subject'].dirty || isFormSubmitted)
-            ) {
-              @if (contactForm.controls['subject'].errors?.['required']) {
-                Please select a subject.
-              }
-              @if (contactForm.controls['subject'].errors?.['injection']) {
-                <span>Invalid characters detected.</span>
-              }
-            }
-          </div>
-        </div>
-        <div class="col-12">
-          <label class="form-label" for="message">Message</label>
-          <textarea
-            class="form-control"
-            formControlName="message"
-            name="message"
-            rows="5"
-            (blur)="onFieldBlur('message')"
-            [class.is-invalid]="contactForm.controls['message'].invalid && (contactForm.controls['message'].touched || contactForm.controls['message'].dirty || isFormSubmitted)"
-          ></textarea>
-          <div class="error-message">
-            @if (
-              contactForm.controls['message'].invalid &&
-              (contactForm.controls['message'].touched || contactForm.controls['message'].dirty || isFormSubmitted)
-            ) {
-              @if (contactForm.controls['message'].errors?.['required']) {
-                Please enter a message.
-              }
-              @if (contactForm.controls['message'].errors?.['injection']) {
-                <span>Invalid characters detected.</span>
-              }
-            }
-          </div>
-        </div>
-      </form>
-      <div class="col-12 col-lg-8 d-flex gap-2">
-        <button class="btn btn-primary" type="button" (click)="onSubmit()">Submit</button>
-        <button class="btn btn-secondary" type="button" (click)="onClear()">Clear</button>
-      </div>
-      </div>
-      <div [hidden]="!submissionSuccess" class="thank-you-message">
-        <h3>Thanks for reaching out!</h3>
-        <p>We appreciate your message and will follow up soon.</p>
-        <button class="btn btn-secondary mt-3" type="button" (click)="onClear()">Submit another response</button>
+<section class="page-section" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-8">
+        <h2 id="contact-heading" class="first">Your story matters, let’s shape it together.</h2>
+        <p>
+          We’d love to hear from you. Whether you’re exploring a new project, have a question about
+          our work, or simply want to connect, our team is here to listen. Drop us a note and we’ll
+          get back to you with clarity, ideas, and next steps.
+        </p>
       </div>
     </div>
+    <div class="row">
+      <div class="col-12 col-lg-8">
+        <div [hidden]="submissionSuccess">
+        <form [formGroup]="contactForm" class="row">
+          <div class="col-md-6">
+            <label class="form-label" for="fullName">Full name</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="fullName"
+              name="fullName"
+              (blur)="onFieldBlur('fullName')"
+              [class.is-invalid]="contactForm.controls['fullName'].invalid && (contactForm.controls['fullName'].touched || contactForm.controls['fullName'].dirty || isFormSubmitted)"
+            />
+            <div class="error-message">
+              @if (
+                contactForm.controls['fullName'].invalid &&
+                (contactForm.controls['fullName'].touched || contactForm.controls['fullName'].dirty || isFormSubmitted)
+              ) {
+                @if (contactForm.controls['fullName'].errors?.['required']) {
+                  <span>Please enter your first name.</span>
+                }
+                @if (contactForm.controls['fullName'].errors?.['pattern']) {
+                  <span>Full name cannot contain numbers.</span>
+                }
+                @if (contactForm.controls['fullName'].errors?.['injection']) {
+                  <span>Invalid characters detected.</span>
+                }
+              }
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="email">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              formControlName="email"
+              name="email"
+              (blur)="onFieldBlur('email')"
+              [class.is-invalid]="contactForm.controls['email'].invalid && (contactForm.controls['email'].touched || contactForm.controls['email'].dirty || isFormSubmitted)"
+            />
+            <div class="error-message">
+              @if (
+                contactForm.controls['email'].invalid &&
+                (contactForm.controls['email'].touched || contactForm.controls['email'].dirty || isFormSubmitted)
+              ) {
+                @if (contactForm.controls['email'].errors?.['required']){
+                  Please enter your email address
+                }
+                @if (contactForm.controls['email'].errors?.['email']){
+                  Please enter a valid email address
+                }
+                @if (contactForm.controls['email'].errors?.['injection']){
+                  <span>Invalid characters detected.</span>
+                }
+              }
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="subject">Subject</label>
+            <select
+              class="form-control"
+              formControlName="subject"
+              name="subject"
+              (blur)="onFieldBlur('subject')"
+              [class.is-invalid]="contactForm.controls['subject'].invalid && (contactForm.controls['subject'].touched || contactForm.controls['subject'].dirty || isFormSubmitted)"
+            >
+              <option value="">Select a subject</option>
+              <option value="WCAG Help">WCAG Help</option>
+              <option value="Analytics implementation">Analytics implementation</option>
+            </select>
+            <div class="error-message">
+              @if (
+                contactForm.controls['subject'].invalid &&
+                (contactForm.controls['subject'].touched || contactForm.controls['subject'].dirty || isFormSubmitted)
+              ) {
+                @if (contactForm.controls['subject'].errors?.['required']) {
+                  Please select a subject.
+                }
+                @if (contactForm.controls['subject'].errors?.['injection']) {
+                  <span>Invalid characters detected.</span>
+                }
+              }
+            </div>
+          </div>
+          <div class="col-12">
+            <label class="form-label" for="message">Message</label>
+            <textarea
+              class="form-control"
+              formControlName="message"
+              name="message"
+              rows="5"
+              (blur)="onFieldBlur('message')"
+              [class.is-invalid]="contactForm.controls['message'].invalid && (contactForm.controls['message'].touched || contactForm.controls['message'].dirty || isFormSubmitted)"
+            ></textarea>
+            <div class="error-message">
+              @if (
+                contactForm.controls['message'].invalid &&
+                (contactForm.controls['message'].touched || contactForm.controls['message'].dirty || isFormSubmitted)
+              ) {
+                @if (contactForm.controls['message'].errors?.['required']) {
+                  Please enter a message.
+                }
+                @if (contactForm.controls['message'].errors?.['injection']) {
+                  <span>Invalid characters detected.</span>
+                }
+              }
+            </div>
+          </div>
+        </form>
+        <div class="col-12 col-lg-8 d-flex gap-2">
+          <button class="btn btn-primary" type="button" (click)="onSubmit()">Submit</button>
+          <button class="btn btn-secondary" type="button" (click)="onClear()">Clear</button>
+        </div>
+        </div>
+        <div [hidden]="!submissionSuccess" class="thank-you-message">
+          <h3>Thanks for reaching out!</h3>
+          <p>We appreciate your message and will follow up soon.</p>
+          <button class="btn btn-secondary mt-3" type="button" (click)="onClear()">Submit another response</button>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>

@@ -1,20 +1,22 @@
 <app-hero-banner parent="home"></app-hero-banner>
-<div class="container">
+<section class="page-section" aria-labelledby="home-heading">
+  <div class="container">
     <div class="row">
-    <div class="col-12">
-      <h2 class="first">SEO Power Meets WCAG Compliance and Creative Design</h2>
-      <p>At Dundee Media Group, we merge performance-driven SEO with WCAG-compliant accessibility and expert design services. Our strategies ensure your brand is discoverable, your digital spaces are welcoming to all, and your design elevates engagement. By aligning technical precision with creative clarity, we transform visibility into measurable growth, inclusivity into trust, and design into lasting impact.</p>
+      <div class="col-12">
+        <h2 id="home-heading" class="first">SEO Power Meets WCAG Compliance and Creative Design</h2>
+        <p>At Dundee Media Group, we merge performance-driven SEO with WCAG-compliant accessibility and expert design services. Our strategies ensure your brand is discoverable, your digital spaces are welcoming to all, and your design elevates engagement. By aligning technical precision with creative clarity, we transform visibility into measurable growth, inclusivity into trust, and design into lasting impact.</p>
+      </div>
+    </div>
+    <app-cards-services></app-cards-services>
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
+        <app-cards-casestudies></app-cards-casestudies>
+      </div>
+    </div>
+    <div class="row justify-content-center pt-5">
+      <div class="col-12 col-lg-8 ">
+        <app-testimonials [data]="review"></app-testimonials>
+      </div>
     </div>
   </div>
-  <app-cards-services></app-cards-services>
-  <div class="row justify-content-center">
-    <div class="col-12 col-lg-10">
-      <app-cards-casestudies></app-cards-casestudies>
-    </div>
-  </div>
-  <div class="row justify-content-center pt-5">
-    <div class="col-12 col-lg-8 ">
-      <app-testimonials [data]="review"></app-testimonials>
-    </div>
-  </div>
-</div>
+</section>
