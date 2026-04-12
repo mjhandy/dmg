@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, ValidationErrors, Validators } from '@angular/forms';
 
 import { HeroBanner } from '../../global/hero-banner/hero-banner';
-import { formConfig } from './form-config';
+import { MatButton } from '@angular/material/button';
 
 
 @Component({
   selector: 'app-contact-us',
-  imports: [HeroBanner, ReactiveFormsModule,],
+  imports: [HeroBanner, ReactiveFormsModule,MatButton],
   templateUrl: './contact-us.html',
   styleUrl: './contact-us.scss'
 })

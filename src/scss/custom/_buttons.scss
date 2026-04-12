@@ -26,10 +26,11 @@
   font-family: var(--#{$prefix}font-family-base);
   font-weight: var(--#{$prefix}body-font-weight);
   line-height: var(--#{$prefix}line-height-base);
+  cursor: pointer;
 
   &-group {
     display: flex;
-    gap: 15px;
+    
 
     @include media-breakpoint-up(lg) {
 

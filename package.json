@@ -9,8 +9,8 @@
     "test": "ng test",
     "generate-sitemap": "node generate-sitemap.js",
     "build:prod": "ng build && npm run generate-sitemap",
-    "predeploy": "ng build --configuration production --base-href /DMG/",
-    "deploy": "gh-pages -d dist/dmg"
+    "predeploy": "ng build --configuration production --base-href https://mjhandy.github.io/dmg/",
+    "deploy": "gh-pages -d dist/dmg/browser"
   },
   "prettier": {
     "printWidth": 100,

@@ -14,117 +14,102 @@
     <div class="row">
       <div class="col-12 col-lg-8">
         <div [hidden]="submissionSuccess">
-        <form [formGroup]="contactForm" class="row">
-          <div class="col-md-6">
-            <label class="form-label" for="fullName">Full name</label>
-            <input
-              type="text"
-              class="form-control"
-              formControlName="fullName"
-              name="fullName"
-              (blur)="onFieldBlur('fullName')"
-              [class.is-invalid]="contactForm.controls['fullName'].invalid && (contactForm.controls['fullName'].touched || contactForm.controls['fullName'].dirty || isFormSubmitted)"
-            />
-            <div class="error-message">
-              @if (
+          <form [formGroup]="contactForm" class="row">
+            <div class="col-md-6">
+              <label class="form-label" for="fullName">Full name</label>
+              <input type="text" class="form-control" formControlName="fullName" name="fullName"
+                (blur)="onFieldBlur('fullName')"
+                [class.is-invalid]="contactForm.controls['fullName'].invalid && (contactForm.controls['fullName'].touched || contactForm.controls['fullName'].dirty || isFormSubmitted)" />
+              <div class="error-message">
+                @if (
                 contactForm.controls['fullName'].invalid &&
                 (contactForm.controls['fullName'].touched || contactForm.controls['fullName'].dirty || isFormSubmitted)
-              ) {
+                ) {
                 @if (contactForm.controls['fullName'].errors?.['required']) {
-                  <span>Please enter your first name.</span>
+                <span>Please enter your first name.</span>
                 }
                 @if (contactForm.controls['fullName'].errors?.['pattern']) {
-                  <span>Full name can only contain letters.</span>
+                <span>Full name can only contain letters.</span>
                 }
                 @if (contactForm.controls['fullName'].errors?.['injection']) {
-                  <span>Invalid characters detected.</span>
+                <span>Invalid characters detected.</span>
                 }
-              }
+                }
+              </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <label class="form-label" for="email">Email</label>
-            <input
-              type="email"
-              class="form-control"
-              formControlName="email"
-              name="email"
-              (blur)="onFieldBlur('email')"
-              [class.is-invalid]="contactForm.controls['email'].invalid && (contactForm.controls['email'].touched || contactForm.controls['email'].dirty || isFormSubmitted)"
-            />
-            <div class="error-message">
-              @if (
+            <div class="col-md-6">
+              <label class="form-label" for="email">Email</label>
+              <input type="email" class="form-control" formControlName="email" name="email"
+                (blur)="onFieldBlur('email')"
+                [class.is-invalid]="contactForm.controls['email'].invalid && (contactForm.controls['email'].touched || contactForm.controls['email'].dirty || isFormSubmitted)" />
+              <div class="error-message">
+                @if (
                 contactForm.controls['email'].invalid &&
                 (contactForm.controls['email'].touched || contactForm.controls['email'].dirty || isFormSubmitted)
-              ) {
+                ) {
                 @if (contactForm.controls['email'].errors?.['required']){
-                  Please enter your email address
+                Please enter your email address
                 }
                 @if (contactForm.controls['email'].errors?.['email']){
-                  Please enter a valid email address
+                Please enter a valid email address
                 }
                 @if (contactForm.controls['email'].errors?.['injection']){
-                  <span>Invalid characters detected.</span>
+                <span>Invalid characters detected.</span>
                 }
-              }
+                }
+              </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <label class="form-label" for="subject">Subject</label>
-            <select
-              class="form-control"
-              formControlName="subject"
-              name="subject"
-              (blur)="onFieldBlur('subject')"
-              [class.is-invalid]="contactForm.controls['subject'].invalid && (contactForm.controls['subject'].touched || contactForm.controls['subject'].dirty || isFormSubmitted)"
-            >
-              <option value="">Select a subject</option>
-              <option value="WCAG Help">WCAG Help</option>
-              <option value="Analytics implementation">Analytics implementation</option>
-            </select>
-            <div class="error-message">
-              @if (
+            <div class="col-md-6">
+              <label class="form-label" for="subject">Subject</label>
+              <select class="form-control" formControlName="subject" name="subject" (blur)="onFieldBlur('subject')"
+                [class.is-invalid]="contactForm.controls['subject'].invalid && (contactForm.controls['subject'].touched || contactForm.controls['subject'].dirty || isFormSubmitted)">
+                <option value="">Select a subject</option>
+                <option value="WCAG Help">WCAG Help</option>
+                <option value="Analytics implementation">Analytics implementation</option>
+              </select>
+              <div class="error-message">
+                @if (
                 contactForm.controls['subject'].invalid &&
                 (contactForm.controls['subject'].touched || contactForm.controls['subject'].dirty || isFormSubmitted)
-              ) {
+                ) {
                 @if (contactForm.controls['subject'].errors?.['required']) {
-                  Please select a subject.
+                Please select a subject.
                 }
                 @if (contactForm.controls['subject'].errors?.['injection']) {
-                  <span>Invalid characters detected.</span>
+                <span>Invalid characters detected.</span>
                 }
-              }
+                }
+              </div>
             </div>
-          </div>
-          <div class="col-12">
-            <label class="form-label" for="message">Message</label>
-            <textarea
-              class="form-control"
-              formControlName="message"
-              name="message"
-              rows="5"
-              (blur)="onFieldBlur('message')"
-              [class.is-invalid]="contactForm.controls['message'].invalid && (contactForm.controls['message'].touched || contactForm.controls['message'].dirty || isFormSubmitted)"
-            ></textarea>
-            <div class="error-message">
-              @if (
+            <div class="col-12">
+              <label class="form-label" for="message">Message</label>
+              <textarea class="form-control" formControlName="message" name="message" rows="5"
+                (blur)="onFieldBlur('message')"
+                [class.is-invalid]="contactForm.controls['message'].invalid && (contactForm.controls['message'].touched || contactForm.controls['message'].dirty || isFormSubmitted)"></textarea>
+              <div class="error-message">
+                @if (
                 contactForm.controls['message'].invalid &&
                 (contactForm.controls['message'].touched || contactForm.controls['message'].dirty || isFormSubmitted)
-              ) {
+                ) {
                 @if (contactForm.controls['message'].errors?.['required']) {
-                  Please enter a message.
+                Please enter a message.
                 }
                 @if (contactForm.controls['message'].errors?.['injection']) {
-                  <span>Invalid characters detected.</span>
+                <span>Invalid characters detected.</span>
                 }
-              }
+                }
+              </div>
             </div>
+          </form>
+          <div class="col-12 col-lg-8 btn-group gap-6 mb-5">
+            <button matButton="elevated" matButton="filled" class="btn btn-primary" type="button"
+              (click)="onSubmit()">Submit</button>
+            <button matButton="elevated" matButton="filled" class="btn btn-secondary" type="button"
+              (click)="onClear()">Clear</button>
           </div>
-        </form>
-        <div class="col-12 col-lg-8 btn-group gap-2">
-          <button class="btn btn-primary" type="button" (click)="onSubmit()">Submit</button>
-          <button class="btn btn-secondary" type="button" (click)="onClear()">Clear</button>
-        </div>
+          <div class="col-12 col-lg-8">
+            <p>Thanks for reaching out. We appreciate you taking the time to connect with us, and our team will follow up soon with a clear path forward and any details you may need.</p>
+          </div>
         </div>
         <div [hidden]="!submissionSuccess" class="thank-you-message">
           <h3>Thanks for reaching out!</h3>
