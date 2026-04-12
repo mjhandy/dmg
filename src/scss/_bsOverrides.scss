@@ -229,9 +229,16 @@ $btn-heroBanner-secondary-text: $white;
 
 $btn-primary-bg: map-get($dmgColours, blue);
 $btn-primary-text: $white;
-$btn-secondary-bg: map-get($dmgColours, blue);
-$btn-secondary-text: $white;
+$btn-secondary-bg: map-get($dmgColours, white);
+$btn-secondary-text: map-get($dmgColours, blue);
+$btn-secondary-border: map-get($dmgColours, blue);
 $btn-icon-colour: map-get($dmgColours, orange);
+
+//forms
+$input-btn-focus-box-shadow: map-get($dmgColours, red);
+
+//messages
+$form-error: map-get($dmgColours, red);
 
 // border
 $brd-radius: 5px;

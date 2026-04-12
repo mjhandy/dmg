@@ -1,0 +1,17 @@
+form{
+  margin-bottom: 20px;
+
+  .error{
+    &-message{
+      height: 20px;
+      color: var(--#{$prefix}-error-message-form);
+      margin-bottom: 15px;
+    }
+  }
+
+  // input borders
+  .is-invalid{
+    border-color: var(--#{$prefix}-error-message-form);
+    
+  }
+}

@@ -33,7 +33,7 @@ export class ContactUs {
     private fb: FormBuilder
   ) {
     this.contactForm = this.fb.group({
-      fullName: ['', [Validators.required, Validators.pattern(/^[^\d]+$/), this.noInjectionValidator]],
+      fullName: ['', [Validators.required, Validators.pattern(/^[A-Za-zÀ-ÖØ-öø-ÿ' -]+$/), this.noInjectionValidator]],
       email: ['', [Validators.required, Validators.email, this.noInjectionValidator]],
       message: ['', [Validators.required, this.noInjectionValidator]]
     });
@@ -41,7 +41,7 @@ export class ContactUs {
 
   ngOnInit() {
     this.contactForm = this.fb.group({
-      fullName: ['', [Validators.required, Validators.pattern(/^[^\d]+$/), this.noInjectionValidator]],
+      fullName: ['', [Validators.required, Validators.pattern(/^[A-Za-zÀ-ÖØ-öø-ÿ' -]+$/), this.noInjectionValidator]],
       email: ['', [Validators.required, Validators.email, this.noInjectionValidator]],
       subject: ['', [Validators.required, this.noInjectionValidator]],
       message: ['', [Validators.required, this.noInjectionValidator]]

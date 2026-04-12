@@ -40,8 +40,13 @@
   --#{$prefix}-button-bg-primary: #{$btn-primary-bg};
   --#{$prefix}-button-text-primary: #{$btn-primary-text};
   --#{$prefix}-button-bg-secondary: #{$btn-secondary-bg};
+  --#{$prefix}-button-border-secondary: #{$btn-secondary-border};
   --#{$prefix}-button-text-secondary: #{$btn-secondary-text};
   --#{$prefix}-button-icon-colour: #{$btn-icon-colour};
+
+
+  // messages
+  --#{$prefix}-error-message-form: #{$form-error};
 
   // heading sizes
   @each $heading, $size in $heading {

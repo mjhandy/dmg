@@ -34,7 +34,7 @@
                   <span>Please enter your first name.</span>
                 }
                 @if (contactForm.controls['fullName'].errors?.['pattern']) {
-                  <span>Full name cannot contain numbers.</span>
+                  <span>Full name can only contain letters.</span>
                 }
                 @if (contactForm.controls['fullName'].errors?.['injection']) {
                   <span>Invalid characters detected.</span>
@@ -121,7 +121,7 @@
             </div>
           </div>
         </form>
-        <div class="col-12 col-lg-8 d-flex gap-2">
+        <div class="col-12 col-lg-8 btn-group gap-2">
           <button class="btn btn-primary" type="button" (click)="onSubmit()">Submit</button>
           <button class="btn btn-secondary" type="button" (click)="onClear()">Clear</button>
         </div>

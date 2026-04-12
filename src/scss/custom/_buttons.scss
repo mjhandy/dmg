@@ -20,6 +20,12 @@
   border: 0;
   text-decoration: none;
   width: fit-content;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: var(--#{$prefix}font-size-base);
+  font-family: var(--#{$prefix}font-family-base);
+  font-weight: var(--#{$prefix}body-font-weight);
+  line-height: var(--#{$prefix}line-height-base);
 
   &-group {
     display: flex;
@@ -51,16 +57,7 @@
 
   &-secondary {
     background-color: var(--#{$prefix}-button-bg-secondary) !important;
-    color: var(--#{$prefix}-button-text-secondary) !important;
-  }
-
-  &-primary {
-    background-color: var(--#{$prefix}-button-bg-primary) !important;
-    color: var(--#{$prefix}-button-text-primary) !important;
-  }
-
-  &-secondary {
-    background-color: var(--#{$prefix}-button-bg-secondary) !important;
+    border: 2px solid var(--#{$prefix}-button-border-secondary);
     color: var(--#{$prefix}-button-text-secondary) !important;
   }
 
