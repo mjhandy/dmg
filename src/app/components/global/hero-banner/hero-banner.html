@@ -17,7 +17,7 @@
   <div class="heroBanner-copy side-{{ positionClass }}">
     <h1 [innerHTML]=" h1Html ? h1Html : (banners[parent] && banners[parent].h1) "></h1>
     @if ( h2Html || (parent && banners && banners[parent] && banners[parent].h2) ){
-    <h2 [innerHTML]=" h2Html ? h2Html : banners[parent].h2"></h2>
+      <h2 [innerHTML]=" h2Html ? h2Html : banners[parent].h2"></h2>
     }
     @if (ctaCopy && ctaTarget ){
     <div class="btn-group">
@@ -34,8 +34,6 @@
       }
     </div>
     }
-
-
   </div>
 </div>
 }
