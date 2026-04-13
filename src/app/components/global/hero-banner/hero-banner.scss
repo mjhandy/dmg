@@ -5,8 +5,14 @@ $gradient: linear-gradient(to right, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%
 
 .heroBanner {
   position: relative;
-  aspect-ratio: 3.2/1;
-  width: 100%;
+  aspect-ratio: 1/1;
+
+  @include media-breakpoint-up(sm) {
+
+    aspect-ratio: 13/1;
+
+  }
+
   &-image {
     &.mask {
       &-true {
@@ -30,11 +36,15 @@ $gradient: linear-gradient(to right, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%
 
 
   &-copy {
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 20px;
     position: absolute;
     z-index: 5;
     top: 15px;
     left: 15px;
     right: 15px;
+    bottom: 15px;
     padding: 10px;
     background: rgba(255, 255, 255, 0.025);
     /* Semi-transparent background */
@@ -47,13 +57,43 @@ $gradient: linear-gradient(to right, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%
     box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2),
       inset 0 4px 20px rgba(255, 255, 255, 0.3);
 
-    @include media-breakpoint-up(lg) {
-      width: 40%;
-      top: 25px;
-      left: unset;
-      right: unset;
-      padding: 15px;
+    @include media-breakpoint-up(sm) {
+      // width: 75%;
+      // right: unset;
+      // bottom: unset;
+      row-gap: 5px;
     }
+
+    @include media-breakpoint-up(lg) {
+      right: unset;
+      row-gap: 10px;
+      width: 66.66%;
+
+    }
+
+    @include media-breakpoint-up(xl) {
+      right: unset;
+      row-gap: 20px;
+      width: 33.33%;
+
+    }
+
+    // @include media-breakpoint-up(sm) {
+    //   width: 60%;
+    //   top: 15px;
+    //   left: 15px;
+    // }
+
+    // @include media-breakpoint-down(lg) {
+    //   width: 33.33%;
+    //   top: 25px;
+    //   left: unset;
+    //   right: unset;
+    //   bottom: 25px;
+    //   padding: 15px;
+    //   row-gap: 15px;
+    // }
+
 
     /* Depth and glow */
 
@@ -66,10 +106,13 @@ $gradient: linear-gradient(to right, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%
       text-shadow: 4px 2px 5px var(--dmg-baseColour-blue);
     }
 
-    // h2 {
-    //   margin-bottom: 20px;
-    // }
+    h1 {
+      font-size: 2.6rem;
+    }
 
+    h2 {
+      font-size: 2rem;
+    }
 
 
 
