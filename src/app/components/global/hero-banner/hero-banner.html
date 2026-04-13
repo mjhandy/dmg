@@ -10,7 +10,9 @@
         srcset="images/hero-banners/desktop/{{ imgDesktop ? imgDesktop : (banners[parent] && banners[parent].bgImageDesktop) }}">
       <img
         src="images/hero-banners/desktop/{{ imgDesktop ? imgDesktop : (banners[parent] && banners[parent].bgImageDesktop) }}"
-        width="100%" alt="" class="">
+        width="100%" 
+        alt="{{ h1Html }}" class="" 
+        fetchpriority="high">
     </picture>
 
   </div>
