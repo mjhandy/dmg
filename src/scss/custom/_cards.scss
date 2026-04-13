@@ -4,6 +4,7 @@
     color: var(--dmg-baseColour-orange);
   }
   &-text{
+
     a{
       text-decoration: none;
       mat-icon{
@@ -11,5 +12,8 @@
         height: 18px;
       }
     }
+  }
+  &-body{
+
   }
 }
