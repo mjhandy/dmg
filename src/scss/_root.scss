@@ -48,12 +48,7 @@
   // messages
   --#{$prefix}-error-message-form: #{$form-error};
 
-  // heading sizes
-  @each $heading, $size in $heading {
-    --#{$prefix}#{$heading}-font-size: #{$size};
-  }
-
-  // fone sizes
+  // font sizes
   @each $fontSize, $size in $fontSize {
     --#{$prefix}#{$fontSize}-font-size: #{$size};
   }

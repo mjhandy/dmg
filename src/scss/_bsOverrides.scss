@@ -106,20 +106,6 @@ $link-colour-underline: map-get($dmgColours, orange);
 $link-colour-focus: map-get($dmgColours, orange);
 $link-colour-active: map-get($dmgColours, orange);
 
-/// Heading sizes
-/// @group sm
-/// @example Usage
-///   .h1{
-///     font-size: map-get($heading, h1);
-///    }
-$heading: (
-  h1: $font-size-base * 2.5,
-  h2: $font-size-base * 1.5,
-  h3: $font-size-base * 1.25,
-  h4: $font-size-base * 1.5,
-  h5: $font-size-base * 1.25,
-  h6: $font-size-base * 1.125,
-  ) !default;
 
 /// font size increase
 /// 
