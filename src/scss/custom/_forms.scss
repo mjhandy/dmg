@@ -1,8 +1,16 @@
-form{
+form {
   margin-bottom: 20px;
 
-  .error{
-    &-message{
+  .form {
+    &-control {
+      font-size: var(--#{$prefix}font-size-base);
+      font-family: var(--#{$prefix}font-family-base);
+      font-weight: var(--#{$prefix}body-font-weight);
+    }
+  }
+
+  .error {
+    &-message {
       height: 20px;
       color: var(--#{$prefix}-error-message-form);
       margin-bottom: 15px;
@@ -10,8 +18,7 @@ form{
   }
 
   // input borders
-  .is-invalid{
+  .is-invalid {
     border-color: var(--#{$prefix}-error-message-form);
-    
   }
 }

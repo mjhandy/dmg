@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, ValidationErrors, Validators } from '@angular/forms';
 
 import { HeroBanner } from '../../global/hero-banner/hero-banner';
@@ -16,6 +16,9 @@ export class ContactUs {
   contactForm!: FormGroup;
   isFormSubmitted: boolean = false;
   submissionSuccess: boolean = false;
+
+  @ViewChild('contactFormElement', { read: ElementRef })
+  contactFormElement!: ElementRef<HTMLFormElement>;
 
   noInjectionValidator = (control: AbstractControl): ValidationErrors | null => {
     const value = control.value;
@@ -53,11 +56,28 @@ export class ContactUs {
     this.contactForm.markAllAsTouched();
 
     if (this.contactForm.invalid) {
+      this.focusFirstInvalidControl();
       return;
     }
 
     this.submissionSuccess = true;
     window.location.href = this.getMailtoLink();
+  }
+
+  private focusFirstInvalidControl(): void {
+    if (!this.contactFormElement?.nativeElement) {
+      return;
+    }
+
+    const firstInvalid = this.contactFormElement.nativeElement.querySelector('.is-invalid') as HTMLElement | null;
+    if (!firstInvalid) {
+      return;
+    }
+
+    firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    if (typeof firstInvalid.focus === 'function') {
+      firstInvalid.focus();
+    }
   }
 
   getMailtoLink(): string {

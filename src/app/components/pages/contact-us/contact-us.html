@@ -14,7 +14,7 @@
     <div class="row">
       <div class="col-12 col-lg-8">
         <div [hidden]="submissionSuccess">
-          <form [formGroup]="contactForm" class="row">
+          <form #contactFormElement class="row" [formGroup]="contactForm">
             <div class="col-md-6">
               <label class="form-label" for="fullName">Full name</label>
               <input type="text" class="form-control" formControlName="fullName" name="fullName"
