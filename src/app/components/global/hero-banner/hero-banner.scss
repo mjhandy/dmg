@@ -5,7 +5,8 @@ $gradient: linear-gradient(to right, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%
 
 .heroBanner {
   position: relative;
-
+  aspect-ratio: 3.2/1;
+  width: 100%;
   &-image {
     &.mask {
       &-true {
