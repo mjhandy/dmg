@@ -58,4 +58,9 @@ export class MainNav {
     el.click();
   }
 
+  onNavClick() {
+    this.closeMenu();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
 }

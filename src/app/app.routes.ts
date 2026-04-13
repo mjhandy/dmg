@@ -70,7 +70,7 @@ export const routes: Routes = [
           showInFooter: false,
           showInSiteMap: true,
           h1: 'Accessibility That Empowers Every User',
-          h2: 'WCAG‑compliant design that improves usability, inclusivity, and performance for all audiences',
+          h2: 'WCAG‑compliant designs that improves usability, inclusivity, and performance for all audiences',
           desktopImage: 'wcag.webp',
           mobileImage: 'wcag.webp',
           headerPostion: 'right',
@@ -82,7 +82,7 @@ export const routes: Routes = [
         title: 'Services | Designs That Connect and Perform | Dundee Media Group',
         data: {
           description: 'Explore Dundee Media Group’s design services. From web and social to email campaigns, we deliver SEO‑optimized and WCAG‑inclusive designs that connect, perform, and drive measurable results.',
-          label: 'Design That Connect',
+          label: 'Designs That Connect',
           showInMain: false,
           showInFooter: false,
           showInSiteMap: true,
