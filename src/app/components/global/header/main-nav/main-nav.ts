@@ -52,15 +52,26 @@ export class MainNav {
   }
 
   closeMenu(){
-    console.debug('close menu');
+    // console.debug('close menu');
     if (!this.closeButton) return;
       let el: HTMLElement = this.closeButton.nativeElement;
     el.click();
   }
 
-  onNavClick() {
+  trackMainNavUsage(label: string | undefined): void {
+    if (!label) {
+      return;
+    }
+
+    // console.log('Main nav usage clicked:', label);
+    console.debug('Tracking main nav usage:', label);
+    if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
+      (window as any).gtag('event', 'Main Nav Usage', {
+        event_category: 'Navigation',
+        event_label: label,
+      });
+    }
     this.closeMenu();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
 }

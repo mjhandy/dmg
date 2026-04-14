@@ -15,7 +15,7 @@
         @for (route of routes; track route.title) {
           @if (!route.children) {
             <li class="nav-item">
-              <a [routerLink]="[route.path]" class="nav-link" routerLinkActive="active" (click)="onNavClick()">{{ route.label }}</a>
+              <a [routerLink]="[route.path]" class="nav-link" routerLinkActive="active" (click)="trackMainNavUsage(route.label)">{{ route.label }}</a>
             </li>
           }
 
@@ -26,11 +26,11 @@
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item" (click)="onNavClick()" [routerLink]="[route.path]">{{ route.label }} Overview</a>
+                  <a class="dropdown-item" (click)="trackMainNavUsage(route.label + ' Overview')" [routerLink]="[route.path]">{{ route.label }} Overview</a>
                 </li>
                 @for (child of route.children; track child.label) {
                   <li>
-                    <a class="dropdown-item" (click)="onNavClick()" [routerLink]="[route.path, child.path]">{{ child.label }}</a>
+                    <a class="dropdown-item" (click)="trackMainNavUsage(child.label)" [routerLink]="[route.path, child.path]">{{ child.label }}</a>
                   </li>
                 }
               </ul>
