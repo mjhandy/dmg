@@ -8,12 +8,11 @@ import { MatIcon } from '@angular/material/icon';
 import { HeroBanner } from '../../global/hero-banner/hero-banner';
 import { TestimonialsService } from '../../../services/testimonials';
 import { Testimonials } from '../../global/testimonials/testimonials';
-import { BodyImage } from "../../global/body-image/body-image";
 
 
 @Component({
   selector: 'app-services',
-  imports: [HeroBanner, Testimonials, BodyImage, RouterModule,MatButton, MatIcon ],
+  imports: [HeroBanner, Testimonials, RouterModule,MatButton, MatIcon ],
   templateUrl: './services.html',
   styleUrl: './services.scss'
 })
