@@ -14,23 +14,6 @@
     </script>
     <meta charset="utf-8" />
     <base href="/" />
-    <script>
-      (function() {
-        const base = document.querySelector('base');
-        if (!base) return;
-
-        const dynamicBase =
-          window.__BASE_HREF__ ||
-          window.APP_BASE_HREF ||
-          (function() {
-            const path = window.location.pathname;
-            const segment = path.split('/').filter(Boolean)[0];
-            return segment ? `/${segment}/` : '/';
-          })();
-
-        base.setAttribute('href', dynamicBase);
-      })();
-    </script>
     <title>Dmg</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="" />
