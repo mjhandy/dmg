@@ -11,6 +11,6 @@ import { RouterModule } from '@angular/router';
 })
 export class SolvingUsability {
   ngOnInit() {
-    console.log('SolvingUsability component initialized');
+    // console.log('SolvingUsability component initialized');
   }
 }

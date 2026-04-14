@@ -37,7 +37,7 @@ export class Services {
 
   ngOnInit() {
 
-     console.log('Services component initialized');
+    //  console.log('Services component initialized');
 
     this.testimonialService.getTestimonials()
       .subscribe(Response => {

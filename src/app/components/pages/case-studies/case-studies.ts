@@ -30,7 +30,7 @@ export class CaseStudies {
   }
 
   ngOnInit() {
-    console.log('CaseStudies component initialized');
+    // console.log('CaseStudies component initialized');
   }
 
 }
