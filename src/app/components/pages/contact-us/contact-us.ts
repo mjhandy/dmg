@@ -56,12 +56,27 @@ export class ContactUs {
     this.contactForm.markAllAsTouched();
 
     if (this.contactForm.invalid) {
+      this.trackContactFormSubmission(false);
       this.focusFirstInvalidControl();
       return;
     }
 
+    this.trackContactFormSubmission(true);
     this.submissionSuccess = true;
     window.location.href = this.getMailtoLink();
+  }
+
+  private trackContactFormSubmission(isValid: boolean): void {
+    const status = isValid ? 'valid' : 'invalid';
+    console.debug(`Contact form submit: ${status}`);
+
+    if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
+      (window as any).gtag('event', 'Contact Form Submit', {
+        event_category: 'Form',
+        event_label: status,
+        value: isValid ? 1 : 0
+      });
+    }
   }
 
   private focusFirstInvalidControl(): void {
