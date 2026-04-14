@@ -54,9 +54,10 @@ export class App {
     this.router.events
       .pipe(
         filter(event => event instanceof NavigationEnd),
-        map(() => this.getChild(this.activatedRoute))
       )
-      .subscribe(route => {
+      .subscribe((event: NavigationEnd) => {
+        const route = this.getChild(this.activatedRoute);
+
         // Update meta description
         const data = route.snapshot.data;
         if (data['description']) {
@@ -68,7 +69,19 @@ export class App {
         // Set body class based on route
         const pageClass = this.getPageClass(route);
         document.body.className = pageClass ? pageClass : '';
+
+        // Track route change as a Google Analytics page view
+        this.trackPageView(event.urlAfterRedirects);
       });
+  }
+
+  private trackPageView(url: string): void {
+    console.log('Tracking page view for URL:', url);
+    if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
+      (window as any).gtag('config', 'G-T1M6ZYNRKR', {
+        page_path: url,
+      });
+    }
   }
 
   private getChild(route: ActivatedRoute): ActivatedRoute {
