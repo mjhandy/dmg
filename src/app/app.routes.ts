@@ -36,7 +36,8 @@ export const routes: Routes = [
       showInMain: true,
       showInFooter: true,
       showInSiteMap: true,
-      h1: 'What We Do',
+      h1: 'Digital Experiences That Feel Alive',
+      h2: 'Blending SEO, accessibility, and design into work that connects, resonates, and grows with your audience.',
       desktopImage: 'train-over-bridge.webp',
       mobileImage: 'train-over-bridge.webp',
       headerPostion: 'left'
@@ -196,6 +197,7 @@ export const routes: Routes = [
       showInFooter: true,
       showInSiteMap: true,
       h1: 'Let’s Start the Conversation',
+      h2: 'Your story matters, and we’re here to listen, understand, and help you take the next step.',
       desktopImage: 'train-over-bridge.webp',
       mobileImage: 'train-over-bridge.webp',
       headerPostion: 'left'
