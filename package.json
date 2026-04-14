@@ -10,8 +10,7 @@
     "generate-sitemap": "node generate-sitemap.js",
     "build:prod": "ng build && npm run generate-sitemap",
     "predeploy": "ng build --configuration production --base-href https://mjhandy.github.io/dmg/",
-    "deploy": "npm run build && wrangler deploy",
-    "preview": "npm run build && wrangler dev"
+    "deploy" : "ng deploy --repo=https://github.com/mjhandy/dmg.git --name='mjhandy' --email=mjhandy@outlook.com"
   },
   "prettier": {
     "printWidth": 100,
@@ -53,7 +52,6 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.9.2",
-    "wrangler": "^4.82.2"
+    "typescript": "~5.9.2"
   }
 }

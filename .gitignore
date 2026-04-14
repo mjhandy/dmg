@@ -31,9 +31,3 @@ yarn-error.log*
 /dmg/.angular
 /dmg/node_modules
 /dmg/dist
-
-# wrangler files
-.wrangler
-.dev.vars*
-!.dev.vars.example
-!.env.example
