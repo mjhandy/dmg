@@ -10,7 +10,7 @@
     "generate-sitemap": "node generate-sitemap.js",
     "build:prod": "ng build && npm run generate-sitemap",
     "predeploy": "ng build --configuration production --base-href https://mjhandy.github.io/dmg/",
-    "deploy": "gh-pages -d dist/dmg/browser"
+    "deploy" : "ng deploy --repo=https://github.com/mjhandy/dmg.git --name='mjhandy' --email=mjhandy@outlook.com"
   },
   "prettier": {
     "printWidth": 100,
@@ -44,6 +44,7 @@
     "@angular/cli": "^20.3.6",
     "@angular/compiler-cli": "^20.3.0",
     "@types/jasmine": "~5.1.0",
+    "angular-cli-ghpages": "^3.0.2",
     "gh-pages": "^5.0.0",
     "jasmine-core": "~5.9.0",
     "karma": "~6.4.0",
