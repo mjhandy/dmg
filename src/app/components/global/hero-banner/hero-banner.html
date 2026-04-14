@@ -1,6 +1,6 @@
 @if (h1Html || imgDesktop || imgMobile || (parent && banners && banners[parent])) {
 <div class="heroBanner p-0 {{ positionClass }}">
-  <div class="heroBanner-image mask-{{ imageMask }}">
+  <div class="heroBanner-image mask-{{ imageMask }} flip-{{ flipImage }}">
     <picture>
       <!-- image should be 480 x 320 -->
       <source media="(max-width:767px)"
