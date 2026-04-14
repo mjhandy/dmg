@@ -19,13 +19,13 @@ h3,
 
 h2,
 .h2 {
-	font-size: 2;
+	font-size: 2rem;
 	font-weight: 700;
 	@include media-breakpoint-up(lg) {
-		font-family: 1.75;
+		font-size: 1.75rem;
 	}
 	&.first{
-		font-size: 1.8srem;
+		font-size: 2.25rem;
 		margin-top: 1rem;
 	}
 	
