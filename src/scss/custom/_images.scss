@@ -27,3 +27,12 @@
     /* Set the offset */
   }
 }
+
+
+.flip{
+  &-horizontal{
+    img{
+      transform: scaleX(-1);
+    }
+  }
+}

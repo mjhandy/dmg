@@ -60,7 +60,7 @@ export const routes: Routes = [
           headerPostion: 'left',
         }
       },
-            {
+      {
         path: 'wcag-accessibility-web-design',
         loadComponent: () => import('./components/pages/services/wcag/wcag').then(m => m.Wcag),
         title: 'Services | Accessibility That Empowers Every User | Dundee Media Group',
@@ -75,9 +75,11 @@ export const routes: Routes = [
           desktopImage: 'wcag.webp',
           mobileImage: 'wcag.webp',
           headerPostion: 'right',
+          flipImage: 'horizontal'
+
         }
       },
-            {
+      {
         path: 'design-web-social-email-seo-wcag',
         loadComponent: () => import('./components/pages/services/design/design').then(m => m.Design),
         title: 'Services | Designs That Connect and Perform | Dundee Media Group',
@@ -92,6 +94,7 @@ export const routes: Routes = [
           desktopImage: 'design.webp',
           mobileImage: 'design.webp',
           headerPostion: 'right',
+          flipImage: 'horizontal'
         }
       }
     ]

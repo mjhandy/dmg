@@ -29,6 +29,7 @@ export class HeroBanner implements OnInit, OnDestroy {
   ctaTargetSecondary: string ='';
   positionClass: string = '';
   imageMask: boolean = false;
+  flipImage: boolean = false;
 
   private routerSub?: Subscription;
 
@@ -64,6 +65,7 @@ export class HeroBanner implements OnInit, OnDestroy {
       this.imgMobile = d.mobileImage || '';
       this.positionClass = d.headerPostion || '';
       this.imageMask = d.imageMask || '';
+      this.flipImage = d.flipImage || '';
       this.ctaCopy = d.ctaCopy || '';
       this.ctaTarget = d.ctaTarget || '';
       this.ctaCopySecondary = d.ctaCopySecondary || '';
@@ -91,6 +93,7 @@ export class HeroBanner implements OnInit, OnDestroy {
     this.imgMobile = '';
     this.positionClass = '';
     this.imageMask = false;
+    this.flipImage = false;
     this.ctaCopy = '';
     
   }
