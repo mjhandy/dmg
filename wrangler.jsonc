@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "dmg",
+  "compatibility_date": "2026-04-14",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "dist\\dmg\\browser"
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}
