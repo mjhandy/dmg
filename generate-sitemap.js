@@ -5,7 +5,7 @@ const path = require('path');
 const routesContent = fs.readFileSync('./src/app/app.routes.ts', 'utf8');
 
 // Base URL of your website
-const BASE_URL = 'https://dundeemediagroup.com'; // Update this to your actual domain
+const BASE_URL = 'https://dmg.dundee-media-group.workers.dev/'; // Update this to your actual domain
 
 // Extract routes using regex
 const routeRegex = /path:\s+'([^']+)'/g;
