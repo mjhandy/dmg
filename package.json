@@ -8,7 +8,7 @@
     "test": "ng test",
     "generate-sitemap": "node generate-sitemap.js",
     "build:prod": "ng build && npm run generate-sitemap",
-    "build": "ng build --configuration production  --base-href=dmg.dundee-media-group.workers.dev && npm run generate-sitemap",
+    "build": "ng build --configuration production  --base-href=/ && npm run generate-sitemap",
     "predeploy": "ng build --configuration production --base-href=https://mjhandy.github.io/dmg/",
     "deploy" : "ng deploy --repo=https://github.com/mjhandy/dmg.git --name='mjhandy' --email=mjhandy@outlook.com"
   },
