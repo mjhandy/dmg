@@ -2,22 +2,22 @@
 
 ul{
   display: flex;
-  flex-flow: row;
   flex-wrap: wrap;
+  flex-flow: row;
+  width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
-  width: 100%;
   @include media-breakpoint-up(lg){
     width: 75%;
   }
   li{
+    flex: 0 0 50%;
     margin: 0;
     padding: 0;
-    flex: 0 0 50%;
     a{
-      font-weight: 400;
       font-size: 1.5rem;
+      font-weight: 400;
       text-decoration: none;
     }
   }

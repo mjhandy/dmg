@@ -1,6 +1,5 @@
 form {
   margin-bottom: 20px;
-
   .form {
     &-control {
       font-size: var(--#{$prefix}font-size-base);
@@ -12,8 +11,8 @@ form {
   .error {
     &-message {
       height: 20px;
-      color: var(--#{$prefix}-error-message-form);
       margin-bottom: 15px;
+      color: var(--#{$prefix}-error-message-form);
     }
   }
 

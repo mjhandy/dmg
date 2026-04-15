@@ -6,40 +6,37 @@
 // skip to main items
 .skipToMain {
   position: absolute;
+  z-index: 99999;
   top: 0;
   left: 50%;
   transform: translateY(-100%);
   padding: 25px 50px;
   background-color: $white;
-  z-index: 99999;
-
   &:focus {
     transform: translateY(10%);
-    @include outline();
   }
 }
 
 // focus state
 a {
   &:focus {
-    @include outline(0);
   }
 }
 
 footer {
-  background: var(--web-gray-900);
   min-height: 100px;
+  background: var(--web-gray-900);
 }
 
 
 header{
   position: sticky;
-  top: 0;
   z-index: 50;
+  top: 0;
   background-color: $white;
 }
 
 footer{
-  padding: 15px 0;
   // background-color: var(--dmg-monochrome-185);
+  padding: 15px 0;
 }

@@ -15,16 +15,16 @@
 .alert{
   &-default{
     .mdc-snackbar__surface.mat-mdc-snackbar-surface{
+      padding: 25px 50px;
       background: rgba(var(--web-black-rgb),0.6);
       border: 2px solid #495057;
       border-radius: 10px;
-      padding: 25px 50px;
     }
   }
 }
 
 .mat-mdc-progress-spinner {
   position: absolute;
-  left: 50%;
   top: 50%;
+  left: 50%;
 }

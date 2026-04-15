@@ -13,7 +13,6 @@
 /// 
 /// @example scss 
 /// .card {
-///    @include boxshadow (1, 2, 300);
 /// }
 /// 
 /// 
@@ -22,7 +21,7 @@
 
 @mixin boxShadow ($level, $hoverLevel, $speed : 250) {
   transition : all $speed + ms ease-in-out;
-  @if $level == 1 {    
+  @if $level == 1 {
     box-shadow : 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   } @else if $level == 2 {
     box-shadow : 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
