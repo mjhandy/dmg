@@ -52,7 +52,7 @@ export class MainNav {
   }
 
   closeMenu(){
-    // console.debug('close menu');
+   
     if (!this.closeButton) return;
       let el: HTMLElement = this.closeButton.nativeElement;
     el.click();
@@ -63,7 +63,7 @@ export class MainNav {
       return;
     }
 
-    // console.log('Main nav usage clicked:', label);
+    
     console.debug('Tracking main nav usage:', label);
     if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
       (window as any).gtag('event', 'Main Nav Usage', {

@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 })
 export class Seo {
   ngOnInit() {
-    console.log('Seo component initialized');
+    // console.log('Seo component initialized');
   }
 }
