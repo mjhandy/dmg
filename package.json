@@ -10,7 +10,7 @@
     "build:prod": "ng build && npm run generate-sitemap",
     "build": "ng build --configuration production  --base-href=/  && npm run generate-sitemap",
     "predeploy": "ng build --configuration production --base-href=https://mjhandy.github.io/dmg/",
-    "deploy" : "ng deploy --repo=https://github.com/mjhandy/dmg.git --name='mjhandy' --email=mjhandy@outlook.com"
+    "deploy": "ng deploy --repo=https://github.com/mjhandy/dmg.git --name='mjhandy' --email=mjhandy@outlook.com"
   },
   "prettier": {
     "printWidth": 100,
@@ -27,22 +27,22 @@
   "private": true,
   "dependencies": {
     "@angular/cdk": "^20.2.10",
-    "@angular/common": "^20.3.0",
-    "@angular/compiler": "^20.3.0",
-    "@angular/core": "^20.3.0",
-    "@angular/forms": "^20.3.0",
+    "@angular/common": "^21.2.8",
+    "@angular/compiler": "^21.2.8",
+    "@angular/core": "^21.2.8",
+    "@angular/forms": "^21.2.8",
     "@angular/material": "^20.2.10",
-    "@angular/platform-browser": "^20.3.0",
-    "@angular/router": "^20.3.0",
+    "@angular/platform-browser": "^21.2.8",
+    "@angular/router": "^21.2.8",
     "bootstrap": "^5.3.8",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
-    "@angular/build": "^20.3.6",
-    "@angular/cli": "^20.3.6",
-    "@angular/compiler-cli": "^20.3.0",
+    "@angular/build": "^21.2.7",
+    "@angular/cli": "^21.2.7",
+    "@angular/compiler-cli": "^21.2.8",
     "@types/jasmine": "~5.1.0",
     "angular-cli-ghpages": "^3.0.2",
     "gh-pages": "^5.0.0",

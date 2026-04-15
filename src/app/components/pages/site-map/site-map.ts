@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { RouterModule, Routes } from '@angular/router';
 import { routes } from '../../../app.routes';
 
@@ -12,7 +12,7 @@ interface SiteMapEntry {
 @Component({
   selector: 'app-site-map',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [RouterModule],
   templateUrl: './site-map.html',
   styleUrl: './site-map.scss'
 })
