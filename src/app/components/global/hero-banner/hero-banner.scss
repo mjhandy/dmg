@@ -60,6 +60,7 @@ $gradient: linear-gradient(to right, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%
 
     @include media-breakpoint-up(sm) {
       row-gap: 5px;
+      bottom: unset;
     }
 
     @include media-breakpoint-up(lg) {
