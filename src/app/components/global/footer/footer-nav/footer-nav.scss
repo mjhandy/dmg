@@ -1,18 +1,21 @@
 @import 'componentInclude';
 
+#footer-nav{
+  display: flex;
 ul{
   display: flex;
-  flex-wrap: wrap;
-  flex-flow: row;
+  flex-flow: row wrap;
   width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
   @include media-breakpoint-up(lg){
-    width: 75%;
+    // flex-flow: column nowrap;
+    
   }
   li{
-    flex: 0 0 50%;
+    // flex: 0 0 50
+    width: 50%;
     margin: 0;
     padding: 0;
     a{
@@ -22,3 +25,5 @@ ul{
     }
   }
 }
+}
+
