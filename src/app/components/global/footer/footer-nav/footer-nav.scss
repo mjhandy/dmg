@@ -9,10 +9,7 @@ ul{
   margin: 0;
   padding: 0;
   list-style: none;
-  @include media-breakpoint-up(lg){
-    // flex-flow: column nowrap;
-    
-  }
+
   li{
     // flex: 0 0 50
     width: 50%;

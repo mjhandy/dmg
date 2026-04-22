@@ -42,8 +42,10 @@ export class App {
 
     this.matIconRegistry
       .addSvgIcon(
-        "site-logo",
-        this.setPath(`${this.iconPath}logo_horizontal.svg`)
+        "site-logo", this.setPath(`${this.iconPath}logo_horizontal.svg`),
+      
+        // "logo-FB", this.setPath(`${this.iconPath}logo_horizontal.svg`)
+      
       );
 
 
