@@ -1,7 +1,2 @@
-# Handle SPA routing - all routes redirect to index.html
+# SPA routing
 /*    /index.html   200
-
-
-
-# Optional: Custom 404 page
-# /404    /index.html   404
