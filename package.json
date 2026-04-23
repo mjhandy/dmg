@@ -8,7 +8,7 @@
     "test": "ng test",
     "generate-sitemap": "node generate-sitemap.js",
     "build:prod": "ng build && npm run generate-sitemap",
-    "build": "ng build --configuration production  --base-href=/  && npm run generate-sitemap"
+    "build": "ng build --configuration production "
   },
   "prettier": {
     "printWidth": 100,
