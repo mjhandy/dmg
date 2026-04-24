@@ -7,9 +7,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "generate-sitemap": "node generate-sitemap.js",
-    "build:prod": "ng build && npm run generate-sitemap",
+    "build:prod": "ng build --configuration production && npm run generate-sitemap",
     "build": "ng build --configuration production",
-    "gitDeploy": "ng deploy --base-href=/mjhandy.github.io/dmg/ --branch=dev --dir=dist/dmg/browser --repo=https://github.com/mjhandy/dmg.git --name='mjhandy' --email=mjhandy@outlook.com"
+    "gitDeploy": "npx angular-cli-ghpages --dir=dist/dmg/browser --repo=https://github.com/mjhandy/dmg.git --branch=dev"
   },
   "prettier": {
     "printWidth": 100,

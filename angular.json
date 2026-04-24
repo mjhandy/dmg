@@ -19,7 +19,7 @@
           "options": {
             "outputPath": "dist/dmg",
             "index": "src/index.html",
-            "baseHref": "/",
+            "baseHref": "/mjhandy.github.io/dmg/",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
@@ -31,7 +31,12 @@
                 "glob": "_redirects",
                 "input": "src",
                 "output": "/"
-              },              
+              },
+              {
+                "glob": "404.html",
+                "input": "src",
+                "output": "/"
+              },
               {
                 "glob": "**/*",
                 "input": "public"
