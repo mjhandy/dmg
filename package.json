@@ -8,7 +8,8 @@
     "test": "ng test",
     "generate-sitemap": "node generate-sitemap.js",
     "build:prod": "ng build && npm run generate-sitemap",
-    "build": "ng build --configuration production "
+    "build": "ng build --configuration production",
+    "gitDeploy": "ng deploy --base-href=/mjhandy.github.io/dmg/ --branch=dev --dir=dist/dmg/browser --repo=https://github.com/mjhandy/dmg.git --name='mjhandy' --email=mjhandy@outlook.com"
   },
   "prettier": {
     "printWidth": 100,
