@@ -4,38 +4,31 @@
 .mdc {
   &-button {
     padding: 10px 20px;
-
     &>.mat-icon {
+      margin-left: 0;
       font-size: 1.5rem;
       font-weight: 700;
-      margin-left: 0;
     }
   }
 }
 
 
 .btn {
-
-  margin: 0;
-  border: 0;
-  text-decoration: none;
   width: fit-content;
+  margin: 0;
   padding: 5px 20px;
+  cursor: pointer;
+  border: 0;
   border-radius: 5px;
   font-size: var(--#{$prefix}font-size-base);
   font-family: var(--#{$prefix}font-family-base);
   font-weight: var(--#{$prefix}body-font-weight);
   line-height: var(--#{$prefix}line-height-base);
-  cursor: pointer;
-
+  text-decoration: none;
   &-group {
     display: flex;
-    
-
     @include media-breakpoint-up(lg) {
-
       flex-direction: row;
-
     }
   }
 

@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 
+import { SvgIcons } from '../../../../services/svg-icons';
+
 @Component({
   selector: 'app-logo',
   imports: [MatIconModule, RouterModule],
@@ -9,5 +11,9 @@ import { RouterModule } from '@angular/router';
   styleUrl: './logo.scss'
 })
 export class Logo {
+
+  constructor(
+    private svgIcons: SvgIcons
+  ) { }
 
 }

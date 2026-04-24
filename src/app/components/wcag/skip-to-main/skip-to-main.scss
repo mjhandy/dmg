@@ -1,17 +1,16 @@
 @import 'componentInclude';
 
 .skipToMain{
-  width: 25%;
-  margin: 25px auto;
-  border: 5px solid var(--dmg-baseColour-orange);
-
-  background-color: var(--dmg-baseColour-white);
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  padding: 15px;
   transform: translateY(-150%);
+  width: 25%;
+  margin: 25px auto;
+  padding: 15px;
+  background-color: var(--dmg-baseColour-white);
+  border: 5px solid var(--dmg-baseColour-orange);
   &:focus{
     transform: translateY(10%);
   }

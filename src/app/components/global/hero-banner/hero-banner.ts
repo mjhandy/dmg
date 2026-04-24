@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, OnDestroy } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
@@ -10,7 +10,7 @@ import { MatIcon } from '@angular/material/icon';
 @Component({
   selector: 'app-hero-banner',
   standalone: true,
-  imports: [CommonModule,MatButton,MatIcon],
+  imports: [MatButton, MatIcon],
   templateUrl: './hero-banner.html',
   styleUrl: './hero-banner.scss'
 })

@@ -5,29 +5,24 @@
 $gradient: linear-gradient(to right, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
 
 .heroBanner {
-  position: relative;
   aspect-ratio: 1/1;
-
+  position: relative;
   @include media-breakpoint-up(sm) {
-
     aspect-ratio: 13/1;
-
   }
 
   &-image {
     &.mask {
       &-true {
         &:after {
+          inset: 0;
+          /* shorthand for top:0; right:0; bottom:0; left:0 */;
+          pointer-events: none;
           content: '';
           position: absolute;
-          inset: 0;
-          /* shorthand for top:0; right:0; bottom:0; left:0 */
-          background: rgba(0, 0, 0, 0.25);
-          /* Adjust alpha for darkness */
-          pointer-events: none;
-          /* Allow clicks to pass through */
-          height: 100%;
           width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.25);
         }
 
 
@@ -37,44 +32,36 @@ $gradient: linear-gradient(to right, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%
 
 
   &-copy {
+    backdrop-filter: blur(3px) saturate(180%);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2),;
     display: flex;
     flex-flow: column nowrap;
     row-gap: 20px;
     position: absolute;
     z-index: 5;
     top: 15px;
+    bottom: 15px;
     left: 15px;
     right: 15px;
-    bottom: 15px;
     padding: 10px;
     background: rgba(255, 255, 255, 0.025);
-    /* Semi-transparent background */
-    backdrop-filter: blur(3px) saturate(180%);
-    /* Frosted glass effect */
     border: 1px solid rgba(255, 255, 255, 0.50);
-    /* Subtle border */
     border-radius: 10px;
-    /* Rounded corners */
-    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2),
-      inset 0 4px 20px rgba(255, 255, 255, 0.3);
-
     @include media-breakpoint-up(sm) {
       row-gap: 5px;
       bottom: unset;
     }
 
     @include media-breakpoint-up(lg) {
-      right: unset;
       row-gap: 10px;
+      right: unset;
       width: 66.66%;
-
     }
 
     @include media-breakpoint-up(xl) {
-      right: unset;
       row-gap: 20px;
+      right: unset;
       width: 33.33%;
-
     }
 
 
@@ -83,9 +70,9 @@ $gradient: linear-gradient(to right, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%
     /// font colours
     h1,
     h2 {
-      color: var(--dmg-baseColour-white);
       font-weight: 500;
       line-height: 1.2;
+      color: var(--dmg-baseColour-white);
       text-shadow: 4px 2px 5px var(--dmg-baseColour-blue);
     }
 

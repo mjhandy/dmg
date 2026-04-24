@@ -2,7 +2,6 @@ import { Component, signal } from '@angular/core';
 
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
-import { MatIconRegistry, MatIconModule } from '@angular/material/icon';
 
 import { ReadOnRouteChange } from './components/wcag/read-on-route-change/read-on-route-change';
 import { SkipToMain } from './components/wcag/skip-to-main/skip-to-main';
@@ -16,8 +15,7 @@ import { filter, map } from 'rxjs';
 @Component({
   selector: 'app-root',
   imports: [
-    RouterOutlet, 
-    MatIconModule, 
+    RouterOutlet,  
     ReadOnRouteChange,
     SkipToMain,
     Header, 
@@ -27,24 +25,16 @@ import { filter, map } from 'rxjs';
 })
 export class App {
   protected readonly title = signal('dmg');
-  private iconPath = '/assets/';
 
 
 
   constructor(
-    private matIconRegistry: MatIconRegistry,
     private domSanitizer: DomSanitizer,
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private metaService: Meta,
-    private titleService: Title,
   ) {
 
-    this.matIconRegistry
-      .addSvgIcon(
-        "site-logo",
-        this.setPath(`${this.iconPath}logo_horizontal.svg`)
-      );
 
 
   }
