@@ -1,8 +1,9 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, ViewChild } from '@angular/core';
 
 import { Logo } from '../logo/logo';
 import { RouterModule, Router } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
+import Dropdown from 'bootstrap/js/src/dropdown.js';
 
 
 
@@ -13,9 +14,12 @@ import { MatIconModule } from '@angular/material/icon';
   templateUrl: './main-nav.html',
   styleUrl: './main-nav.scss'
 })
-export class MainNav {
+export class MainNav implements AfterViewInit, OnDestroy {
 
   @ViewChild('closeButton') closeButton: ElementRef<HTMLElement> | undefined
+  @ViewChild('mainNav', { static: true }) mainNav!: ElementRef<HTMLElement>;
+
+  private dropdowns: Dropdown[] = [];
 
   routes: {
     path: string;
@@ -49,6 +53,17 @@ export class MainNav {
           children: children.length ? children : undefined
         };
       });
+  }
+
+  ngAfterViewInit(): void {
+    const toggles = this.mainNav.nativeElement.querySelectorAll<HTMLElement>(
+      '[data-bs-toggle="dropdown"]'
+    );
+    this.dropdowns = Array.from(toggles, toggle => new Dropdown(toggle));
+  }
+
+  ngOnDestroy(): void {
+    this.dropdowns.forEach(dropdown => dropdown.dispose());
   }
 
   closeMenu(){
