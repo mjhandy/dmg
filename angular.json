@@ -19,7 +19,7 @@
           "options": {
             "outputPath": "dist/dmg",
             "index": "src/index.html",
-            "baseHref": "/mjhandy.github.io/dmg/",
+            "baseHref": "",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
@@ -124,7 +124,13 @@
             ],
             "styles": [
               "src/styles.scss"
-            ]
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "./node_modules/bootstrap/scss",
+                "./src/scss"
+              ]
+            }
           }
         },
         "deploy": {

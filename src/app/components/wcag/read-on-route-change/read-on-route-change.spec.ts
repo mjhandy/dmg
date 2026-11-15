@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Subject } from 'rxjs';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, provideRouter, Router } from '@angular/router';
 
 import { ReadOnRouteChange } from './read-on-route-change';
 
@@ -16,8 +16,9 @@ describe('ReadOnRouteChange', () => {
     mockRouter = { events: events$.asObservable() };
 
     await TestBed.configureTestingModule({
-      declarations: [ReadOnRouteChange],
+      imports: [ReadOnRouteChange],
       providers: [
+        provideRouter([]),
         { provide: Router, useValue: mockRouter }
       ]
     }).compileComponents();
@@ -46,7 +47,7 @@ describe('ReadOnRouteChange', () => {
 
   it('reads meta description on init (document fallback)', () => {
     expect(component.description).toBe('initial description');
-    const el = fixture.nativeElement.querySelector('.hide');
+    const el = fixture.nativeElement.querySelector('.visually-hidden');
     expect(el.textContent.trim()).toBe('initial description');
   });
 
@@ -59,7 +60,7 @@ describe('ReadOnRouteChange', () => {
     return new Promise(resolve => setTimeout(resolve, 0)).then(() => {
       fixture.detectChanges();
       expect(component.description).toBe('after navigation description');
-      const el = fixture.nativeElement.querySelector('.hide');
+      const el = fixture.nativeElement.querySelector('.visually-hidden');
       expect(el.textContent.trim()).toBe('after navigation description');
     });
   });

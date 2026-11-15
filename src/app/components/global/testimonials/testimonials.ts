@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnDestroy, ViewChild } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
+import Carousel from 'bootstrap/js/src/carousel.js';
 
 
 @Component({
@@ -8,13 +9,24 @@ import { MatIconModule } from '@angular/material/icon';
   templateUrl: './testimonials.html',
   styleUrl: './testimonials.scss'
 })
-export class Testimonials {
+export class Testimonials implements AfterViewInit, OnDestroy {
 
   @Input() data: any;
+  @ViewChild('carouselElement', { static: true }) carouselElement!: ElementRef<HTMLElement>;
+
+  private carouselInstance?: Carousel;
 
   stars = [1, 2, 3, 4, 5];
 
   silderID = 'slideID-' + this.randomString(5);
+
+  ngAfterViewInit(): void {
+    this.carouselInstance = new Carousel(this.carouselElement.nativeElement);
+  }
+
+  ngOnDestroy(): void {
+    this.carouselInstance?.dispose();
+  }
 
   randomString(length: number) {
 

@@ -4,3 +4,10 @@ declare module 'bootstrap/js/src/dropdown.js' {
     dispose(): void;
   }
 }
+
+declare module 'bootstrap/js/src/carousel.js' {
+  export default class Carousel {
+    constructor(element: Element);
+    dispose(): void;
+  }
+}

@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
 
 import { SiteMap } from './site-map';
 
@@ -8,7 +9,8 @@ describe('SiteMap', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SiteMap]
+      imports: [SiteMap],
+      providers: [provideRouter([])]
     })
     .compileComponents();
 
