@@ -2,24 +2,22 @@ import { AfterViewInit, Component, ElementRef, OnDestroy, ViewChild } from '@ang
 
 import { Logo } from '../logo/logo';
 import { RouterModule, Router } from '@angular/router';
-import { MatIconModule } from '@angular/material/icon';
 import Dropdown from 'bootstrap/js/src/dropdown.js';
-
-
+import Collapse from 'bootstrap/js/src/collapse.js';
 
 
 @Component({
   selector: 'app-main-nav',
-  imports: [Logo, MatIconModule, RouterModule],
+  imports: [Logo, RouterModule],
   templateUrl: './main-nav.html',
   styleUrl: './main-nav.scss'
 })
 export class MainNav implements AfterViewInit, OnDestroy {
 
-  @ViewChild('closeButton') closeButton: ElementRef<HTMLElement> | undefined
   @ViewChild('mainNav', { static: true }) mainNav!: ElementRef<HTMLElement>;
 
   private dropdowns: Dropdown[] = [];
+  private collapse?: Collapse;
 
   routes: {
     path: string;
@@ -60,17 +58,19 @@ export class MainNav implements AfterViewInit, OnDestroy {
       '[data-bs-toggle="dropdown"]'
     );
     this.dropdowns = Array.from(toggles, toggle => new Dropdown(toggle));
+    const collapseElement = this.mainNav.nativeElement.querySelector<HTMLElement>('#navbarContent');
+    if (collapseElement) {
+      this.collapse = new Collapse(collapseElement, { toggle: false });
+    }
   }
 
   ngOnDestroy(): void {
     this.dropdowns.forEach(dropdown => dropdown.dispose());
+    this.collapse?.dispose();
   }
 
-  closeMenu(){
-   
-    if (!this.closeButton) return;
-      let el: HTMLElement = this.closeButton.nativeElement;
-    el.click();
+  closeMenu(): void {
+    this.collapse?.hide();
   }
 
   trackMainNavUsage(label: string | undefined): void {

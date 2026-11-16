@@ -1,44 +1,36 @@
 <nav id="mainNav" class="navbar navbar-expand-lg fixed-top" #mainNav>
   <app-logo></app-logo>
-  <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-    aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+  <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
-    <div class="offcanvas-header">
-      <button type="button" class="btn btn-icon" data-bs-dismiss="offcanvas" aria-label="Close" #closeButton>
-        <mat-icon>close</mat-icon>
-      </button>
-    </div>
-    <div class="offcanvas-body">
-      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-        @for (route of routes; track route.title) {
-          @if (!route.children) {
-            <li class="nav-item">
-              <a [routerLink]="[route.path]" class="nav-link" routerLinkActive="active" (click)="trackMainNavUsage(route.label)">{{ route.label }}</a>
-            </li>
-          }
-
-          @if (route.children) {
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="{{ route.path }}Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                {{ route.label }}
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" (click)="trackMainNavUsage(route.label + ' Overview')" [routerLink]="[route.path]">{{ route.label }} Overview</a>
-                </li>
-                @for (child of route.children; track child.label) {
-                  <li>
-                    <a class="dropdown-item" (click)="trackMainNavUsage(child.label)" [routerLink]="[route.path, child.path]">{{ child.label }}</a>
-                  </li>
-                }
-              </ul>
-            </li>
-          }
+  <div class="collapse navbar-collapse" id="navbarContent">
+    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+      @for (route of routes; track route.title) {
+        @if (!route.children) {
+          <li class="nav-item">
+            <a [routerLink]="[route.path]" class="nav-link" routerLinkActive="active" (click)="trackMainNavUsage(route.label)">{{ route.label }}</a>
+          </li>
         }
-      </ul>
-    </div>
-  </div>
 
+        @if (route.children) {
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="{{ route.path }}Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {{ route.label }}
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" (click)="trackMainNavUsage(route.label + ' Overview')" [routerLink]="[route.path]">{{ route.label }} Overview</a>
+              </li>
+              @for (child of route.children; track child.label) {
+                <li>
+                  <a class="dropdown-item" (click)="trackMainNavUsage(child.label)" [routerLink]="[route.path, child.path]">{{ child.label }}</a>
+                </li>
+              }
+            </ul>
+          </li>
+        }
+      }
+    </ul>
+  </div>
 </nav>

@@ -2,28 +2,11 @@
 
 @import 'navbar';
 @import 'dropdown';
-@import 'offcanvas';
 @import 'custom/buttons';
 
 :root {
   --dmg-dropdown-bg: var(--var-dmg-baseColor-white);
   --dmg-navbar-active-color: blue;
-}
-
-.offcanvas {
-  // background-color: map-get($dmgColours, white );
-  &-header {
-    padding: 15px 15px 0 15px;
-    justify-content: flex-end;
-
-    h3 {
-      margin: 0;
-    }
-
-    .btn {
-      color: var(--dmg-baseColour-orange);
-    }
-  }
 }
 
 .navbar {
