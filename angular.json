@@ -19,7 +19,7 @@
           "options": {
             "outputPath": "dist/dmg",
             "index": "src/index.html",
-            "baseHref": "",
+            "baseHref": "/",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
@@ -77,6 +77,7 @@
                 }
               ],
               "outputHashing": "all",
+              "baseHref": "/dmg/",
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -85,6 +86,7 @@
               ]
             },
             "development": {
+              "baseHref": "/",
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
