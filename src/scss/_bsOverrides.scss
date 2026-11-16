@@ -169,9 +169,10 @@ $sizes: map-merge((25: 25%,
 
 
 /// navbar
-$navbar-toggler-padding-y: 0;
-$navbar-toggler-padding-x: 0;
-$navbar-toggler-font-size: 1.75rem;
+$navbar-toggler-padding-y: 5px;
+$navbar-toggler-padding-x: 5px;
+$navbar-toggler-font-size: 2.5rem;
+// $navbar-padding-y: 0;
 
 /// offcanvas
 $offcanvas-bg-color: map-get($dmgColours, white);

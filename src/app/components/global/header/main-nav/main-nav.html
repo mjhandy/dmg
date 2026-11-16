@@ -19,14 +19,18 @@
               {{ route.label }}
             </a>
             <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item" (click)="trackMainNavUsage(route.label + ' Overview')" [routerLink]="[route.path]">{{ route.label }} Overview</a>
+              <li class="dropdown-menu-content">
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a class="dropdown-item" (click)="trackMainNavUsage(route.label + ' Overview')" [routerLink]="[route.path]">{{ route.label }} Overview</a>
+                  </li>
+                  @for (child of route.children; track child.label) {
+                    <li>
+                      <a class="dropdown-item" (click)="trackMainNavUsage(child.label)" [routerLink]="[route.path, child.path]">{{ child.label }}</a>
+                    </li>
+                  }
+                </ul>
               </li>
-              @for (child of route.children; track child.label) {
-                <li>
-                  <a class="dropdown-item" (click)="trackMainNavUsage(child.label)" [routerLink]="[route.path, child.path]">{{ child.label }}</a>
-                </li>
-              }
             </ul>
           </li>
         }
