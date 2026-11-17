@@ -1,0 +1,28 @@
+// SCSS Mixin for underline hover effect
+
+// Example usage
+// a {
+//   @include underline-hover(#ff6600, 3px, 0.4s);
+//   text-decoration: none; // Remove default underline
+// }
+
+
+@mixin underline-hover($color: currentColor, $height: 2px, $duration: 0.3s) {
+  position: relative; // Required for ::after positioning
+  display: inline-block; // Ensure underline fits text width
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: $height;
+    background-color: $color;
+    transition: width $duration ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}

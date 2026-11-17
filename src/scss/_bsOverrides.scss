@@ -172,6 +172,7 @@ $sizes: map-merge((25: 25%,
 $navbar-toggler-padding-y: 5px;
 $navbar-toggler-padding-x: 5px;
 $navbar-toggler-font-size: 2.5rem;
+$navbar-light-active-color: map-get($dmgColours, orange);
 // $navbar-padding-y: 0;
 
 /// offcanvas

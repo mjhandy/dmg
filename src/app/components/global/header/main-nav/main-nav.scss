@@ -27,23 +27,23 @@
 }
 
 .nav {
+  &-item{
+    @include underline-hover(var(--dmg-link-colour-hover), 3px, 0.4s);
+  }
   &-link {
+    display: flex;
+    align-items: center;
     font-size: 2.5rem;
     text-decoration: none;
-
-    @include media-breakpoint-up(lg){
-      
+    justify-content: space-between;
+    @include media-breakpoint-up(lg){      
       font-size: 2rem;
       width: fit-content;
     }
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: var(--dmg-link-colour-hover);
-      border-bottom: 5px solid var(--dmg-link-colour-hover);
-      text-decoration: none;
+    &:active{
+      color: var(--dmg-baseColour-orange);
     }
+
   }
 }
 
