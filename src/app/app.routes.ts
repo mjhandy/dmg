@@ -10,7 +10,7 @@ export const routes: Routes = [
   {
     path: '',
     loadComponent: () => import('./components/pages/home/home').then(m => m.Home),
-    title: 'Home Page | Dundee Media Group',
+    title: 'Home | Dundee Media Group',
     data: {
       description: 'Dundee Media Group. Where Digital Visability Meets Inclusive Design.',
       label: 'Home',
@@ -98,23 +98,6 @@ export const routes: Routes = [
         }
       }
     ]
-  },
-  {
-    path: 'about-us',
-    loadComponent: () => import('./components/pages/about-us/about-us').then(m => m.AboutUs),
-    title: 'About Us | Dundee Media Group',
-    data: {
-      description: 'Learn about who we are at Dundee Media Group',
-      label: 'About Us',
-      showInMain: true,
-      showInFooter: true,
-      showInSiteMap: true,
-      h1: 'Smarter Websites Start Here',
-      h2: 'From visibility to accessibility, we deliver results through audits, analytics, and expert care.',
-      desktopImage: 'sun-rays-over-loch.webp',
-      mobileImage: 'sun-rays-over-loch.webp',
-      headerPostion: 'left'
-    }
   },
   {
     path: 'case-studies',
@@ -206,6 +189,23 @@ export const routes: Routes = [
       headerPostion: 'left'
     }
   },
+  {
+    path: 'about-us',
+    loadComponent: () => import('./components/pages/about-us/about-us').then(m => m.AboutUs),
+    title: 'About Us | Dundee Media Group',
+    data: {
+      description: 'Learn about who we are at Dundee Media Group',
+      label: 'About Us',
+      showInMain: true,
+      showInFooter: true,
+      showInSiteMap: true,
+      h1: 'Smarter Websites Start Here',
+      h2: 'From visibility to accessibility, we deliver results through audits, analytics, and expert care.',
+      desktopImage: 'sun-rays-over-loch.webp',
+      mobileImage: 'sun-rays-over-loch.webp',
+      headerPostion: 'left'
+    }
+  },  
   {
     path: 'terms-and-conditions',
     loadComponent: () => import('./components/pages/terms/terms').then(m => m.Terms),

@@ -64,7 +64,7 @@
               <select class="form-control" formControlName="subject" name="subject" (blur)="onFieldBlur('subject')"
                 [class.is-invalid]="contactForm.controls['subject'].invalid && (contactForm.controls['subject'].touched || contactForm.controls['subject'].dirty || isFormSubmitted)">
                 <option value="">Select a subject</option>
-                <option value="WCAG Help">WCAG Help</option>
+                <option value="WCAG Audit">WCAG Audit</option>
                 <option value="Analytics implementation">Analytics implementation</option>
               </select>
               <div class="error-message">
@@ -108,7 +108,7 @@
               (click)="onClear()">Clear</button>
           </div>
           <div class="col-12 col-lg-8">
-            <p>Thanks for reaching out. We appreciate you taking the time to connect with us, and our team will follow up soon with a clear path forward and any details you may need.</p>
+            <p>Thanks for reaching out. We appreciate you taking the time to connect with us, our team will follow up soon with a clear path forward and any details you may need.</p>
           </div>
         </div>
         <div [hidden]="!submissionSuccess" class="thank-you-message">
