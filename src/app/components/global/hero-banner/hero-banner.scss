@@ -7,6 +7,7 @@ $gradient: linear-gradient(to right, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%
 .heroBanner {
   aspect-ratio: 1/1;
   position: relative;
+
   @include media-breakpoint-up(sm) {
     aspect-ratio: 13/1;
   }
@@ -16,7 +17,8 @@ $gradient: linear-gradient(to right, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%
       &-true {
         &:after {
           inset: 0;
-          /* shorthand for top:0; right:0; bottom:0; left:0 */;
+          /* shorthand for top:0; right:0; bottom:0; left:0 */
+          ;
           pointer-events: none;
           content: '';
           position: absolute;
@@ -32,8 +34,8 @@ $gradient: linear-gradient(to right, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%
 
 
   &-copy {
-    backdrop-filter: blur(3px) saturate(180%);
-    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2),;
+    backdrop-filter: blur(5px) saturate(180%);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2), ;
     display: flex;
     flex-flow: column nowrap;
     row-gap: 20px;
@@ -47,6 +49,7 @@ $gradient: linear-gradient(to right, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%
     background: rgba(255, 255, 255, 0.025);
     border: 1px solid rgba(255, 255, 255, 0.50);
     border-radius: 10px;
+
     @include media-breakpoint-up(sm) {
       row-gap: 5px;
       bottom: unset;
@@ -71,17 +74,23 @@ $gradient: linear-gradient(to right, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%
     h1,
     h2 {
       font-weight: 500;
-      line-height: 1.2;
       color: var(--dmg-baseColour-white);
       text-shadow: 4px 2px 5px var(--dmg-baseColour-blue);
     }
 
     h1 {
-      font-size: 2.6rem;
+      font-size: 2.2rem;
+      @include media-breakpoint-up(lg) {
+        font-size: 2.6rem;
+      }
+
     }
 
     h2 {
-      font-size: 2rem;
+      font-size: 1.8rem;      
+      @include media-breakpoint-up(lg) {
+        font-size: 2rem;
+      }
     }
 
 
