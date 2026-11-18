@@ -17,7 +17,7 @@
           <form #contactFormElement class="row" [formGroup]="contactForm">
             <div class="col-md-6">
               <label class="form-label" for="fullName">Full name</label>
-              <input type="text" class="form-control" formControlName="fullName" name="fullName"
+              <input type="text" class="form-control" formControlName="fullName" name="fullName" id="fullName"
                 (blur)="onFieldBlur('fullName')"
                 [class.is-invalid]="contactForm.controls['fullName'].invalid && (contactForm.controls['fullName'].touched || contactForm.controls['fullName'].dirty || isFormSubmitted)" />
               <div class="error-message">
@@ -39,7 +39,7 @@
             </div>
             <div class="col-md-6">
               <label class="form-label" for="email">Email</label>
-              <input type="email" class="form-control" formControlName="email" name="email"
+              <input type="email" class="form-control" formControlName="email" name="email" id="email"
                 (blur)="onFieldBlur('email')"
                 [class.is-invalid]="contactForm.controls['email'].invalid && (contactForm.controls['email'].touched || contactForm.controls['email'].dirty || isFormSubmitted)" />
               <div class="error-message">
@@ -61,7 +61,7 @@
             </div>
             <div class="col-md-6">
               <label class="form-label" for="subject">Subject</label>
-              <select class="form-control" formControlName="subject" name="subject" (blur)="onFieldBlur('subject')"
+              <select class="form-control" formControlName="subject" name="subject" id="subject"  (blur)="onFieldBlur('subject')"
                 [class.is-invalid]="contactForm.controls['subject'].invalid && (contactForm.controls['subject'].touched || contactForm.controls['subject'].dirty || isFormSubmitted)">
                 <option value="">Select a subject</option>
                 <option value="WCAG Audit">WCAG Audit</option>
@@ -83,7 +83,7 @@
             </div>
             <div class="col-12">
               <label class="form-label" for="message">Message</label>
-              <textarea class="form-control" formControlName="message" name="message" rows="5"
+              <textarea class="form-control" formControlName="message" name="message" id="message" rows="5"
                 (blur)="onFieldBlur('message')"
                 [class.is-invalid]="contactForm.controls['message'].invalid && (contactForm.controls['message'].touched || contactForm.controls['message'].dirty || isFormSubmitted)"></textarea>
               <div class="error-message">
