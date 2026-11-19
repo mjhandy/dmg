@@ -85,7 +85,7 @@ export const routes: Routes = [
         title: 'Services | Designs That Connect and Perform | Dundee Media Group',
         data: {
           description: 'Explore Dundee Media Group’s design services. From web and social to email campaigns, we deliver SEO‑optimized and WCAG‑inclusive designs that connect, perform, and drive measurable results.',
-          label: 'Design That Connect',
+          label: 'Designs That Connect',
           showInMain: false,
           showInFooter: false,
           showInSiteMap: true,
