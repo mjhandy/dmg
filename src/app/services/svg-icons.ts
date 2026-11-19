@@ -7,7 +7,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class SvgIcons {
 
-  private iconPath = '/assets/icons/';
+  private iconPath = 'assets/icons/';
 
   constructor(
     private matIconRegistry: MatIconRegistry,
