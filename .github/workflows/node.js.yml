@@ -1,38 +1,54 @@
-name: Deploy Angular App to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - dev  # Change to your default branch if different
+      - main
+      - dev
+  workflow_dispatch:
 
 permissions:
-  contents: write  # Required for pushing to gh-pages branch
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      # 1. Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18' # Match your Angular project's Node version
+          node-version: 22
+          cache: npm
 
-      # 3. Install dependencies
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
       - name: Install dependencies
         run: npm ci
 
-      # 4. Build Angular app
       - name: Build Angular app
-        run: npm run build -- --configuration production
-        # Replace <REPO_NAME> with your GitHub repository name
+        run: npm run build:prod
 
-      # 5. Deploy to GitHub Pages
+      - name: Prepare SPA fallback
+        run: cp dist/dmg/browser/index.html dist/dmg/browser/404.html
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/dmg/browser
+
       - name: Deploy to GitHub Pages
-        run: npx angular-cli-ghpages --dir=dist/dmg
-        # Replace <PROJECT_NAME> with your Angular project folder name inside dist/
+        id: deployment
+        uses: actions/deploy-pages@v4

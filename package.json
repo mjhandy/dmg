@@ -7,7 +7,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "generate-sitemap": "node generate-sitemap.js",
-    "build:prod": "ng build --configuration production && npm run generate-sitemap",
+    "build:prod": "npm run generate-sitemap && ng build --configuration production",
     "build": "ng build --configuration production"
   },
   "prettier": {

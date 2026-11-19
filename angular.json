@@ -77,7 +77,7 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "/dmg/",
+              "baseHref": "/DMG/",
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
