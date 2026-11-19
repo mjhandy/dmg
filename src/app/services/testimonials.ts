@@ -7,7 +7,7 @@ import { map, Observable, shareReplay } from 'rxjs';
 })
 export class TestimonialsService {
 
-  private url = '../json/testimonials.json';
+  private url = 'json/testimonials.json';
   private testimonials$: Observable<any> | null = null;
 
   constructor(private httpClient: HttpClient) {
