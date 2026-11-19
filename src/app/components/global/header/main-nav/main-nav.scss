@@ -27,20 +27,23 @@
 }
 
 .nav {
-  &-item{
+  &-item {
     @include underline-hover(var(--dmg-link-colour-hover), 3px, 0.4s);
   }
+
   &-link {
     display: flex;
     align-items: center;
     font-size: 2.5rem;
     text-decoration: none;
     justify-content: space-between;
-    @include media-breakpoint-up(lg){      
+
+    @include media-breakpoint-up(lg) {
       font-size: 2rem;
       width: fit-content;
     }
-    &:active{
+
+    &:active {
       color: var(--dmg-baseColour-orange);
     }
 
@@ -53,13 +56,16 @@
       // margin-top: 5px;
       min-width: 420px;
       border: 1px solid var(--dmg-baseColour-orange);
+      --#{$prefix}dropdown-padding-y: #{$dropdown-padding-y};
+      --#{$prefix}dropdown-spacer: #{$dropdown-spacer};
     }
+
     // dropdown
     --#{$prefix}dropdown-zindex: #{$zindex-dropdown};
     --#{$prefix}dropdown-min-width: #{$dropdown-min-width};
     --#{$prefix}dropdown-padding-x: #{$dropdown-padding-x};
-    --#{$prefix}dropdown-padding-y: #{$dropdown-padding-y};
-    --#{$prefix}dropdown-spacer: #{$dropdown-spacer};
+    --#{$prefix}dropdown-padding-y: 0;
+    --#{$prefix}dropdown-spacer: 0;
     @include rfs($dropdown-font-size, --#{$prefix}dropdown-font-size);
     --#{$prefix}dropdown-color: #{$link-colour};
     --#{$prefix}dropdown-bg: #{$dropdown-bg-color};
@@ -81,15 +87,20 @@
     --#{$prefix}dropdown-header-color: #{$dropdown-header-color};
     --#{$prefix}dropdown-header-padding-x: #{$dropdown-header-padding-x};
     --#{$prefix}dropdown-header-padding-y: #{$dropdown-header-padding-y};
-    ul{
+
+    ul {
       list-style: none;
       margin: 0;
       padding: 0;
     }
   }
+
   &-item {
-    font-size: 1.5rem;
+    font-size: 2rem;
     white-space: unset;
+    @include media-breakpoint-up(lg){
+      font-size: 1.5rem;
+    }
   }
 }
 
