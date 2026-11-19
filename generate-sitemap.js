@@ -3,7 +3,7 @@ const path = require('path');
 const ts = require('typescript');
 
 // Base URL of your website
-const BASE_URL = 'https://mjhandy.github.io/DMG';
+const BASE_URL = 'https://mjhandy.github.io/dmg';
 
 const routesFile = path.join(__dirname, 'src', 'app', 'app.routes.ts');
 const routesSource = ts.createSourceFile(
