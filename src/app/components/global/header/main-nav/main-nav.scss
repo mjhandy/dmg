@@ -96,8 +96,9 @@
   }
 
   &-item {
-    font-size: 2rem;
+    font-size: 1.7rem;
     white-space: unset;
+    line-height: 1.2;
     @include media-breakpoint-up(lg){
       font-size: 1.5rem;
     }
