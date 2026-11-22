@@ -5,11 +5,11 @@ export const routes: Routes = [
   {
     path: '',
     redirectTo: '',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: '',
-    loadComponent: () => import('./components/pages/home/home').then(m => m.Home),
+    loadComponent: () => import('./components/pages/home/home').then((m) => m.Home),
     title: 'Home | Dundee Media Group',
     data: {
       description: 'Dundee Media Group. Where Digital Visability Meets Inclusive Design.',
@@ -23,15 +23,16 @@ export const routes: Routes = [
       mobileImage: 'castle-loch-bridge.webp',
       headerPostion: 'left',
       ctaCopy: 'Book An Audit',
-      ctaTarget: 'contact-us'
-    }
+      ctaTarget: 'contact-us',
+    },
   },
   {
     path: 'services',
-    loadComponent: () => import('./components/pages/services/services').then(m => m.Services),
+    loadComponent: () => import('./components/pages/services/services').then((m) => m.Services),
     title: 'Services | Dundee Media Group',
     data: {
-      description: "Discover a digital agency that blends SEO, accessibility, and design into unforgettable experiences—visible, inclusive, and built to connect.",
+      description:
+        'Discover a digital agency that blends SEO, accessibility, and design into unforgettable experiences—visible, inclusive, and built to connect.',
       label: 'Services',
       showInMain: true,
       showInFooter: true,
@@ -40,15 +41,16 @@ export const routes: Routes = [
       h2: 'Blending SEO, accessibility, and design into work that connects, resonates, and grows with your audience.',
       desktopImage: 'train-over-bridge.webp',
       mobileImage: 'train-over-bridge.webp',
-      headerPostion: 'left'
+      headerPostion: 'left',
     },
     children: [
       {
         path: 'seo-visibility-growth',
-        loadComponent: () => import('./components/pages/services/seo/seo').then(m => m.Seo),
+        loadComponent: () => import('./components/pages/services/seo/seo').then((m) => m.Seo),
         title: 'Services | Seo Visibility and Growth | Dundee Media Group',
         data: {
-          description: 'Discover how Dundee Media Group transforms SEO into measurable growth. From clean code to smart content, we help you reach your KPIs with sustainable visibility.',
+          description:
+            'Discover how Dundee Media Group transforms SEO into measurable growth. From clean code to smart content, we help you reach your KPIs with sustainable visibility.',
           label: 'SEO: From Visibility to Growth',
           showInMain: false,
           showInFooter: false,
@@ -58,14 +60,15 @@ export const routes: Routes = [
           desktopImage: 'seo.webp',
           mobileImage: 'seo.webp',
           headerPostion: 'left',
-        }
+        },
       },
       {
         path: 'wcag-accessibility-web-design',
-        loadComponent: () => import('./components/pages/services/wcag/wcag').then(m => m.Wcag),
+        loadComponent: () => import('./components/pages/services/wcag/wcag').then((m) => m.Wcag),
         title: 'Services | Accessibility That Empowers Every User | Dundee Media Group',
         data: {
-          description: 'Ensure your website is WCAG-compliant and accessible to all users. Dundee Media Group delivers inclusive design services that improve usability, strengthen SEO, and build trust across audiences.',
+          description:
+            'Ensure your website is WCAG-compliant and accessible to all users. Dundee Media Group delivers inclusive design services that improve usability, strengthen SEO, and build trust across audiences.',
           label: 'Accessibility For All Users',
           showInMain: false,
           showInFooter: false,
@@ -75,16 +78,17 @@ export const routes: Routes = [
           desktopImage: 'wcag.webp',
           mobileImage: 'wcag.webp',
           headerPostion: 'right',
-          flipImage: 'horizontal'
-
-        }
+          flipImage: 'horizontal',
+        },
       },
       {
         path: 'design-web-social-email-seo-wcag',
-        loadComponent: () => import('./components/pages/services/design/design').then(m => m.Design),
+        loadComponent: () =>
+          import('./components/pages/services/design/design').then((m) => m.Design),
         title: 'Services | Designs That Connect and Perform | Dundee Media Group',
         data: {
-          description: 'Explore Dundee Media Group’s design services. From web and social to email campaigns, we deliver SEO‑optimized and WCAG‑inclusive designs that connect, perform, and drive measurable results.',
+          description:
+            'Explore Dundee Media Group’s design services. From web and social to email campaigns, we deliver SEO‑optimized and WCAG‑inclusive designs that connect, perform, and drive measurable results.',
           label: 'Designs That Connect',
           showInMain: false,
           showInFooter: false,
@@ -94,14 +98,15 @@ export const routes: Routes = [
           desktopImage: 'design.webp',
           mobileImage: 'design.webp',
           headerPostion: 'right',
-          flipImage: 'horizontal'
-        }
-      }
-    ]
+          flipImage: 'horizontal',
+        },
+      },
+    ],
   },
   {
     path: 'case-studies',
-    loadComponent: () => import('./components/pages/case-studies/case-studies').then(m => m.CaseStudies),
+    loadComponent: () =>
+      import('./components/pages/case-studies/case-studies').then((m) => m.CaseStudies),
     title: 'Case Studies | Dundee Media Group',
     data: {
       description: 'How have we helped other here at Dundee Media Group?',
@@ -113,15 +118,19 @@ export const routes: Routes = [
       h2: 'Inclusive, visible, and measurable results.',
       desktopImage: 'train-over-bridge.webp',
       mobileImage: 'train-over-bridge.webp',
-      headerPostion: 'left'
+      headerPostion: 'left',
     },
     children: [
       {
         path: 'solving-usability',
-        loadComponent: () => import('./components/pages/case-studies/solving-usability/solving-usability').then(m => m.SolvingUsability),
+        loadComponent: () =>
+          import('./components/pages/case-studies/solving-usability/solving-usability').then(
+            (m) => m.SolvingUsability,
+          ),
         title: 'Case study: Solving usability and accessibility challenges | Dundee Media Group',
         data: {
-          description: 'How Dundee Media Group improved UX and met WCAG standards—validated with Google Analytics.',
+          description:
+            'How Dundee Media Group improved UX and met WCAG standards—validated with Google Analytics.',
           label: 'Solving Usability and Accessibility Challenges',
           showInMain: false,
           showInFooter: false,
@@ -131,12 +140,15 @@ export const routes: Routes = [
           desktopImage: 'accessability-computer-addon.webp',
           mobileImage: 'accessability-computer-addon.webp',
           headerPostion: 'left',
-          imageMask: true
-        }
+          imageMask: '75',
+        },
       },
       {
         path: 'rejunvenating-our-digital-experience',
-        loadComponent: () => import('./components/pages/case-studies/rejuvenating-digital-experience/rejuvenating-digital-experience').then(m => m.RejuvenatingDigitalExperience),
+        loadComponent: () =>
+          import('./components/pages/case-studies/rejuvenating-digital-experience/rejuvenating-digital-experience').then(
+            (m) => m.RejuvenatingDigitalExperience,
+          ),
         title: 'Case Study: Rejuvenating Our Digital Experience | Dundee Media Group',
         data: {
           description: 'How Dundee Media Group Helped Our Family-Owned Spa Thrive Online',
@@ -148,15 +160,20 @@ export const routes: Routes = [
           h2: 'How Dundee Media Group Helped Our Family-Owned Spa Thrive Online',
           desktopImage: 'web-design.webp',
           mobileImage: 'web-design.webp',
-          headerPostion: 'left'
-        }
+          headerPostion: 'left',
+          imageMask: '75',
+        },
       },
       {
         path: 'turning-data-into-direction',
-        loadComponent: () => import('./components/pages/case-studies/turning-data-into-direction/turning-data-into-direction').then(m => m.TurningDataIntoDirection),
+        loadComponent: () =>
+          import('./components/pages/case-studies/turning-data-into-direction/turning-data-into-direction').then(
+            (m) => m.TurningDataIntoDirection,
+          ),
         title: 'Case Study: Turning Data Into Direction | Dundee Media Group',
         data: {
-          description: 'How Dundee Media Group Helped a Small Manufacturing Firm Harness Google Analytics for Smarter Engagement',
+          description:
+            'How Dundee Media Group Helped a Small Manufacturing Firm Harness Google Analytics for Smarter Engagement',
           label: 'Turning Data into Direction',
           showInMain: false,
           showInFooter: false,
@@ -167,14 +184,15 @@ export const routes: Routes = [
           mobileImage: 'laptop-data-graphs.webp',
           headerPostion: 'left',
 
-          imageMask: true
-        }
-      }
-    ]
+          imageMask: '75',
+        },
+      },
+    ],
   },
   {
     path: 'contact-us',
-    loadComponent: () => import('./components/pages/contact-us/contact-us').then(m => m.ContactUs),
+    loadComponent: () =>
+      import('./components/pages/contact-us/contact-us').then((m) => m.ContactUs),
     title: 'Contact Us | Dundee Media Group',
     data: {
       description: 'Reach our and talk to us',
@@ -186,12 +204,12 @@ export const routes: Routes = [
       h2: 'Your story matters, and we’re here to listen, understand, and help you take the next step.',
       desktopImage: 'train-over-bridge.webp',
       mobileImage: 'train-over-bridge.webp',
-      headerPostion: 'left'
-    }
+      headerPostion: 'left',
+    },
   },
   {
     path: 'about-us',
-    loadComponent: () => import('./components/pages/about-us/about-us').then(m => m.AboutUs),
+    loadComponent: () => import('./components/pages/about-us/about-us').then((m) => m.AboutUs),
     title: 'About Us | Dundee Media Group',
     data: {
       description: 'Learn about who we are at Dundee Media Group',
@@ -203,12 +221,12 @@ export const routes: Routes = [
       h2: 'From visibility to accessibility, we deliver results through audits, analytics, and expert care.',
       desktopImage: 'sun-rays-over-loch.webp',
       mobileImage: 'sun-rays-over-loch.webp',
-      headerPostion: 'left'
-    }
-  },  
+      headerPostion: 'left',
+    },
+  },
   {
     path: 'terms-and-conditions',
-    loadComponent: () => import('./components/pages/terms/terms').then(m => m.Terms),
+    loadComponent: () => import('./components/pages/terms/terms').then((m) => m.Terms),
     title: 'Terms and Conditions | Dundee Media Group',
     data: {
       description: "Dundee Media Group's Terms and Conditions",
@@ -219,13 +237,12 @@ export const routes: Routes = [
       h1: 'Terms & Conditions',
       desktopImage: 'train-over-bridge.webp',
       mobileImage: 'train-over-bridge.webp',
-      headerPostion: 'left'
-
-    }
+      headerPostion: 'left',
+    },
   },
   {
     path: 'privacy-policy',
-    loadComponent: () => import('./components/pages/privacy/privacy').then(m => m.Privacy),
+    loadComponent: () => import('./components/pages/privacy/privacy').then((m) => m.Privacy),
     title: 'Our Privacy Policy | Dundee Media Group',
     data: {
       description: "Dundee Media Group's Privacy Policy",
@@ -236,12 +253,12 @@ export const routes: Routes = [
       h1: 'Privacy Policy',
       desktopImage: 'train-over-bridge.webp',
       mobileImage: 'train-over-bridge.webp',
-      headerPostion: 'left'
-    }
+      headerPostion: 'left',
+    },
   },
   {
     path: 'site-map',
-    loadComponent: () => import('./components/pages/site-map/site-map').then(m => m.SiteMap),
+    loadComponent: () => import('./components/pages/site-map/site-map').then((m) => m.SiteMap),
     title: 'Site Map | Dundee Media Group',
     data: {
       description: "Looking for a page? Here's a map.",
@@ -253,7 +270,7 @@ export const routes: Routes = [
       h2: 'We don’t just build websites.',
       desktopImage: 'train-over-bridge.webp',
       mobileImage: 'train-over-bridge.webp',
-      headerPostion: 'left'
-    }
+      headerPostion: 'left',
+    },
   },
 ];

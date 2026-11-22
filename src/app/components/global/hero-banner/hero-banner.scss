@@ -15,19 +15,31 @@ $gradient: linear-gradient(to right, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%
   &-image {
     &.mask {
       &-true {
-
         img {
           filter: brightness(90%); // this will darken the image if needed
         }
-
       }
+      &-90 {
+        img {
+          filter: brightness(90%); // this will darken the image if needed
+        }
+      }
+      &-75 {
+        img {
+          filter: brightness(75%); // this will darken the image if needed
+        }
+      }       
+      &-50 {
+        img {
+          filter: brightness(50%); // this will darken the image if needed
+        }
+      }      
     }
   }
 
-
   &-copy {
     backdrop-filter: blur(5px) saturate(180%);
-    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2), ;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
     display: flex;
     flex-flow: column nowrap;
     row-gap: 20px;
@@ -39,7 +51,7 @@ $gradient: linear-gradient(to right, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%
     right: 15px;
     padding: 10px;
     background: rgba(255, 255, 255, 0.025);
-    border: 1px solid rgba(255, 255, 255, 0.50);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 10px;
 
     @include media-breakpoint-up(sm) {
@@ -59,7 +71,6 @@ $gradient: linear-gradient(to right, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%
       width: 33.33%;
     }
 
-
     /* Depth and glow */
 
     /// font colours
@@ -76,7 +87,6 @@ $gradient: linear-gradient(to right, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%
       @include media-breakpoint-up(lg) {
         font-size: 2.6rem;
       }
-
     }
 
     h2 {
@@ -87,14 +97,11 @@ $gradient: linear-gradient(to right, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%
       }
     }
 
-
-
     &.side {
       &-left {
         @include media-breakpoint-up(lg) {
           left: 25px;
         }
-
       }
 
       &-right {
