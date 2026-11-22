@@ -6,11 +6,12 @@ import { filter } from 'rxjs/operators';
 
 import { MatButton } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
+import { Breadcrumb } from '../header/breadcrumb/breadcrumb';
 
 @Component({
   selector: 'app-hero-banner',
   standalone: true,
-  imports: [MatButton, MatIcon],
+  imports: [MatButton, MatIcon, Breadcrumb],
   templateUrl: './hero-banner.html',
   styleUrl: './hero-banner.scss'
 })

@@ -1,4 +1,5 @@
 @if (h1Html || imgDesktop || imgMobile || (parent && banners && banners[parent])) {
+
 <div class="heroBanner p-0 {{ positionClass }}">
   <div class="heroBanner-image mask-{{ imageMask }} flip-{{ flipImage }}">
     <picture>
@@ -38,4 +39,5 @@
     }
   </div>
 </div>
+<app-breadcrumb></app-breadcrumb>
 }

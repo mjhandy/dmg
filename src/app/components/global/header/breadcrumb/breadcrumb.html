@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      @if (items.length > 1) {
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <ol class="breadcrumb">
+            @for (item of items; track item.url; let first = $first, last = $last) {
+              <li
+                class="breadcrumb-item"
+                [class.active]="last"
+                [attr.aria-current]="last ? 'page' : null"
+              >
+                @if (last) {
+                  <span [attr.title]="item.label">{{ item.label }}</span>
+                } @else {
+                  <a [routerLink]="item.url" [attr.aria-label]="first ? 'Home' : null">
+                    @if (first) {
+                      <mat-icon aria-hidden="true" class="pt-1">home</mat-icon>
+                    } @else {
+                      {{ item.label }}
+                    }
+                  </a>
+                }
+              </li>
+            }
+          </ol>
+        </nav>
+      }
+    </div>
+  </div>
+</div>
